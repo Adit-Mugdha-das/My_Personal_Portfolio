@@ -161,7 +161,9 @@
         </nav>
 
         <!-- About Section with Image + Text (Animated Separately) -->
-        <section class="about-wrapper min-h-screen">
+        <section class="w-full px-4 sm:px-6 flex items-center justify-center min-h-screen">
+        <div class="about-wrapper w-full max-w-6xl">
+
 
             <!-- Left: Image -->
             <div class="profile-image animate__animated animate__fadeInLeft">
@@ -192,6 +194,7 @@
                     If you’re interested in collaborating or discussing exciting ideas in AI, feel free to <a href="/contact" class="cta-link">contact me</a>!
                 </p>
             </div>
+        </div>
         </section>
 
     </div>
