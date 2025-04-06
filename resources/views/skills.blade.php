@@ -67,7 +67,8 @@
 
 
     <!-- Skills Section -->
-    <section class="text-center py-16 px-4 animate__animated animate__fadeIn">
+    <section class="text-center py-16 px-4 animate__animated animate__fadeIn min-h-screen">
+
         <h1 class="text-3xl sm:text-4xl font-bold mb-12 text-white drop-shadow-[0_0_20px_#c084fc]">My Skills</h1>
 
         <div class="flex flex-wrap justify-center gap-6 max-w-7xl mx-auto text-left">
@@ -92,6 +93,7 @@
                         <li>Laravel</li>
                         <li>PHP & MySQL</li>
                         <li>HTML, CSS, Tailwind</li>
+                        <li>NODE.JS</li>
                     </ul>
                 </div>
 
@@ -152,6 +154,8 @@
                     <li>Regression & Classification Algorithms</li>
                     <li>NLP, Computer Vision</li>
                     <li>Hyperparameter Tuning</li>
+                    <li>Regularization</li>
+                    <li>Optimization</li>
                     <li>XGBOOST</li>
                 </ul>
             </div>
