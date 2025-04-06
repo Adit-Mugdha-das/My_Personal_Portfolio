@@ -8,4 +8,8 @@ export default defineConfig({
       refresh: true,
     }),
   ],
+  build: {
+    outDir: 'public/build', // 👈 this ensures manifest.json lands in the right place
+    emptyOutDir: true,
+  },
 });
