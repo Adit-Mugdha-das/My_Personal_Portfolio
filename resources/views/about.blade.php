@@ -162,7 +162,8 @@
 
         <!-- About Section with Image + Text (Animated Separately) -->
         <section class="w-full px-4 sm:px-6 flex items-center justify-center min-h-screen">
-        <div class="about-wrapper w-full max-w-6xl">
+        <div class="about-wrapper w-full md:max-w-6xl">
+
 
 
             <!-- Left: Image -->
