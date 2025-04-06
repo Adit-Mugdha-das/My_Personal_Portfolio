@@ -17,8 +17,11 @@ COPY . .
 # Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
 
-# Copy existing application key or generate one if it doesn't exist
-RUN php artisan key:generate
+# Copy .env.example to .env if it doesn't exist
+RUN if [ ! -f .env ]; then cp .env.example .env; fi
+
+# Generate application key only if it's not set
+RUN if ! grep -q "^APP_KEY=base64" .env; then php artisan key:generate; fi
 
 # Expose port 8000 and start server
 EXPOSE 8000
