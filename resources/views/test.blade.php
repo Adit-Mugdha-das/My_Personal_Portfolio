@@ -4,8 +4,11 @@
   <meta charset="UTF-8" />
   <title>Honors & Awards - Mugdha</title>
   <!--@vite('resources/css/app.css')-->
-  <link rel="stylesheet" href="{{ asset('build/assets/app-Ct2FSlyM.css') }}">
-<script src="{{ asset('build/assets/app-eMHK6VFw.js') }}" defer></script>
+  
+
+<link rel="stylesheet" href="{{ secure_asset('build/assets/app-Ct2FSlyM.css') }}">
+<script src="{{ secure_asset('build/assets/app-eMHK6VFw.js') }}" defer></script>
+
 
 
   <!-- Three.js and Vanta.js -->

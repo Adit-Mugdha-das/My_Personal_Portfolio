@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>Contact - Mugdha</title>
     <!--@vite('resources/css/app.css')-->
-    <link rel="stylesheet" href="{{ asset('build/assets/app-Ct2FSlyM.css') }}">
-<script src="{{ asset('build/assets/app-eMHK6VFw.js') }}" defer></script>
-
+    
+    <link rel="stylesheet" href="{{ secure_asset('build/assets/app-Ct2FSlyM.css') }}">
+<script src="{{ secure_asset('build/assets/app-eMHK6VFw.js') }}" defer></script>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
