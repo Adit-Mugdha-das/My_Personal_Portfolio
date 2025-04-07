@@ -23,15 +23,6 @@
             margin: 0;
             padding: 0;
             background-color: #0f172a;
-            overflow-x: hidden;
-        }
-
-        #vanta-bg {
-            min-height: 100vh;
-            width: 100%;
-            position: relative;
-            display: flex;
-            flex-direction: column;
         }
 
         .neon-glow {
@@ -64,7 +55,6 @@
             border: 2px solid #9333ea;
             box-shadow: 0 0 15px #9333ea80;
             transition: transform 0.4s ease, box-shadow 0.4s ease;
-            min-height: 400px;
         }
 
         .profile-image:hover {
@@ -82,25 +72,6 @@
 
         .profile-image:hover img {
             transform: scale(1.02);
-        }
-
-        @media (max-width: 767px) {
-            .profile-image {
-                min-height: auto;
-                max-height: 450px;
-            }
-
-            .profile-image img {
-                height: auto;
-                max-height: 100%;
-                object-fit: contain;
-                object-position: center;
-                padding: 1rem;
-            }
-
-            .about-wrapper {
-                padding: 1rem 1rem 2rem;
-            }
         }
 
         .about-text-content {
@@ -157,7 +128,7 @@
     </style>
 </head>
 <body class="text-white overflow-x-hidden bg-[#0f172a]">
-    <div id="vanta-bg" x-data="{ navOpen: false }">
+    <div id="vanta-bg" class="min-h-screen w-full flex flex-col" x-data="{ navOpen: false }">
 
         <!-- Navbar -->
         <nav class="bg-black/50 backdrop-blur-md text-white px-6 py-4 flex justify-between items-center shadow-md rounded-b-xl">
@@ -193,9 +164,9 @@
             </ul>
         </nav>
 
-        <!-- About Section -->
+        <!-- About Section with Image + Text (Animated Separately) -->
         <section class="about-wrapper flex-grow">
-
+            
             <!-- Left: Image -->
             <div class="profile-image animate__animated animate__fadeInLeft">
                 <img src="{{ asset('images/aboutphoto.png') }}" alt="Adit Mugdha Das">
@@ -226,11 +197,12 @@
                 </p>
             </div>
         </section>
+
     </div>
 
     <!-- Vanta.js Initialization -->
     <script>
-        let vantaEffect = VANTA.NET({
+        VANTA.NET({
             el: "#vanta-bg",
             mouseControls: true,
             touchControls: true,
@@ -241,20 +213,6 @@
             scaleMobile: 1.00,
             color: 0x8e44ad,
             backgroundColor: 0x0f172a
-        });
-
-        window.addEventListener('resize', () => {
-            if (vantaEffect) {
-                vantaEffect.resize();
-            }
-        });
-
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                if (vantaEffect) {
-                    vantaEffect.resize();
-                }
-            }, 300);
         });
     </script>
 </body>
