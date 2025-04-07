@@ -139,8 +139,9 @@
                 </div>
 
               <!-- Download CV Button -->
-                <a href="{{ url('/download-cv') }}"
-                class="px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button animate__animated animate__fadeInUp animate__delay-3s">
+              <a href="{{ url('/download-cv') }}"
+                class="invisible animate__animated animate__fadeInUp animate__delay-1s px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button"
+                style="animation-fill-mode: forwards;">
                 Download CV
                 </a>
 
