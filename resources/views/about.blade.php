@@ -64,7 +64,7 @@
             border: 2px solid #9333ea;
             box-shadow: 0 0 15px #9333ea80;
             transition: transform 0.4s ease, box-shadow 0.4s ease;
-            min-height: 400px; /* ensures tall enough on desktop */
+            min-height: 400px;
         }
 
         .profile-image:hover {
@@ -80,16 +80,27 @@
             transition: transform 0.4s ease;
         }
 
-        @media (max-width: 767px) {
-            .profile-image img {
-                height: auto;
-                object-fit: contain;
-                object-position: center;
-            }
-        }
-
         .profile-image:hover img {
             transform: scale(1.02);
+        }
+
+        @media (max-width: 767px) {
+            .profile-image {
+                min-height: auto;
+                max-height: 450px;
+            }
+
+            .profile-image img {
+                height: auto;
+                max-height: 100%;
+                object-fit: contain;
+                object-position: center;
+                padding: 1rem;
+            }
+
+            .about-wrapper {
+                padding: 1rem 1rem 2rem;
+            }
         }
 
         .about-text-content {
@@ -184,6 +195,7 @@
 
         <!-- About Section -->
         <section class="about-wrapper flex-grow">
+
             <!-- Left: Image -->
             <div class="profile-image animate__animated animate__fadeInLeft">
                 <img src="{{ asset('images/aboutphoto.png') }}" alt="Adit Mugdha Das">
@@ -214,10 +226,9 @@
                 </p>
             </div>
         </section>
-
     </div>
 
-    <!-- Vanta.js Init -->
+    <!-- Vanta.js Initialization -->
     <script>
         let vantaEffect = VANTA.NET({
             el: "#vanta-bg",
