@@ -1,49 +1,34 @@
-<h1 align="center">🌟 Adit Mugdha Das — Portfolio 🌟</h1>
+# 🌐 Adit Mugdha Das — Portfolio
 
-<p align="center">
-  <strong>🚀 Aspiring AI Researcher | 👨‍💻 CSE Student @ KUET | 💡 Problem Solver | 🔍 Explorer</strong><br>
-  <em>Showcasing my journey, projects, and achievements.</em>
-</p>
+Hi! I'm **Adit Mugdha Das**, a passionate CS undergrad at **KUET** (Graduating 2027), with a deep interest in **Machine Learning**, **Deep Learning**, and creative problem solving. This portfolio showcases my projects, achievements, skills, and journey so far.
 
-<p align="center">
-  <a href="https://your-live-portfolio-link.com" target="_blank">
-    🔗 Visit Live Portfolio
-  </a>
-</p>
+🔗 **Live Site**: [https://adit-mugdha-das.onrender.com](https://adit-mugdha-das.onrender.com)
 
 ---
 
-## 📁 About This Repository
+##  Tech Stack
 
-This repository contains the source code of my personal developer portfolio built using:
-
-- **Laravel 10** (PHP Framework)
-- **Tailwind CSS** for styling
-- **Vite** for asset bundling
+- **Laravel 10** (PHP)
+- **Tailwind CSS**
+- **Vite**
 - **Blade Templates**
-- **AOS (Animate On Scroll)** & **Vanta.js** for effects
-
-The portfolio showcases my:
-- 💼 Projects
-- 🛠 Skills
-- 📜 Certifications
-- 🏆 Honors & Awards
-- 🎓 Education
-- 📬 Contact
+- **AOS**, **Vanta.js**
 
 ---
 
-## 🖥 Preview
+## Pages & Features
 
-![Portfolio Preview](assets/preview.png)
-
-> ✨ For best experience, view in desktop mode.
+-  **About** – A quick intro & CV download  
+-  **Skills** – Tech & tools I work with  
+-  **Projects** – Real-world projects with details  
+-  **Certifications** – Verified learning & growth  
+-  **Honors & Awards** – Recognitions & achievements  
+-  **Education** – Academic background  
+-  **Contact** – Get in touch with me  
 
 ---
 
-## 🛠️ Setup Instructions
-
-To run this project locally:
+##  Local Setup
 
 ```bash
 git clone https://github.com/aditmugdha/your-portfolio-repo.git
