@@ -88,7 +88,10 @@
                         <h2 class="text-2xl sm:text-3xl font-bold text-fuchsia-400 mb-1">Khulna University of Engineering and Technology</h2>
                         <p class="text-white text-base sm:text-xl">B.Sc in Computer Science</p>
                         <p class="text-white/70 text-base sm:text-xl">Duration: Jan 2023 – Present</p>
-                        <p class="text-fuchsia-400 text-base sm:text-xl font-semibold">CGPA: 3.64</p>
+                        <p class="text-fuchsia-400 text-base sm:text-xl font-semibold">
+                        CGPA: 3.64 <span class="text-white/70 font-normal">(from first three semesters)</span>
+                    </p>
+
                     </div>
                 </div>
             </div>
