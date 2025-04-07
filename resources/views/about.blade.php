@@ -162,8 +162,8 @@
         </nav>
 
         <!-- About Section with Image + Text (Animated Separately) -->
-        <!--<section class="about-wrapper">-->
-        <section class="py-20 px-6 text-center">
+        <section class="about-wrapper">
+            
             <!-- Left: Image -->
             <div class="profile-image animate__animated animate__fadeInLeft">
                 <img src="{{ asset('images/aboutphoto.png') }}" alt="Adit Mugdha Das">
