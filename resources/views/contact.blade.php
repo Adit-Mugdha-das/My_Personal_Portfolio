@@ -96,6 +96,10 @@
         .delay-1000 {
             animation-delay: 1s;
         }
+        .neon-hover:hover {
+    box-shadow: 0 0 10px #c084fc, 0 0 20px #a855f7, 0 0 30px #9333ea;
+    transition: box-shadow 0.3s ease-in-out;
+}
 
 
 
@@ -169,8 +173,8 @@
               <!-- Download CV Button -->
                 <!-- Download CV Button -->
                 <div class="mt-6">
-                    <a href="{{ url('/download-cv') }}"
-                    class="submit-hover bg-fuchsia-500 hover:bg-fuchsia-600 text-white px-6 py-3 rounded shadow-md hover:shadow-lg transition-all w-full max-w-[200px] text-center animate-fadeInUp delay-1000 inline-block">
+                <a href="{{ url('/download-cv') }}"
+                    class="submit-hover neon-hover bg-fuchsia-500 hover:bg-fuchsia-600 text-white px-6 py-3 rounded shadow-md transition-all w-full max-w-[200px] text-center animate-fadeInUp delay-1000 inline-block">
                         Download CV
                     </a>
                 </div>
