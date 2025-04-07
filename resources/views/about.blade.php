@@ -73,10 +73,17 @@
 
         .profile-image img {
             width: 100%;
-            height: 100%;
+            height: auto;
             object-fit: cover;
             object-position: 40% center;
             transition: transform 0.4s ease;
+        }
+
+        @media (max-width: 767px) {
+            .profile-image img {
+                object-fit: contain;
+                max-height: 100%;
+            }
         }
 
         .profile-image:hover img {
@@ -175,7 +182,6 @@
 
         <!-- About Section with Image + Text (Animated Separately) -->
         <section class="about-wrapper flex-grow">
-            
             <!-- Left: Image -->
             <div class="profile-image animate__animated animate__fadeInLeft">
                 <img src="{{ asset('images/aboutphoto.png') }}" alt="Adit Mugdha Das">
