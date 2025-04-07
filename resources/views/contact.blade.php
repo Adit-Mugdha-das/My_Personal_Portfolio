@@ -87,11 +87,15 @@
         opacity: 1;
         transform: translateY(0);
     }
-}
+        }
 
-.animate-fadeInUp {
-    animation: fadeInUp 0.7s ease forwards;
-}
+        .animate-fadeInUp {
+            animation: fadeInUp 0.7s ease forwards;
+        }
+
+        .delay-1000 {
+            animation-delay: 1s;
+        }
 
 
 
@@ -163,12 +167,14 @@
 
               <!-- Download CV Button -->
               <!-- Download CV Button -->
+                <!-- Download CV Button -->
                 <div class="mt-6">
                     <a href="{{ url('/download-cv') }}"
-                    class="px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button transition-all duration-700 delay-1000 inline-block animate-fadeInUp">
-                    Download CV
+                    class="submit-hover bg-fuchsia-500 hover:bg-fuchsia-600 text-white px-6 py-3 rounded shadow-md hover:shadow-lg transition-all w-full max-w-[200px] text-center animate-fadeInUp delay-1000 inline-block">
+                        Download CV
                     </a>
                 </div>
+
 
 
             </div>
