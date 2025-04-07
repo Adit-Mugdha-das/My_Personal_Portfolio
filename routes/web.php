@@ -39,7 +39,10 @@ Route::get('/contact', function () {
 Route::get('/test', function () {
     return view('test');
 });
-
+Route::get('/download-cv', function () {
+    $path = public_path('documents/Mugdha_CV.pdf');
+    return response()->download($path, 'Mugdha_CV.pdf');
+});
 
 // Contact Form Submit
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');

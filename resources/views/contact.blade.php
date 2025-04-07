@@ -137,11 +137,12 @@
                     <a href="https://www.facebook.com/aditmugdha.das.3" target="_blank" class="text-fuchsia-400 icon-hover-facebook social-icon transition duration-300"><i class="fab fa-facebook"></i></a>
                 </div>
 
-                <!-- Download CV -->
-                <a href="{{ asset('documents/Mugdha_CV.pdf') }}" download 
-                   class="submit-hover social-icon inline-block mt-6 bg-fuchsia-600 hover:bg-fuchsia-700 text-white px-5 py-2 rounded shadow-md transition">
-                    <i class="fas fa-download mr-2"></i>Download CV
-                </a>
+              <!-- Download CV Button -->
+<a href="{{ url('/download-cv') }}"
+   class="px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button animate__animated animate__fadeInUp animate__delay-3s">
+   Download CV
+</a>
+
             </div>
 
             <!-- Right Column (Form) -->

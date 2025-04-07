@@ -102,10 +102,11 @@
             </p>
 
             <!-- Download CV Button -->
-            <a href="{{ asset('documents/Mugdha_CV.pdf') }}" download
-               class="px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button animate__animated animate__fadeInUp animate__delay-3s">
-                Download CV
-            </a>
+<a href="{{ url('/download-cv') }}"
+   class="px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button animate__animated animate__fadeInUp animate__delay-3s">
+   Download CV
+</a>
+
 
             <!-- Social Icons -->
             <div class="flex flex-wrap justify-center gap-6 sm:gap-8 mt-6 text-white text-3xl sm:text-4xl animate__animated animate__fadeInUp animate__delay-4s">
