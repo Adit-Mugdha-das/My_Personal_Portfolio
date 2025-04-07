@@ -72,6 +72,13 @@
             box-shadow: 0 0 12px rgba(192, 132, 252, 0.6);
             transition: all 0.3s ease;
         }
+        /* Make opacity-0 elements visible after Animate.css animations */
+        .opacity-0.animate__animated {
+            animation-fill-mode: forwards !important;
+            opacity: 1 !important;
+        }
+
+
     </style>
 </head>
 <body class="text-white">
@@ -139,11 +146,13 @@
                 </div>
 
               <!-- Download CV Button -->
-              <a href="{{ url('/download-cv') }}"
-                class="invisible animate__animated animate__fadeInUp animate__delay-1s px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button"
+              <!-- Download CV Button -->
+                <a href="{{ url('/download-cv') }}"
+                class="opacity-0 animate__animated animate__fadeInUp animate__delay-1s px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button"
                 style="animation-fill-mode: forwards;">
                 Download CV
                 </a>
+
 
             </div>
 
