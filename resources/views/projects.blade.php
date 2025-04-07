@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <title>Projects - Mugdha</title>
-  <!--@vite('resources/css/app.css')-->
-  <link rel="stylesheet" href="{{ secure_asset('build/assets/app-Ct2FSlyM.css') }}">
-<script src="{{ secure_asset('build/assets/app-eMHK6VFw.js') }}" defer></script>
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+ <!-- <link rel="stylesheet" href="{{ secure_asset('build/assets/app-Ct2FSlyM.css') }}">
+<script src="{{ secure_asset('build/assets/app-eMHK6VFw.js') }}" defer></script>-->
 
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
