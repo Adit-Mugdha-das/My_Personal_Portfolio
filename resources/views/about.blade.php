@@ -197,9 +197,12 @@
         <section class="about-wrapper flex-grow">
 
             <!-- Left: Image -->
-            <div class="profile-image animate__animated animate__fadeInLeft">
-                <img src="{{ asset('images/aboutphoto.png') }}" alt="Adit Mugdha Das">
-            </div>
+            <!-- Left: Image -->
+                <div class="profile-image animate__animated animate__fadeInLeft">
+                    <img src="{{ asset('images/aboutphoto.png') }}" 
+                        alt="Adit Mugdha Das"
+                        class="w-64 md:w-80 lg:w-96 xl:w-[28rem] h-auto mx-auto rounded-xl shadow-xl" />
+                </div>
 
             <!-- Right: Text -->
             <div class="about-text-content animate__animated animate__fadeInRight animate__delay-1s">
