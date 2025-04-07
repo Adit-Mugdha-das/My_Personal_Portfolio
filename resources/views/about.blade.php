@@ -23,6 +23,15 @@
             margin: 0;
             padding: 0;
             background-color: #0f172a;
+            overflow-x: hidden;
+        }
+
+        #vanta-bg {
+            min-height: 100vh;
+            width: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
         }
 
         .neon-glow {
@@ -128,7 +137,7 @@
     </style>
 </head>
 <body class="text-white overflow-x-hidden bg-[#0f172a]">
-    <div id="vanta-bg" class="min-h-screen w-full flex flex-col" x-data="{ navOpen: false }">
+    <div id="vanta-bg" x-data="{ navOpen: false }">
 
         <!-- Navbar -->
         <nav class="bg-black/50 backdrop-blur-md text-white px-6 py-4 flex justify-between items-center shadow-md rounded-b-xl">
@@ -202,7 +211,7 @@
 
     <!-- Vanta.js Initialization -->
     <script>
-        VANTA.NET({
+        let vantaEffect = VANTA.NET({
             el: "#vanta-bg",
             mouseControls: true,
             touchControls: true,
@@ -213,6 +222,20 @@
             scaleMobile: 1.00,
             color: 0x8e44ad,
             backgroundColor: 0x0f172a
+        });
+
+        window.addEventListener('resize', () => {
+            if (vantaEffect) {
+                vantaEffect.resize();
+            }
+        });
+
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                if (vantaEffect) {
+                    vantaEffect.resize();
+                }
+            }, 300);
         });
     </script>
 </body>
