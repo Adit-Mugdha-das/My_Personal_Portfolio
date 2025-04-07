@@ -5,10 +5,6 @@
     <title>About Me | Adit Mugdha Das</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-   <!-- <link rel="stylesheet" href="{{ secure_asset('build/assets/app-Ct2FSlyM.css') }}">-->
-<!--<script src="{{ secure_asset('build/assets/app-eMHK6VFw.js') }}" defer></script>-->
-
-
     <!-- Font Awesome for social icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
@@ -22,6 +18,13 @@
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #0f172a;
+        }
+
         .neon-glow {
             text-shadow: 0 0 5px #c084fc, 0 0 10px #c084fc, 0 0 20px #c084fc, 0 0 40px #a855f7, 0 0 80px #9333ea;
         }
@@ -124,8 +127,8 @@
         }
     </style>
 </head>
-<body class="text-white overflow-x-hidden">
-    <div id="vanta-bg" class="min-h-screen w-full relative" x-data="{ navOpen: false }">
+<body class="text-white overflow-x-hidden bg-[#0f172a]">
+    <div id="vanta-bg" class="min-h-screen w-full flex flex-col" x-data="{ navOpen: false }">
 
         <!-- Navbar -->
         <nav class="bg-black/50 backdrop-blur-md text-white px-6 py-4 flex justify-between items-center shadow-md rounded-b-xl">
@@ -162,7 +165,7 @@
         </nav>
 
         <!-- About Section with Image + Text (Animated Separately) -->
-        <section class="about-wrapper">
+        <section class="about-wrapper flex-grow">
             
             <!-- Left: Image -->
             <div class="profile-image animate__animated animate__fadeInLeft">
