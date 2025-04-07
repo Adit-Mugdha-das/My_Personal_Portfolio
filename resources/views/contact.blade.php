@@ -139,10 +139,10 @@
                 </div>
 
               <!-- Download CV Button -->
-<a href="{{ url('/download-cv') }}"
-   class="px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button animate__animated animate__fadeInUp animate__delay-3s">
-   Download CV
-</a>
+                <a href="{{ url('/download-cv') }}"
+                class="px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button animate__animated animate__fadeInUp animate__delay-3s">
+                Download CV
+                </a>
 
             </div>
 
