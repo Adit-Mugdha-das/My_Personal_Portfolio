@@ -64,6 +64,7 @@
             border: 2px solid #9333ea;
             box-shadow: 0 0 15px #9333ea80;
             transition: transform 0.4s ease, box-shadow 0.4s ease;
+            min-height: 400px; /* ensures tall enough on desktop */
         }
 
         .profile-image:hover {
@@ -73,7 +74,7 @@
 
         .profile-image img {
             width: 100%;
-            height: auto;
+            height: 100%;
             object-fit: cover;
             object-position: 40% center;
             transition: transform 0.4s ease;
@@ -81,8 +82,9 @@
 
         @media (max-width: 767px) {
             .profile-image img {
+                height: auto;
                 object-fit: contain;
-                max-height: 100%;
+                object-position: center;
             }
         }
 
@@ -180,7 +182,7 @@
             </ul>
         </nav>
 
-        <!-- About Section with Image + Text (Animated Separately) -->
+        <!-- About Section -->
         <section class="about-wrapper flex-grow">
             <!-- Left: Image -->
             <div class="profile-image animate__animated animate__fadeInLeft">
@@ -215,7 +217,7 @@
 
     </div>
 
-    <!-- Vanta.js Initialization -->
+    <!-- Vanta.js Init -->
     <script>
         let vantaEffect = VANTA.NET({
             el: "#vanta-bg",
