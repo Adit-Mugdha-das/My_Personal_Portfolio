@@ -78,6 +78,22 @@
             opacity: 1 !important;
         }
 
+        @keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeInUp {
+    animation: fadeInUp 0.7s ease forwards;
+}
+
+
 
     </style>
 </head>
@@ -147,11 +163,12 @@
 
               <!-- Download CV Button -->
               <!-- Download CV Button -->
-                <a href="{{ url('/download-cv') }}"
-                class="opacity-0 animate__animated animate__fadeInUp animate__delay-1s px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button"
-                style="animation-fill-mode: forwards;">
-                Download CV
-                </a>
+                <div class="mt-6">
+                    <a href="{{ url('/download-cv') }}"
+                    class="px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button transition-all duration-700 delay-1000 inline-block animate-fadeInUp">
+                    Download CV
+                    </a>
+                </div>
 
 
             </div>
