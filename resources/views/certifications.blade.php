@@ -80,10 +80,21 @@
         $certs = [
 
           [
+  'title' => 'Structuring Machine Learning Projects',
+  'issuer' => 'DeepLearning.AI',
+  'date' => 'Apr 2025',
+  'id' => 'HRQIYLEA94R1',
+  'skills' => 'Machine Learning Project Structure, ML Strategy, ML Deployment Readiness',
+  'image' => 'certificates/structuring_ml_projects.png',
+  'link' => 'https://coursera.org/verify/HRQIYLEA94R1'
+],
+
+
+          [
   'title' => 'Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization',
   'issuer' => 'DeepLearning.AI',
   'date' => 'Apr 2025',
-  'id' => 'TEXNNEV25JGL',
+  'id' => 'TEKNANEX2SGI',
   'skills' => 'Hyperparameter Tuning, Regularization, Optimization, Deep Learning',
   'image' => 'certificates/improving_hyperparameter.png',
   'link' => 'https://coursera.org/verify/TEKNANEX2SGI'
