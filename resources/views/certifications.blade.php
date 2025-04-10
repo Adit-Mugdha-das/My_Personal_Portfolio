@@ -84,7 +84,7 @@
   'issuer' => 'DeepLearning.AI',
   'date' => 'Apr 2025',
   'id' => 'HRQIYLEA94R1',
-  'skills' => 'Designing ML Pipelines for Practical Deployment ,  Diagnosing ML Model Errors, Transfer Learning Strategy, Multi-Task Learning Strategy, ',
+  'skills' => 'Designing ML Pipelines for Practical Deployment ,  Diagnosing ML Model Errors, Transfer Learning Strategy, Multi-Task Learning Strategy ',
   'image' => 'certificates/structuring_ml_projects.png',
   'link' => 'https://coursera.org/verify/HRQIYLEA94R1'
 ],
