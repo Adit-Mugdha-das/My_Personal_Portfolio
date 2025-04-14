@@ -144,7 +144,7 @@
           <li>Regression & Classification Algorithms</li>
           <li>NLP, Computer Vision</li>
           <li>Classic CNNs, LeNet-5, AlexNet,</li>
-          <li>ResNets, InceptionNet, MobileNet, EfficientNet</li>
+          <li>ResNets, InceptionNet, MobileNet</li>
           <li>Hyperparameter Tuning</li>
           <li>Regularization</li>
           <li>Optimization</li>
