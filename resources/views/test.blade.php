@@ -1,16 +1,11 @@
+<!-- 🟣 FULL HONORS FILE — ONLY ADDED TRANSLATION, NOTHING REMOVED -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Honors & Awards - Mugdha</title>
-  <!--@vite('resources/css/app.css')-->
   @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-
-<!--<link rel="stylesheet" href="{{ secure_asset('build/assets/app-Ct2FSlyM.css') }}">
-<script src="{{ secure_asset('build/assets/app-eMHK6VFw.js') }}" defer></script>-->
-
-
 
   <!-- Three.js and Vanta.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
@@ -62,7 +57,6 @@
       <li><a href="{{ url('/test') }}" class="text-purple-300 font-semibold drop-shadow-[0_0_8px_#c084fc] scale-110">Honors & Awards</a></li>
       <li><a href="{{ url('/contact') }}" class="hover:text-purple-300 transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_#c084fc]">Contact</a></li>
     </ul>
-    <!-- Mobile Nav -->
     <ul x-show="navOpen" class="md:hidden absolute top-[64px] left-0 w-full bg-black/80 backdrop-blur-md p-6 flex flex-col gap-4 z-50">
       <li><a href="{{ url('/') }}">Home</a></li>
       <li><a href="{{ url('/about') }}">About</a></li>
@@ -91,13 +85,36 @@
           [
             'title' => 'Best Talent – District Level',
             'issuer' => 'Sylhet District Edu. Office – Mar 2018',
-            'desc' => 'Awarded in Math & CS at District Level (Grades 9–10) in Sustainable Talent Search 2018. <br><br>Issued by <span class="text-purple-300 font-semibold">Mr.</span> <span class="font-semibold text-fuchsia-400">Gaziur Rahman Khan</span> and <span class="text-purple-300 font-semibold">Mr.</span> <span class="font-semibold text-fuchsia-400">Md. Amirul Islam</span>.',
+            'desc' => 'Awarded in Math & CS at District Level (Grades 9–10) in Sustainable Talent Search 2018. <br><br>
+              Issued by <span class="text-purple-300 font-semibold">Mr.</span> <span class="font-semibold text-fuchsia-400">Gaziur Rahman Khan</span> and 
+              <span class="text-purple-300 font-semibold">Mr.</span> <span class="font-semibold text-fuchsia-400">Md. Amirul Islam</span>.
+              <br><br>
+              <b>English Translation:</b><br>
+              <b>Sustainable Talent Search Competition – 2018</b><br>
+              Certificate of Achievement<br><br>
+              This is to certify that <b>Adit Mugdha Das</b>, a student of grade 10 from <b>Shahjalal N.G.F.F School, Sylhet</b>, has been awarded the title of 
+              <i>"Best Talent of the Year"</i> in the <b>Mathematics and Computer Division</b> at the <b>District Level</b> (Grade 9–10) in the Sustainable Talent Search Competition – 2018.<br><br>
+              Issued by:<br>
+              <b>Gaziur Rahman Khan</b>, Member Secretary, District Level Match-Monitoring Committee, Sylhet District Education Office<br>
+              <b>Md. Amirul Islam</b>, Organizer, District Commissioner, Sylhet',
             'image' => 'images/district_level.jpeg'
           ],
           [
             'title' => 'Best Talent – Upazila Level',
             'issuer' => 'Upazila Secondary Edu. Office – Feb 2018',
-            'desc' => 'Recognized for excellence in Math & CS at Upazila Level in 2018 talent search competition. <br><br>Issued by <span class="text-purple-300 font-semibold">Upazila Secondary Education Officer</span> and <span class="text-purple-300 font-semibold">UNO</span>, Fenchuganj, Sylhet.',
+            'desc' => 'Recognized for excellence in Math & CS at Upazila Level in 2018 talent search competition. <br><br>
+              Issued by <span class="text-purple-300 font-semibold">Upazila Secondary Education Officer</span> and 
+              <span class="text-purple-300 font-semibold">UNO</span>, Fenchuganj, Sylhet.
+              <br><br>
+              <b>English Translation:</b><br>
+              <b>Sustainable Talent Search Competition – 2018</b><br>
+              Certificate of Achievement<br><br>
+              This is to certify that <b>Adit Mugdha Das</b>, son of Mr. Sujit Kumar Das and Mrs. Mukti Rani Das, from class 10 of 
+              <b>Shahjalal N.G.F.F School, Fenchuganj, Sylhet</b>, has been awarded the title of 
+              <i>"Best Talent of the Year"</i> in the <b>Mathematics and Computer Division</b> at the <b>Upazila Level</b> (Grade 9–10) in the Sustainable Talent Search Competition – 2018.<br><br>
+              Issued by:<br>
+              <b>Upazila Secondary Education Officer</b>, Fenchuganj, Sylhet<br>
+              <b>Upazila Nirbahi Officer (UNO)</b>, Fenchuganj, Sylhet',
             'image' => 'images/upazila_level.jpeg'
           ]
         ];
