@@ -44,7 +44,23 @@
   </style>
 </head>
 <body class="text-white overflow-x-hidden">
-<div id="vanta-bg" class="min-h-screen" x-data="{ modalOpen: false, modalImage: '', navOpen: false }">
+<!-- Put this inside <div id="vanta-bg" ...> -->
+<div id="vanta-bg" class="min-h-screen" x-data="{
+  imageModalOpen: false,
+  translationModalOpen: false,
+  modalImage: '',
+  modalContent: '',
+  openImageModal(image) {
+    this.modalImage = image;
+    this.imageModalOpen = true;
+  },
+  openTranslationModal(image, contentId) {
+    this.modalImage = image;
+    this.modalContent = contentId;
+    this.translationModalOpen = true;
+  }
+}">
+
 
   <!-- Navbar -->
   <nav class="bg-black/50 backdrop-blur-md text-white px-6 py-4 flex justify-between items-center shadow-md rounded-b-xl">
@@ -76,16 +92,8 @@
   </nav>
 
 <!-- Section Title -->
-<section class="text-center py-16 px-4 animate__animated animate__fadeIn" x-data="{
-  modalOpen: false,
-  modalImage: '',
-  modalContent: '',
-  openTranslation(image, contentId) {
-    this.modalOpen = true;
-    this.modalImage = image;
-    this.modalContent = contentId;
-  }
-}">
+<section class="text-center py-16 px-4 animate__animated animate__fadeIn">
+
   <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 text-white drop-shadow-[0_0_20px_#c084fc]">Honors & Awards</h1>
 
   <div class="grid gap-8 max-w-6xl mx-auto text-left sm:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(360px,1fr))] text-lg">
@@ -120,9 +128,9 @@
         data-aos-duration="800"
         data-aos-once="true"
       >
-        <img src="{{ asset($honor['image']) }}" alt="{{ $honor['title'] }}"
-             class="rounded-lg mb-4 w-full cursor-zoom-in transition duration-300 hover:shadow-[0_0_25px_#c084fc] hover-border-purple"
-             @click="modalImage = '{{ asset($honor['image']) }}'; modalOpen = true">
+      <img src="{{ asset($honor['image']) }}" alt="{{ $honor['title'] }}"
+  class="rounded-lg mb-4 w-full cursor-zoom-in transition duration-300 hover:shadow-[0_0_25px_#c084fc] hover-border-purple"
+  @click="openImageModal('{{ asset($honor['image']) }}')">
 
         <h2 class="text-2xl font-bold text-fuchsia-300 mb-2">{{ $honor['title'] }}</h2>
         <p class="text-base text-purple-200 font-semibold mb-2">{{ $honor['issuer'] }}</p>
@@ -133,10 +141,11 @@
           <a href="{{ asset($honor['image']) }}" download class="text-fuchsia-400 underline hover:scale-105 hover:drop-shadow-[0_0_8px_#c084fc] transition-transform">Download</a>
 
           @if ($index === 1 || $index === 2)
-            <button @click="openTranslation('{{ asset($honor['image']) }}', 'translation{{ $index }}')"
-            class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_8px_#c084fc] transition-transform focus:outline-none">
-              Translation
-            </button>
+          <button @click="openTranslationModal('{{ asset($honor['image']) }}', 'translation{{ $index }}')"
+  class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_8px_#c084fc] transition-transform focus:outline-none">
+  Translation
+</button>
+
           @endif
         </div>
 
@@ -169,14 +178,15 @@
 
 
 <!-- Modal: Simple image zoom modal -->
-<div x-show="modalOpen" x-transition class="fixed inset-0 z-50 flex items-center justify-center">
-  <div class="absolute inset-0 bg-black/80" @click="modalOpen = false"></div>
+<div x-show="imageModalOpen" x-transition class="fixed inset-0 z-50 flex items-center justify-center">
+  <div class="absolute inset-0 bg-black/80" @click="imageModalOpen = false"></div>
   <img :src="modalImage" class="relative max-w-full max-h-[90vh] rounded-lg shadow-lg border-4 border-fuchsia-400 z-10">
 </div>
 
+
 <!-- Modal: Side-by-side translation modal -->
-<div x-show="modalOpen && modalImage !== '' && modalContent !== ''" x-transition class="fixed inset-0 z-50 flex items-center justify-center">
-  <div class="absolute inset-0 bg-black/80" @click="modalOpen = false"></div>
+<div x-show="translationModalOpen && modalImage !== '' && modalContent !== ''" x-transition class="fixed inset-0 z-50 flex items-center justify-center">
+  <div class="absolute inset-0 bg-black/80" @click="translationModalOpen = false"></div>
 
   <div class="relative bg-black/90 border border-fuchsia-400 max-w-6xl w-[90%] max-h-[90vh] rounded-xl shadow-lg z-10 flex flex-col md:flex-row overflow-hidden">
     
@@ -191,6 +201,7 @@
     </div>
   </div>
 </div>
+
 
 
 <!-- Scripts -->
