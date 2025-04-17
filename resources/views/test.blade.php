@@ -136,7 +136,7 @@
         </div>
 
         <!-- Hidden Translation Content -->
-        <div x-show="false" id="translation{{ $index }}">
+        <div style="display:none" id="translation{{ $index }}">
           @if ($index === 1)
             <div class="text-sm space-y-2 text-gray-200 p-4 leading-relaxed">
               <p class="font-bold text-fuchsia-300 text-base">Sustainable Talent Search Competition – 2018</p>
