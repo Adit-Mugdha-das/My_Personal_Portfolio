@@ -5,8 +5,8 @@
     <title>Mugdha's Portfolio</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-  <!--  <link rel="stylesheet" href="{{ secure_asset('build/assets/app-Ct2FSlyM.css') }}">
-<script src="{{ secure_asset('build/assets/app-eMHK6VFw.js') }}" defer></script>-->
+    <!--  <link rel="stylesheet" href="{{ secure_asset('build/assets/app-Ct2FSlyM.css') }}">
+    <script src="{{ secure_asset('build/assets/app-eMHK6VFw.js') }}" defer></script>-->
 
     <!-- Font Awesome for social icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -41,6 +41,12 @@
     </style>
 </head>
 <body class="text-white overflow-x-hidden">
+
+    <!-- 🔄 Preloader -->
+    <div id="preloader" class="fixed inset-0 z-[9999] bg-black flex items-center justify-center">
+        <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-fuchsia-500 border-solid border-t-transparent"></div>
+    </div>
+
     <div id="vanta-bg" class="min-h-screen w-full relative" x-data="{ modalOpen: false, modalImage: '', navOpen: false }">
 
         <!-- Navbar -->
@@ -55,14 +61,12 @@
 
             <!-- Nav Links -->
             <ul class="hidden md:flex gap-6 text-sm md:text-base">
-            <li><a href="{{ url('/') }}" class="text-purple-300 font-semibold drop-shadow-[0_0_8px_#c084fc] scale-110">Home</a></li>
-
+                <li><a href="{{ url('/') }}" class="text-purple-300 font-semibold drop-shadow-[0_0_8px_#c084fc] scale-110">Home</a></li>
                 <li><a href="{{ url('/about') }}" class="hover:text-purple-300 transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_#c084fc]">About</a></li>
                 <li><a href="{{ url('/education') }}" class="hover:text-purple-300 transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_#c084fc]">Education</a></li>
                 <li><a href="{{ url('/skills') }}" class="hover:text-purple-300 transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_#c084fc]">Skills</a></li>
                 <li><a href="{{ url('/projects') }}" class="hover:text-purple-300 transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_#c084fc]">Projects</a></li>
                 <li><a href="{{ url('/certifications') }}" class="hover:text-purple-300 transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_#c084fc]">Certifications</a></li>
-
                 <li><a href="{{ url('/test') }}" class="hover:text-purple-300 transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_#c084fc]">Honors & Awards</a></li>
                 <li><a href="{{ url('/contact') }}" class="hover:text-purple-300 transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_#c084fc]">Contact</a></li>
             </ul>
@@ -75,7 +79,6 @@
                 <li><a href="{{ url('/skills') }}">Skills</a></li>
                 <li><a href="{{ url('/projects') }}">Projects</a></li>
                 <li><a href="{{ url('/certifications') }}">Certifications</a></li>
-
                 <li><a href="{{ url('/test') }}">Honors & Awards</a></li>
                 <li><a href="{{ url('/contact') }}">Contact</a></li>
             </ul>
@@ -83,17 +86,14 @@
 
         <!-- Hero Section -->
         <section class="flex flex-col items-center justify-center text-center py-16 px-4 sm:px-6 md:px-10 lg:px-20">
-            <!-- Profile Image -->
             <img src="{{ asset('images/profile.jpeg') }}" alt="Mugdha"
                 class="w-60 h-60 sm:w-72 sm:h-72 md:w-80 md:h-80 mb-6 object-cover border-4 border-[#d8b4fe] drop-shadow-[0_0_10px_#d8b4fe] shadow-xl transition-transform duration-300 hover:scale-105 animate__animated animate__fadeInDown cursor-zoom-in"
                 @click="modalImage = '{{ asset('images/profile.jpeg') }}'; modalOpen = true" />
 
-            <!-- Intro Text -->
             <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 tracking-wide neon-glow animate__animated animate__fadeInUp animate__delay-1s">
                 Hello, I'm Mugdha
             </h1>
 
-            <!-- Description -->
             <p class="text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mb-6 drop-shadow leading-relaxed animate__animated animate__fadeInUp animate__delay-2s">
                 I'm a 3rd-year CSE student at <span class="text-yellow-200 font-medium">KUET</span>, driven by curiosity in 
                 <span class="text-pink-200 font-medium">AI</span>, 
@@ -102,14 +102,11 @@
                 I thrive on solving real-world problems and crafting unique, innovative tech with clean, elegant code.
             </p>
 
-            <!-- Download CV Button -->
-<a href="{{ url('/download-cv') }}"
-   class="px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button animate__animated animate__fadeInUp animate__delay-3s">
-   Download CV
-</a>
+            <a href="{{ url('/download-cv') }}"
+               class="px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button animate__animated animate__fadeInUp animate__delay-3s">
+               Download CV
+            </a>
 
-
-            <!-- Social Icons -->
             <div class="flex flex-wrap justify-center gap-6 sm:gap-8 mt-6 text-white text-3xl sm:text-4xl animate__animated animate__fadeInUp animate__delay-4s">
                 <a href="https://www.linkedin.com/in/adit-mugdha-das-0a6723314/" target="_blank"
                    class="hover:text-blue-400 hover:drop-shadow-[0_0_8px_#3b82f6] transition-transform transform duration-300 hover:scale-110" title="LinkedIn">
@@ -128,10 +125,9 @@
                     <i class="fab fa-whatsapp"></i>
                 </a>
                 <a href="https://leetcode.com/u/Mugdha_118/" target="_blank"
-   class="hover:text-yellow-400 hover:drop-shadow-[0_0_8px_#facc15] transition-transform transform duration-300 hover:scale-110" title="LeetCode">
-    <i class="fas fa-code"></i>
-</a>
-
+                   class="hover:text-yellow-400 hover:drop-shadow-[0_0_8px_#facc15] transition-transform transform duration-300 hover:scale-110" title="LeetCode">
+                    <i class="fas fa-code"></i>
+                </a>
                 <a href="https://www.facebook.com/aditmugdha.das.3" target="_blank"
                    class="hover:text-blue-500 hover:drop-shadow-[0_0_8px_#3b82f6] transition-transform transform duration-300 hover:scale-110" title="Facebook">
                     <i class="fab fa-facebook"></i>
@@ -161,5 +157,20 @@
             });
         </script>
     </div>
+
+    <!-- 🧠 Loader fade-out script -->
+    <script>
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.style.transition = 'opacity 0.5s ease';
+                preloader.style.opacity = 0;
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 500);
+            }
+        });
+    </script>
+
 </body>
 </html>
