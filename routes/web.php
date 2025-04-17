@@ -43,6 +43,9 @@ Route::get('/download-cv', function () {
     $path = public_path('documents/Mugdha_CV.pdf');
     return response()->download($path, 'Mugdha_CV.pdf');
 });
+Route::get('/ping', function () {
+    return response('pong', 200);
+});
 
 // Contact Form Submit
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
