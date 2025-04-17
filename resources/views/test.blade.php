@@ -76,7 +76,7 @@
   </nav>
 
 <!-- Section Title -->
-<section class="text-center py-16 px-4 animate__animated animate__fadeIn">
+<section class="text-center py-16 px-4 animate__animated animate__fadeIn" x-data="{ modalOpen: false, modalImage: '', modalContent: '' }">
   <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 text-white drop-shadow-[0_0_20px_#c084fc]">Honors & Awards</h1>
 
   <div class="grid gap-8 max-w-6xl mx-auto text-left sm:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(360px,1fr))] text-lg">
@@ -127,7 +127,7 @@
             <button @click="
               modalOpen = true;
               modalImage = '{{ asset($honor['image']) }}';
-              modalContent = 'translation{{ $index }}';
+              modalContent = 'translation' + {{ $index }};
             "
             class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_8px_#c084fc] transition-transform focus:outline-none">
               Translation
@@ -159,6 +159,7 @@
     @endforeach
   </div>
 </section>
+
 
 
 
