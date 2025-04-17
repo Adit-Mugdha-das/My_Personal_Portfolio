@@ -127,7 +127,7 @@
             <button @click="
               modalOpen = true;
               modalImage = '{{ asset($honor['image']) }}';
-              modalContent = 'translation' + {{ $index }};
+              modalContent = 'translation{{ $index }}';
             "
             class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_8px_#c084fc] transition-transform focus:outline-none">
               Translation
@@ -159,6 +159,7 @@
     @endforeach
   </div>
 </section>
+
 
 
 <!-- Modal: Simple image zoom modal -->
