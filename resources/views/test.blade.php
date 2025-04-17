@@ -103,28 +103,55 @@
         ];
       @endphp
 
-      @foreach ($honors as $index => $honor)
-        <div class="bg-black/60 border border-fuchsia-400/20 rounded-xl p-6 shadow-lg transition-transform duration-1000 ease-in-out transform hover:scale-[1.03] hover:shadow-[0_0_20px_#c084fc]"
-             data-aos="{{ $index === 0 ? 'fade-left' : ($index === 1 ? 'fade-up' : 'fade-right') }}"
-             data-aos-delay="{{ $index * 300 }}"
-             data-aos-duration="800"
-             data-aos-once="true">
-          <img src="{{ asset($honor['image']) }}" alt="{{ $honor['title'] }}"
-               class="rounded-lg mb-4 w-full cursor-zoom-in transition duration-300 hover:shadow-[0_0_25px_#c084fc] hover-border-purple"
-               @click="modalImage = '{{ asset($honor['image']) }}'; modalOpen = true">
+@foreach ($honors as $index => $honor)
+  <div
+    class="bg-black/60 border border-fuchsia-400/20 rounded-xl p-6 shadow-lg transition-transform duration-1000 ease-in-out transform hover:scale-[1.03] hover:shadow-[0_0_20px_#c084fc]"
+    data-aos="{{ $index === 0 ? 'fade-left' : ($index === 1 ? 'fade-up' : 'fade-right') }}"
+    data-aos-delay="{{ $index * 300 }}"
+    data-aos-duration="800"
+    data-aos-once="true"
+    x-data="{ showTranslation{{ $index }}: false }"
+  >
+    <img src="{{ asset($honor['image']) }}" alt="{{ $honor['title'] }}"
+         class="rounded-lg mb-4 w-full cursor-zoom-in transition duration-300 hover:shadow-[0_0_25px_#c084fc] hover-border-purple"
+         @click="modalImage = '{{ asset($honor['image']) }}'; modalOpen = true">
 
-          <h2 class="text-2xl font-bold text-fuchsia-300 mb-2">{{ $honor['title'] }}</h2>
-          <p class="text-base text-purple-200 font-semibold mb-2">{{ $honor['issuer'] }}</p>
-          <p class="text-base text-gray-300 leading-relaxed">{!! $honor['desc'] !!}</p>
+    <h2 class="text-2xl font-bold text-fuchsia-300 mb-2">{{ $honor['title'] }}</h2>
+    <p class="text-base text-purple-200 font-semibold mb-2">{{ $honor['issuer'] }}</p>
+    <p class="text-base text-gray-300 leading-relaxed">{!! $honor['desc'] !!}</p>
 
-          <div class="mt-4 space-x-6 text-base font-medium">
-            <a href="{{ asset($honor['image']) }}" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_8px_#c084fc] transition-transform">View</a>
-            <a href="{{ asset($honor['image']) }}" download class="text-fuchsia-400 underline hover:scale-105 hover:drop-shadow-[0_0_8px_#c084fc] transition-transform">Download</a>
-          </div>
-        </div>
-      @endforeach
+    <div class="mt-4 space-x-6 text-base font-medium">
+      <a href="{{ asset($honor['image']) }}" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_8px_#c084fc] transition-transform">View</a>
+      <a href="{{ asset($honor['image']) }}" download class="text-fuchsia-400 underline hover:scale-105 hover:drop-shadow-[0_0_8px_#c084fc] transition-transform">Download</a>
+
+      @if ($index === 1 || $index === 2)
+        <button @click="showTranslation{{ $index }} = !showTranslation{{ $index }}"
+                class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_8px_#c084fc] transition-transform focus:outline-none">
+          Translation
+        </button>
+      @endif
     </div>
-  </section>
+
+    @if ($index === 1)
+      <div x-show="showTranslation1" x-transition class="mt-4 p-4 border border-purple-400/30 bg-black/40 rounded-lg text-sm text-gray-200 space-y-2">
+        <p class="font-bold text-fuchsia-300">Sustainable Talent Search Competition – 2018<br>Certificate of Achievement</p>
+        <p>This is to certify that Adit Mugdha Das, a student of grade 10 from Shahjalal N.G.F.F School, Sylhet, has been awarded the title of <strong>“Best Talent of the Year”</strong> in the Mathematics and Computer Division at the District Level (Grade 9–10) in the Sustainable Talent Search Competition – 2018.</p>
+        <p><strong>Issued by:</strong></p>
+        <p>Gaziur Rahman Khan,<br>Member Secretary,<br>District Level Match-Monitoring Committee,<br>Sustainable Talent Search Competition – 2018,<br>Sylhet District Education Office</p>
+        <p>Md. Amirul Islam,<br>Organizer,<br>District Level Match-Monitoring Committee,<br>District Commissioner, Sylhet</p>
+      </div>
+    @elseif ($index === 2)
+      <div x-show="showTranslation2" x-transition class="mt-4 p-4 border border-purple-400/30 bg-black/40 rounded-lg text-sm text-gray-200 space-y-2">
+        <p class="font-bold text-fuchsia-300">Sustainable Talent Search Competition – 2018<br>Certificate of Achievement</p>
+        <p>This is to certify that Adit Mugdha Das, son of Mr. Sujit Kumar Das and Mrs. Mukti Rani Das, from class 10 of Shahjalal N.G.F.F School, Fenchuganj, Sylhet, has been awarded the title of <strong>“Best Talent of the Year”</strong> in the Mathematics and Computer Division at the Upazila Level (Grade 9–10) in the Sustainable Talent Search Competition – 2018.</p>
+        <p><strong>Issued by:</strong></p>
+        <p>Upazila Secondary Education Officer,<br>Fenchuganj, Sylhet<br>Member Secretary,<br>Sustainable Talent Search Competition – 2018</p>
+        <p><strong>Organized by:</strong><br>Upazila Nirbahi Officer (UNO),<br>Fenchuganj, Sylhet</p>
+      </div>
+    @endif
+  </div>
+@endforeach
+
 
   <!-- Modal -->
   <div x-show="modalOpen" x-transition class="fixed inset-0 z-50 flex items-center justify-center">
