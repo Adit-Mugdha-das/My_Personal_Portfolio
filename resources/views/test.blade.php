@@ -75,90 +75,116 @@
     </ul>
   </nav>
 
-  <!-- Section Title -->
-  <section class="text-center py-16 px-4 animate__animated animate__fadeIn">
-    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 text-white drop-shadow-[0_0_20px_#c084fc]">Honors & Awards</h1>
+<!-- Section Title -->
+<section class="text-center py-16 px-4 animate__animated animate__fadeIn">
+  <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 text-white drop-shadow-[0_0_20px_#c084fc]">Honors & Awards</h1>
 
-    <div class="grid gap-8 max-w-6xl mx-auto text-left sm:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(360px,1fr))] text-lg">
-      @php
-        $honors = [
-          [
-            'title' => 'Best Project Award',
-            'issuer' => 'KUET – Dec 2024',
-            'desc' => 'Awarded for the desktop project "Mind Map" in the Advanced Programming Course. <br><br>Supervised and nominated by <span class="text-purple-300 font-semibold">Sir</span> <span class="font-semibold text-fuchsia-400">Kazi Saeed Alam</span> and <span class="text-purple-300 font-semibold">Sir</span> <span class="font-semibold text-fuchsia-400">Argha Chandra Dhar</span>.',
-            'image' => 'images/best_project.jpeg'
-          ],
-          [
-            'title' => 'Best Talent – District Level',
-            'issuer' => 'Sylhet District Edu. Office – Mar 2018',
-            'desc' => 'Awarded in Math & CS at District Level (Grades 9–10) in Sustainable Talent Search 2018. <br><br>Issued by <span class="text-purple-300 font-semibold">Mr.</span> <span class="font-semibold text-fuchsia-400">Gaziur Rahman Khan</span> and <span class="text-purple-300 font-semibold">Mr.</span> <span class="font-semibold text-fuchsia-400">Md. Amirul Islam</span>.',
-            'image' => 'images/district_level.jpeg'
-          ],
-          [
-            'title' => 'Best Talent – Upazila Level',
-            'issuer' => 'Upazila Secondary Edu. Office – Feb 2018',
-            'desc' => 'Recognized for excellence in Math & CS at Upazila Level in 2018 talent search competition. <br><br>Issued by <span class="text-purple-300 font-semibold">Upazila Secondary Education Officer</span> and <span class="text-purple-300 font-semibold">UNO</span>, Fenchuganj, Sylhet.',
-            'image' => 'images/upazila_level.jpeg'
-          ]
-        ];
-      @endphp
+  <div class="grid gap-8 max-w-6xl mx-auto text-left sm:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(360px,1fr))] text-lg">
+    @php
+      $honors = [
+        [
+          'title' => 'Best Project Award',
+          'issuer' => 'KUET – Dec 2024',
+          'desc' => 'Awarded for the desktop project "Mind Map" in the Advanced Programming Course. <br><br>Supervised and nominated by <span class="text-purple-300 font-semibold">Sir</span> <span class="font-semibold text-fuchsia-400">Kazi Saeed Alam</span> and <span class="text-purple-300 font-semibold">Sir</span> <span class="font-semibold text-fuchsia-400">Argha Chandra Dhar</span>.',
+          'image' => 'images/best_project.jpeg'
+        ],
+        [
+          'title' => 'Best Talent – District Level',
+          'issuer' => 'Sylhet District Edu. Office – Mar 2018',
+          'desc' => 'Awarded in Math & CS at District Level (Grades 9–10) in Sustainable Talent Search 2018. <br><br>Issued by <span class="text-purple-300 font-semibold">Mr.</span> <span class="font-semibold text-fuchsia-400">Gaziur Rahman Khan</span> and <span class="text-purple-300 font-semibold">Mr.</span> <span class="font-semibold text-fuchsia-400">Md. Amirul Islam</span>.',
+          'image' => 'images/district_level.jpeg'
+        ],
+        [
+          'title' => 'Best Talent – Upazila Level',
+          'issuer' => 'Upazila Secondary Edu. Office – Feb 2018',
+          'desc' => 'Recognized for excellence in Math & CS at Upazila Level in 2018 talent search competition. <br><br>Issued by <span class="text-purple-300 font-semibold">Upazila Secondary Education Officer</span> and <span class="text-purple-300 font-semibold">UNO</span>, Fenchuganj, Sylhet.',
+          'image' => 'images/upazila_level.jpeg'
+        ]
+      ];
+    @endphp
 
-@foreach ($honors as $index => $honor)
-  <div
-    class="bg-black/60 border border-fuchsia-400/20 rounded-xl p-6 shadow-lg transition-transform duration-1000 ease-in-out transform hover:scale-[1.03] hover:shadow-[0_0_20px_#c084fc]"
-    data-aos="{{ $index === 0 ? 'fade-left' : ($index === 1 ? 'fade-up' : 'fade-right') }}"
-    data-aos-delay="{{ $index * 300 }}"
-    data-aos-duration="800"
-    data-aos-once="true"
-    x-data="{ showTranslation{{ $index }}: false }"
-  >
-    <img src="{{ asset($honor['image']) }}" alt="{{ $honor['title'] }}"
-         class="rounded-lg mb-4 w-full cursor-zoom-in transition duration-300 hover:shadow-[0_0_25px_#c084fc] hover-border-purple"
-         @click="modalImage = '{{ asset($honor['image']) }}'; modalOpen = true">
+    @foreach ($honors as $index => $honor)
+      <div
+        class="bg-black/60 border border-fuchsia-400/20 rounded-xl p-6 shadow-lg transition-transform duration-1000 ease-in-out transform hover:scale-[1.03] hover:shadow-[0_0_20px_#c084fc]"
+        data-aos="{{ $index === 0 ? 'fade-left' : ($index === 1 ? 'fade-up' : 'fade-right') }}"
+        data-aos-delay="{{ $index * 300 }}"
+        data-aos-duration="800"
+        data-aos-once="true"
+      >
+        <img src="{{ asset($honor['image']) }}" alt="{{ $honor['title'] }}"
+             class="rounded-lg mb-4 w-full cursor-zoom-in transition duration-300 hover:shadow-[0_0_25px_#c084fc] hover-border-purple"
+             @click="modalImage = '{{ asset($honor['image']) }}'; modalOpen = true">
 
-    <h2 class="text-2xl font-bold text-fuchsia-300 mb-2">{{ $honor['title'] }}</h2>
-    <p class="text-base text-purple-200 font-semibold mb-2">{{ $honor['issuer'] }}</p>
-    <p class="text-base text-gray-300 leading-relaxed">{!! $honor['desc'] !!}</p>
+        <h2 class="text-2xl font-bold text-fuchsia-300 mb-2">{{ $honor['title'] }}</h2>
+        <p class="text-base text-purple-200 font-semibold mb-2">{{ $honor['issuer'] }}</p>
+        <p class="text-base text-gray-300 leading-relaxed">{!! $honor['desc'] !!}</p>
 
-    <div class="mt-4 space-x-6 text-base font-medium">
-      <a href="{{ asset($honor['image']) }}" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_8px_#c084fc] transition-transform">View</a>
-      <a href="{{ asset($honor['image']) }}" download class="text-fuchsia-400 underline hover:scale-105 hover:drop-shadow-[0_0_8px_#c084fc] transition-transform">Download</a>
+        <div class="mt-4 space-x-6 text-base font-medium">
+          <a href="{{ asset($honor['image']) }}" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_8px_#c084fc] transition-transform">View</a>
+          <a href="{{ asset($honor['image']) }}" download class="text-fuchsia-400 underline hover:scale-105 hover:drop-shadow-[0_0_8px_#c084fc] transition-transform">Download</a>
 
-      @if ($index === 1 || $index === 2)
-        <button @click="showTranslation{{ $index }} = !showTranslation{{ $index }}"
-                class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_8px_#c084fc] transition-transform focus:outline-none">
-          Translation
-        </button>
-      @endif
+          @if ($index === 1 || $index === 2)
+            <button @click="
+              modalOpen = true;
+              modalImage = '{{ asset($honor['image']) }}';
+              modalContent = 'translation{{ $index }}';
+            "
+            class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_8px_#c084fc] transition-transform focus:outline-none">
+              Translation
+            </button>
+          @endif
+        </div>
+
+        <!-- Hidden Translation Content -->
+        <template x-if="false">
+          <div id="translation{{ $index }}">
+            @if ($index === 1)
+              <div class="text-sm space-y-2 text-gray-200 p-4 leading-relaxed">
+                <p class="font-bold text-fuchsia-300 text-base">Sustainable Talent Search Competition – 2018</p>
+                <p><strong>Certificate of Achievement</strong></p>
+                <p>This is to certify that Adit Mugdha Das, a student of grade 10 from Shahjalal N.G.F.F School, Sylhet, has been awarded the title of “Best Talent of the Year” in the Mathematics and Computer Division at the District Level (Grade 9–10).</p>
+                <p><strong>Issued by:</strong><br>Gaziur Rahman Khan, Member Secretary<br>Md. Amirul Islam, Organizer<br>Sylhet District Education Office</p>
+              </div>
+            @elseif ($index === 2)
+              <div class="text-sm space-y-2 text-gray-200 p-4 leading-relaxed">
+                <p class="font-bold text-fuchsia-300 text-base">Sustainable Talent Search Competition – 2018</p>
+                <p><strong>Certificate of Achievement</strong></p>
+                <p>This is to certify that Adit Mugdha Das, son of Mr. Sujit Kumar Das and Mrs. Mukti Rani Das, from class 10 of Shahjalal N.G.F.F School, Fenchuganj, Sylhet, has been awarded the title of “Best Talent of the Year” in the Mathematics and Computer Division at the Upazila Level (Grade 9–10).</p>
+                <p><strong>Issued by:</strong><br>Upazila Secondary Education Officer<br>Member Secretary</p>
+                <p><strong>Organized by:</strong><br>Upazila Nirbahi Officer (UNO), Fenchuganj, Sylhet</p>
+              </div>
+            @endif
+          </div>
+        </template>
+      </div>
+    @endforeach
+  </div>
+</section>
+
+<!-- Modal: Simple image zoom modal -->
+<div x-show="modalOpen" x-transition class="fixed inset-0 z-50 flex items-center justify-center">
+  <div class="absolute inset-0 bg-black/80" @click="modalOpen = false"></div>
+  <img :src="modalImage" class="relative max-w-full max-h-[90vh] rounded-lg shadow-lg border-4 border-fuchsia-400 z-10">
+</div>
+
+<!-- Modal: Side-by-side translation modal -->
+<div x-show="modalOpen && modalImage !== '' && modalContent !== ''" x-transition class="fixed inset-0 z-50 flex items-center justify-center">
+  <div class="absolute inset-0 bg-black/80" @click="modalOpen = false"></div>
+
+  <div class="relative bg-black/90 border border-fuchsia-400 max-w-6xl w-[90%] max-h-[90vh] rounded-xl shadow-lg z-10 flex flex-col md:flex-row overflow-hidden">
+    
+    <!-- Left: Certificate Image -->
+    <div class="w-full md:w-1/2 p-4 flex items-center justify-center bg-black/80">
+      <img :src="modalImage" alt="Certificate" class="rounded-lg max-h-[70vh] border-2 border-fuchsia-400">
     </div>
 
-    @if ($index === 1)
-      <div x-show="showTranslation1" x-transition class="mt-4 p-4 border border-purple-400/30 bg-black/40 rounded-lg text-sm text-gray-200 space-y-2">
-        <p class="font-bold text-fuchsia-300">Sustainable Talent Search Competition – 2018<br>Certificate of Achievement</p>
-        <p>This is to certify that Adit Mugdha Das, a student of grade 10 from Shahjalal N.G.F.F School, Sylhet, has been awarded the title of <strong>“Best Talent of the Year”</strong> in the Mathematics and Computer Division at the District Level (Grade 9–10) in the Sustainable Talent Search Competition – 2018.</p>
-        <p><strong>Issued by:</strong></p>
-        <p>Gaziur Rahman Khan,<br>Member Secretary,<br>District Level Match-Monitoring Committee,<br>Sustainable Talent Search Competition – 2018,<br>Sylhet District Education Office</p>
-        <p>Md. Amirul Islam,<br>Organizer,<br>District Level Match-Monitoring Committee,<br>District Commissioner, Sylhet</p>
-      </div>
-    @elseif ($index === 2)
-      <div x-show="showTranslation2" x-transition class="mt-4 p-4 border border-purple-400/30 bg-black/40 rounded-lg text-sm text-gray-200 space-y-2">
-        <p class="font-bold text-fuchsia-300">Sustainable Talent Search Competition – 2018<br>Certificate of Achievement</p>
-        <p>This is to certify that Adit Mugdha Das, son of Mr. Sujit Kumar Das and Mrs. Mukti Rani Das, from class 10 of Shahjalal N.G.F.F School, Fenchuganj, Sylhet, has been awarded the title of <strong>“Best Talent of the Year”</strong> in the Mathematics and Computer Division at the Upazila Level (Grade 9–10) in the Sustainable Talent Search Competition – 2018.</p>
-        <p><strong>Issued by:</strong></p>
-        <p>Upazila Secondary Education Officer,<br>Fenchuganj, Sylhet<br>Member Secretary,<br>Sustainable Talent Search Competition – 2018</p>
-        <p><strong>Organized by:</strong><br>Upazila Nirbahi Officer (UNO),<br>Fenchuganj, Sylhet</p>
-      </div>
-    @endif
-  </div>
-@endforeach
-
-
-  <!-- Modal -->
-  <div x-show="modalOpen" x-transition class="fixed inset-0 z-50 flex items-center justify-center">
-    <div class="absolute inset-0 bg-black/80" @click="modalOpen = false"></div>
-    <img :src="modalImage" class="relative max-w-full max-h-[90vh] rounded-lg shadow-lg border-4 border-fuchsia-400 z-10">
+    <!-- Right: Translation -->
+    <div class="w-full md:w-1/2 p-6 overflow-y-auto bg-black/70 text-sm text-gray-200 leading-relaxed">
+      <div x-html="document.getElementById(modalContent)?.innerHTML"></div>
+    </div>
   </div>
 </div>
+
 
 <!-- Scripts -->
 <script>
