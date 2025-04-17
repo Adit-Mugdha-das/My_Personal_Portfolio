@@ -151,13 +151,34 @@
 
         <!-- Hidden Translation Content -->
         <div style="display:none" id="translation{{ $index }}">
-          @if ($index === 1)
-            <div class="text-sm space-y-2 text-gray-200 p-4 leading-relaxed">
-              <p class="font-bold text-fuchsia-300 text-base">Sustainable Talent Search Competition – 2018</p>
-              <p><strong>Certificate of Achievement</strong></p>
-              <p>This is to certify that Adit Mugdha Das, a student of grade 10 from Shahjalal N.G.F.F School, Sylhet, has been awarded the title of “Best Talent of the Year” in the Mathematics and Computer Division at the District Level (Grade 9–10).</p>
-              <p><strong>Issued by:</strong><br>Gaziur Rahman Khan, Member Secretary<br>Md. Amirul Islam, Organizer<br>Sylhet District Education Office</p>
-            </div>
+  @if ($index === 1)
+    <div class="text-sm space-y-2 text-gray-200 p-4 leading-relaxed">
+      <p class="font-bold text-fuchsia-300 text-base">Best Talent of the Year – Mathematics and Computer Division (District Level)</p>
+      <p><strong>Issued by:</strong> Sylhet District Education Office · Mar 2018</p>
+      <p><strong>Associated with:</strong> Shahjalal N G F F School</p>
+      <p>Awarded for excellence in Mathematics and Computer Division in the Sustainable Talent Search Competition – 2018 at the district level (Grades 9–10).</p>
+
+      <hr class="border-fuchsia-400 my-4">
+
+      <p class="font-bold text-fuchsia-300 text-base">Sustainable Talent Search Competition – 2018</p>
+      <p><strong>Certificate of Achievement</strong></p>
+      <p>This is to certify that Adit Mugdha Das, a student of grade 10 from Shahjalal N.G.F.F School, Sylhet, has been awarded the title of "Best Talent of the Year" in the Mathematics and Computer Division at the District Level (Grade 9–10) in the Sustainable Talent Search Competition – 2018.</p>
+
+      <p class="mt-4"><strong>Issued by:</strong></p>
+      <ul class="list-disc list-inside ml-4">
+        <li><strong>Gaziur Rahman Khan</strong><br>
+          Member Secretary,<br>
+          District Level Match-Monitoring Committee,<br>
+          Sustainable Talent Search Competition – 2018,<br>
+          Sylhet District Education Office</li>
+        <li class="mt-2"><strong>Md. Amirul Islam</strong><br>
+          Organizer,<br>
+          District Level Match-Monitoring Committee,<br>
+          Sustainable Talent Search Competition – 2018,<br>
+          District Commissioner, Sylhet</li>
+      </ul>
+    </div>
+
           @elseif ($index === 2)
             <div class="text-sm space-y-2 text-gray-200 p-4 leading-relaxed">
               <p class="font-bold text-fuchsia-300 text-base">Sustainable Talent Search Competition – 2018</p>
