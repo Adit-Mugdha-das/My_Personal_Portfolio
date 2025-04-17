@@ -76,7 +76,16 @@
   </nav>
 
 <!-- Section Title -->
-<section class="text-center py-16 px-4 animate__animated animate__fadeIn" x-data="{ modalOpen: false, modalImage: '', modalContent: '' }">
+<section class="text-center py-16 px-4 animate__animated animate__fadeIn" x-data="{
+  modalOpen: false,
+  modalImage: '',
+  modalContent: '',
+  openTranslation(image, contentId) {
+    this.modalOpen = true;
+    this.modalImage = image;
+    this.modalContent = contentId;
+  }
+}">
   <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 text-white drop-shadow-[0_0_20px_#c084fc]">Honors & Awards</h1>
 
   <div class="grid gap-8 max-w-6xl mx-auto text-left sm:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(360px,1fr))] text-lg">
@@ -124,11 +133,7 @@
           <a href="{{ asset($honor['image']) }}" download class="text-fuchsia-400 underline hover:scale-105 hover:drop-shadow-[0_0_8px_#c084fc] transition-transform">Download</a>
 
           @if ($index === 1 || $index === 2)
-            <button @click="
-              modalOpen = true;
-              modalImage = '{{ asset($honor['image']) }}';
-              modalContent = 'translation' + {{ $index }};
-            "
+            <button @click="openTranslation('{{ asset($honor['image']) }}', 'translation{{ $index }}')"
             class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_8px_#c084fc] transition-transform focus:outline-none">
               Translation
             </button>
