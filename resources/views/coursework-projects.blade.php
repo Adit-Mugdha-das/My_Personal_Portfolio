@@ -107,6 +107,28 @@
       </div>
 
 
+      <!-- Car Detection with YOLO Coursework Project Card -->
+    <div class="bg-black/60 border border-purple-400/20 rounded-xl p-6 shadow-lg hover:shadow-[0_0_12px_#a855f7] hover:scale-[1.03] transition-transform duration-500" data-aos="zoom-in" data-aos-duration="700">
+      <img src="{{ asset('images/yolo_car_detection.png') }}" class="rounded-lg mb-4 w-full h-48 object-cover cursor-zoom-in hover:drop-shadow-[0_0_3px_#a855f7]" alt="YOLO Car Detection Screenshot" @click="modalImage = '{{ asset('images/yolo_car_detection.png') }}'; modalOpen = true">
+      <h2 class="text-2xl font-extrabold text-purple-300 mb-2 tracking-wide drop-shadow-[0_0_4px_#a855f7]">Car Detection with YOLO</h2>
+      <p class="text-[1.15rem] text-gray-300 mb-4">Used a pre-trained YOLO model to detect cars in images and video frames using non-max suppression and bounding box visualization.</p>
+      <p class="text-base text-gray-500 font-semibold mb-3 transition duration-300 hover:text-white">
+        <span class="text-gray-200">Course: Deep Learning Specialization – Course 4, Week 3</span>
+      </p>
+      <div class="flex flex-wrap gap-2 mb-4 text-base font-semibold">
+        <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full">Python</span>
+        <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full">TensorFlow</span>
+        <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full">OpenCV</span>
+        <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full">Jupyter Notebook</span>
+      </div>
+      <div class="flex flex-wrap gap-4 text-base font-medium mb-4">
+        <a href="https://github.com/Adit-Mugdha-das/Car-detection-with-YOLO" target="_blank" class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#9333ea] transition-transform">GitHub</a>
+        <a href="https://github.com/Adit-Mugdha-das/Car-detection-with-YOLO/blob/main/README.md" target="_blank" class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#9333ea] transition-transform">Read More</a>
+        <a href="{{ asset('downloads/Car detection with YOLO.zip') }}" download class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#9333ea] transition-transform">Download</a>
+      </div>
+      <p class="text-purple-400 font-semibold text-lg mt-3">🚗 Object Detection using YOLOv2 & Non-Max Suppression</p>
+    </div>
+
 
 
       <!-- Transfer Learning with MobileNet Coursework Project Card -->
