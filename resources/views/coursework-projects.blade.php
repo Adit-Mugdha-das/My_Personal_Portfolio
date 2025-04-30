@@ -60,10 +60,76 @@
   <section class="px-6 md:px-20 pb-20 grid gap-10 max-w-7xl mx-auto text-left sm:grid-cols-2 lg:grid-cols-3">
 
 
-      
+      <!-- Face Recognition with FaceNet Coursework Project Card -->
+      <div class="bg-black/60 border border-purple-400/20 rounded-xl p-6 shadow-lg hover:shadow-[0_0_12px_#a855f7] hover:scale-[1.03] transition-transform duration-500" data-aos="zoom-in" data-aos-duration="700">
+        <img src="{{ asset('images/facenet_recognition.png') }}" class="rounded-lg mb-4 w-full h-48 object-cover cursor-zoom-in hover:drop-shadow-[0_0_3px_#a855f7]" alt="FaceNet Screenshot" @click="modalImage = '{{ asset('images/facenet_recognition.png') }}'; modalOpen = true">
+        <h2 class="text-2xl font-extrabold text-purple-300 mb-2 tracking-wide drop-shadow-[0_0_4px_#a855f7]">Face Recognition with FaceNet</h2>
+        <p class="text-[1.15rem] text-gray-300 mb-4">Built a face recognition system using FaceNet embeddings to perform identity verification and recognition.</p>
+        <p class="text-base text-gray-500 font-semibold mb-3 transition duration-300 hover:text-white">
+          <span class="text-gray-200">Course: Deep Learning Specialization – Course 4, Week 4</span>
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4 text-base font-semibold">
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#9333ea]">Python</span>
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#9333ea]">Keras</span>
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#9333ea]">FaceNet</span>
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#9333ea]">Jupyter Notebook</span>
+        </div>
+        <div class="flex flex-wrap gap-4 text-base font-medium mb-4">
+          <a href="https://github.com/Adit-Mugdha-das/Face-Recognition" target="_blank" class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#9333ea] transition-transform">GitHub</a>
+          <a href="https://github.com/Adit-Mugdha-das/Face-Recognition/blob/main/README.md" target="_blank" class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#9333ea] transition-transform">Read More</a>
+          <a href="{{ asset('downloads/Face Recognition.zip') }}" download class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#9333ea] transition-transform">Download</a>
+        </div>
+        <p class="text-purple-400 font-semibold text-lg mt-3">🧠 Identity Verification Using Deep Face Embeddings</p>
+      </div>
 
 
 
+      <!-- Image Segmentation with U-Net Coursework Project Card -->
+      <div class="bg-black/60 border border-purple-400/20 rounded-xl p-6 shadow-lg hover:shadow-[0_0_12px_#a855f7] hover:scale-[1.03] transition-transform duration-500" data-aos="zoom-in" data-aos-duration="700">
+        <img src="{{ asset('images/unet_segmentation.png') }}" class="rounded-lg mb-4 w-full h-48 object-cover cursor-zoom-in hover:drop-shadow-[0_0_3px_#a855f7]" alt="U-Net Segmentation Screenshot" @click="modalImage = '{{ asset('images/unet_segmentation.png') }}'; modalOpen = true">
+        <h2 class="text-2xl font-extrabold text-purple-300 mb-2 tracking-wide drop-shadow-[0_0_4px_#a855f7]">Image Segmentation with U-Net</h2>
+        <p class="text-[1.15rem] text-gray-300 mb-4">Implemented a U-Net architecture for road segmentation from dashcam images using pixel-wise classification.</p>
+        <p class="text-base text-gray-500 font-semibold mb-3 transition duration-300 hover:text-white">
+          <span class="text-gray-200">Course: Deep Learning Specialization – Course 4, Week 3</span>
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4 text-base font-semibold">
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#9333ea]">Python</span>
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#9333ea]">TensorFlow</span>
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#9333ea]">Keras</span>
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#9333ea]">Jupyter Notebook</span>
+        </div>
+        <div class="flex flex-wrap gap-4 text-base font-medium mb-4">
+          <a href="https://github.com/Adit-Mugdha-das/Image-Segmentation-with-U-Net" target="_blank" class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#9333ea] transition-transform">GitHub</a>
+          <a href="https://github.com/Adit-Mugdha-das/Image-Segmentation-with-U-Net/blob/main/README.md" target="_blank" class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#9333ea] transition-transform">Read More</a>
+          <a href="{{ asset('downloads/Image Segmentation with U-Net.zip') }}" download class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#9333ea] transition-transform">Download</a>
+        </div>
+        <p class="text-purple-400 font-semibold text-lg mt-3">🧠 Semantic Segmentation for Road Scenes with U-Net</p>
+      </div>
+
+
+
+
+      <!-- Transfer Learning with MobileNet Coursework Project Card -->
+      <div class="bg-black/60 border border-purple-400/20 rounded-xl p-6 shadow-lg hover:shadow-[0_0_12px_#a855f7] hover:scale-[1.03] transition-transform duration-500" data-aos="zoom-in" data-aos-duration="700">
+        <img src="{{ asset('images/mobilenet.png') }}" class="rounded-lg mb-4 w-full h-48 object-cover cursor-zoom-in hover:drop-shadow-[0_0_3px_#a855f7]" alt="MobileNet Screenshot" @click="modalImage = '{{ asset('images/mobilenet.png') }}'; modalOpen = true">
+        <h2 class="text-2xl font-extrabold text-purple-300 mb-2 tracking-wide drop-shadow-[0_0_4px_#a855f7]">Transfer Learning with MobileNet</h2>
+        <p class="text-[1.15rem] text-gray-300 mb-4">Applied a pretrained MobileNet model for image classification, using feature extraction and fine-tuning for edge-efficient inference.</p>
+        <p class="text-base text-gray-500 font-semibold mb-3 transition duration-300 hover:text-white">
+          <span class="text-gray-200">Course: Deep Learning Specialization – Course 4, Week 2</span>
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4 text-base font-semibold">
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#9333ea]">Python</span>
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#9333ea]">TensorFlow</span>
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#9333ea]">Keras</span>
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#9333ea]">Jupyter Notebook</span>
+        </div>
+        <div class="flex flex-wrap gap-4 text-base font-medium mb-4">
+          <a href="https://github.com/Adit-Mugdha-das/Transfer-Learning-with-MobileNet" target="_blank" class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#9333ea] transition-transform">GitHub</a>
+          <a href="https://github.com/Adit-Mugdha-das/Transfer-Learning-with-MobileNet/blob/main/README.md" target="_blank" class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#9333ea] transition-transform">Read More</a>
+          <a href="{{ asset('downloads/Transfer Learning with MobileNet.zip') }}" download class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#9333ea] transition-transform">Download</a>
+        </div>
+        <p class="text-purple-400 font-semibold text-lg mt-3">📱 Lightweight CNNs for Mobile & Embedded AI</p>
+      </div>
 
 
 
