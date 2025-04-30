@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: laravel-portfolio
+    env: docker
+    plan: free
+    region: oregon
+    dockerfilePath: Dockerfile
+    buildCommand: 'composer install --no-dev --optimize-autoloader && npm install && npm run build'
+    startCommand: php artisan serve --host=0.0.0.0 --port=8000
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: APP_KEY
+        generateValue: true
