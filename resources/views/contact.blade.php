@@ -111,7 +111,8 @@
     </style>
 </head>
 <body class="text-white">
-<div id="vanta-bg" class="min-h-screen" x-data="{ open: false }">
+<div id="vanta-bg" class="min-h-screen" x-data="{ open: false, dropdownOpen: false }">
+
 
     <!-- Navbar -->
     <nav class="bg-black/50 backdrop-blur-md text-white px-6 py-4 flex justify-between items-center shadow-md rounded-b-xl">
@@ -130,7 +131,9 @@
             <li><a href="{{ url('/contact') }}" class="text-purple-300 font-semibold drop-shadow-[0_0_8px_#c084fc] scale-110">Contact</a></li>
         </ul>
         <!-- Mobile Menu -->
-        <ul x-show="open" class="md:hidden absolute top-[64px] left-0 w-full bg-black/80 backdrop-blur-md p-6 flex flex-col gap-4 z-50">
+        <ul x-show="open" x-transition @click.away="open = false"
+    class="md:hidden absolute top-[64px] left-0 w-full bg-black/80 backdrop-blur-md p-6 flex flex-col gap-4 z-50">
+
             <li><a href="{{ url('/') }}">Home</a></li>
             <li><a href="{{ url('/about') }}">About</a></li>
             <li><a href="{{ url('/education') }}">Education</a></li>
@@ -141,6 +144,28 @@
             <li><a href="{{ url('/contact') }}" class="text-purple-300">Contact</a></li>
         </ul>
     </nav>
+
+
+    <!-- Floating Hamburger Button -->
+        <div class="absolute top-[90px] left-6 z-50" x-data>
+        <button @click="open = !open"
+                class="text-purple-300 text-2xl focus:outline-none">
+            <i :class="open ? 'fas fa-times' : 'fas fa-bars'"></i>
+        </button>
+
+        <!-- Dropdown Links -->
+        <ul x-show="open" x-transition @click.away="open = false"
+        class="mt-4 bg-black/90 backdrop-blur-md rounded-2xl px-8 py-6 space-y-4 shadow-2xl text-xl w-96">
+            <li><a @click="open = false" href="{{ url('/about') }}" class="block hover:text-purple-300">About</a></li>
+            <li><a @click="open = false" href="{{ url('/education') }}" class="block hover:text-purple-300">Education</a></li>
+            <li><a @click="open = false" href="{{ url('/skills') }}" class="block hover:text-purple-300">Skills</a></li>
+            <li><a @click="open = false" href="{{ url('/projects') }}" class="block hover:text-purple-300">Projects</a></li>
+            <li><a @click="open = false" href="{{ url('/certifications') }}" class="block hover:text-purple-300">Certifications</a></li>
+            <li><a @click="open = false" href="{{ url('/test') }}" class="block hover:text-purple-300">Honors & Awards</a></li>
+            <li><a @click="open = false" href="{{ url('/contact') }}" class="block hover:text-purple-300">Contact</a></li>
+        </ul>
+        </div>
+
 
     <!-- Contact Section -->
     <section class="py-20 px-6 text-center">
