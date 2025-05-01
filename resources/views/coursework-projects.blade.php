@@ -60,6 +60,79 @@
   <section class="px-6 md:px-20 pb-20 grid gap-10 max-w-7xl mx-auto text-left sm:grid-cols-2 lg:grid-cols-3">
 
 
+      <!-- Dinosaur Island - Character-Level Language Modeling Coursework Project Card -->
+    <div class="bg-black/60 border border-fuchsia-400/20 rounded-xl p-6 shadow-lg hover:shadow-[0_0_12px_#f472b6] hover:scale-[1.03] transition-transform duration-500" data-aos="zoom-in" data-aos-duration="700">
+      <img src="{{ asset('images/dinosaur_language_modeling.png') }}" class="rounded-lg mb-4 w-full h-48 object-cover cursor-zoom-in hover:drop-shadow-[0_0_3px_#f472b6]" alt="Dinosaur Island Screenshot" @click="modalImage = '{{ asset('images/dinosaur_language_modeling.png') }}'; modalOpen = true">
+      <h2 class="text-2xl font-extrabold text-fuchsia-300 mb-2 tracking-wide drop-shadow-[0_0_4px_#f472b6]">Dinosaur Island - Character-Level Language Modeling</h2>
+      <p class="text-[1.15rem] text-gray-300 mb-4">Built a character-level RNN from scratch using NumPy to generate dinosaur names. Demonstrates sequence modeling, sampling, and training stabilization techniques.</p>
+      <p class="text-base text-gray-500 font-semibold mb-3 transition duration-300 hover:text-white">
+        <span class="text-gray-200">Course: Deep Learning Specialization – Course 5, Week 1</span>
+      </p>
+      <div class="flex flex-wrap gap-2 mb-4 text-base font-semibold">
+        <span class="bg-fuchsia-400/10 text-fuchsia-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">Python</span>
+        <span class="bg-fuchsia-400/10 text-fuchsia-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">NumPy</span>
+        <span class="bg-fuchsia-400/10 text-fuchsia-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">RNN</span>
+        <span class="bg-fuchsia-400/10 text-fuchsia-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">Jupyter Notebook</span>
+      </div>
+      <div class="flex flex-wrap gap-4 text-base font-medium mb-4">
+        <a href="https://github.com/Adit-Mugdha-das/Recurrent-Neural-Network-" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">GitHub</a>
+        <a href="https://github.com/Adit-Mugdha-das/Recurrent-Neural-Network-/blob/main/README.md" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Read More</a>
+        <a href="{{ asset('downloads/01-Programming Assignment Building your Recurrent Neural Network - Step by Step.zip') }}" download class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Download</a>
+      </div>
+      <p class="text-fuchsia-400 font-semibold text-lg mt-3">🦕 Generating Dinosaur Names Using RNNs and NumPy</p>
+    </div>
+
+
+
+    <!-- Recurrent Neural Network Coursework Project Card -->
+      <div class="bg-black/60 border border-fuchsia-400/20 rounded-xl p-6 shadow-lg hover:shadow-[0_0_12px_#f472b6] hover:scale-[1.03] transition-transform duration-500" data-aos="zoom-in" data-aos-duration="700">
+        <img src="{{ asset('images/rnn_step_by_step.png') }}" class="rounded-lg mb-4 w-full h-48 object-cover cursor-zoom-in hover:drop-shadow-[0_0_3px_#f472b6]" alt="RNN Screenshot" @click="modalImage = '{{ asset('images/rnn_step_by_step.png') }}'; modalOpen = true">
+        <h2 class="text-2xl font-extrabold text-fuchsia-300 mb-2 tracking-wide drop-shadow-[0_0_4px_#f472b6]">Building My Recurrent Neural Network - Step by Step</h2>
+        <p class="text-[1.15rem] text-gray-300 mb-4">Step-by-step implementation of a character-level RNN using NumPy to understand sequence modeling and BPTT without deep learning libraries.</p>
+        <p class="text-base text-gray-500 font-semibold mb-3 transition duration-300 hover:text-white">
+          <span class="text-gray-200">Course: Deep Learning Specialization – Course 5, Week 1</span>
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4 text-base font-semibold">
+          <span class="bg-fuchsia-400/10 text-fuchsia-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">Python</span>
+          <span class="bg-fuchsia-400/10 text-fuchsia-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">NumPy</span>
+          <span class="bg-fuchsia-400/10 text-fuchsia-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">RNN</span>
+          <span class="bg-fuchsia-400/10 text-fuchsia-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">Char-level Model</span>
+        </div>
+        <div class="flex flex-wrap gap-4 text-base font-medium mb-4">
+          <a href="https://github.com/Adit-Mugdha-das/Recurrent-Neural-Network-" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">GitHub</a>
+          <a href="https://github.com/Adit-Mugdha-das/Recurrent-Neural-Network-/blob/main/README.md" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Read More</a>
+          <a href="{{ asset('downloads/Recurrent Neural Network.zip') }}" download class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Download</a>
+        </div>
+        <p class="text-fuchsia-400 font-semibold text-lg mt-3">🔁 Character-Level Sequence Generation via Custom RNN</p>
+      </div>
+
+
+
+
+            <!-- Neural Style Transfer with VGG-19 Coursework Project Card -->
+      <div class="bg-black/60 border border-fuchsia-400/20 rounded-xl p-6 shadow-lg hover:shadow-[0_0_12px_#f472b6] hover:scale-[1.03] transition-transform duration-500" data-aos="zoom-in" data-aos-duration="700">
+        <img src="{{ asset('images/neural_style_transfer.png') }}" class="rounded-lg mb-4 w-full h-48 object-cover cursor-zoom-in hover:drop-shadow-[0_0_3px_#f472b6]" alt="Neural Style Transfer Screenshot" @click="modalImage = '{{ asset('images/neural_style_transfer.png') }}'; modalOpen = true">
+        <h2 class="text-2xl font-extrabold text-fuchsia-300 mb-2 tracking-wide drop-shadow-[0_0_4px_#f472b6]">Neural Style Transfer with VGG-19</h2>
+        <p class="text-[1.15rem] text-gray-300 mb-4">Implemented neural style transfer to blend content and artistic style using deep convolutional features from a VGG-19 model.</p>
+        <p class="text-base text-gray-500 font-semibold mb-3 transition duration-300 hover:text-white">
+          <span class="text-gray-200">Course: Deep Learning Specialization – Course 4, Week 4</span>
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4 text-base font-semibold">
+          <span class="bg-fuchsia-400/10 text-fuchsia-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">Python</span>
+          <span class="bg-fuchsia-400/10 text-fuchsia-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">TensorFlow</span>
+          <span class="bg-fuchsia-400/10 text-fuchsia-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">VGG-19</span>
+          <span class="bg-fuchsia-400/10 text-fuchsia-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">Jupyter Notebook</span>
+        </div>
+        <div class="flex flex-wrap gap-4 text-base font-medium mb-4">
+          <a href="https://github.com/Adit-Mugdha-das/Art-Generation-with-Neural-Style-Transfer" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">GitHub</a>
+          <a href="https://github.com/Adit-Mugdha-das/Art-Generation-with-Neural-Style-Transfer/blob/main/README.md" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Read More</a>
+          <a href="{{ asset('downloads/Art Generation with Neural Style Transfer.zip') }}" download class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Download</a>
+        </div>
+        <p class="text-fuchsia-400 font-semibold text-lg mt-3">🎨 Artistic Image Generation via Deep Style Transfer</p>
+      </div>
+
+
+
       <!-- Face Recognition with FaceNet Coursework Project Card -->
       <div class="bg-black/60 border border-purple-400/20 rounded-xl p-6 shadow-lg hover:shadow-[0_0_12px_#a855f7] hover:scale-[1.03] transition-transform duration-500" data-aos="zoom-in" data-aos-duration="700">
         <img src="{{ asset('images/facenet_recognition.png') }}" class="rounded-lg mb-4 w-full h-48 object-cover cursor-zoom-in hover:drop-shadow-[0_0_3px_#a855f7]" alt="FaceNet Screenshot" @click="modalImage = '{{ asset('images/facenet_recognition.png') }}'; modalOpen = true">
