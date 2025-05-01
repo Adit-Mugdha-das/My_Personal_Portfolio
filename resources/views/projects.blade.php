@@ -62,14 +62,14 @@
   <section class="text-center py-16 px-4 animate__animated animate__fadeIn">
     <h1 class="text-4xl md:text-5xl font-bold mb-12 text-white drop-shadow-[0_0_20px_#c084fc]">My Projects</h1>
 
+    <!-- View Coursework Projects Button -->
     <div class="text-center mb-10">
-  <a href="{{ url('/coursework-projects') }}">
-    <button class="relative inline-flex items-center px-6 py-2 text-sm font-semibold text-purple-300 rounded-full border border-purple-400/30 bg-black/40 hover:bg-purple-800 shadow-lg transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_0_12px_#a855f7]">
-      <span class="absolute inset-0 rounded-full bg-purple-700 blur-sm opacity-30 animate-pulse z-[-1]"></span>
-      📚 View Coursework Projects
-    </button>
-  </a>
-</div>
+      <a href="{{ url('/coursework-projects') }}">
+        <button class="bg-white text-black px-6 py-2 rounded-lg text-sm font-semibold shadow-lg border border-amber-300 hover:scale-105 transition-all duration-300 hover:drop-shadow-[0_0_12px_#fbbf24]">
+          📚 View Coursework Projects
+        </button>
+      </a>
+    </div>
 
 
 

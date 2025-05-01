@@ -48,87 +48,233 @@
   </section>
 
   <!-- Back to Personal Projects Button -->
-  <div class="text-center mb-10">
-    <a href="{{ url('/projects') }}">
-      <button class="bg-black text-purple-300 border border-purple-500 hover:bg-purple-700 hover:text-white px-6 py-2 rounded-full text-sm shadow transition-all drop-shadow-[0_0_8px_#9333ea] animate-pulse hover:animate-none">
-        🔙 View Personal Projects
-      </button>
-    </a>
-  </div>
+    <div class="text-center mb-10">
+      <a href="{{ url('/projects') }}">
+        <button class="bg-white text-black px-6 py-2 rounded-lg text-sm font-semibold shadow-lg border border-amber-300 hover:scale-105 transition-all duration-300 hover:drop-shadow-[0_0_12px_#fbbf24]">
+          🔙 View Personal Projects
+        </button>
+      </a>
+    </div>
+
 
   <!-- Coursework Project Cards Section -->
   <section class="px-6 md:px-20 pb-20 grid gap-10 max-w-7xl mx-auto text-left sm:grid-cols-2 lg:grid-cols-3">
 
 
+
+      <!-- Transformer Architecture with TensorFlow Coursework Project Card -->
+      <div class="bg-black/60 border border-purple-400/20 rounded-xl p-6 shadow-lg hover:shadow-[0_0_12px_#a78bfa] hover:scale-[1.03] transition-transform duration-500" data-aos="zoom-in" data-aos-duration="700">
+        <img src="{{ asset('images/transformer_tensorflow.png') }}" class="rounded-lg mb-4 w-full h-48 object-cover cursor-zoom-in hover:drop-shadow-[0_0_3px_#a78bfa]" alt="Transformer Screenshot" @click="modalImage = '{{ asset('images/transformer_tensorflow.png') }}'; modalOpen = true">
+        <h2 class="text-2xl font-extrabold text-purple-300 mb-2 tracking-wide drop-shadow-[0_0_4px_#a78bfa]">Transformer Architecture with TensorFlow</h2>
+        <p class="text-[1.15rem] text-gray-300 mb-4">Implemented Transformer from scratch using TensorFlow and Keras — including scaled dot-product attention, multi-head attention, positional encodings, and encoder-decoder blocks.</p>
+        <p class="text-base text-gray-500 font-semibold mb-3 transition duration-300 hover:text-white">
+          <span class="text-gray-200">Course: Deep Learning Specialization – Course 5, Week 4</span>
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4 text-base font-semibold">
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#a78bfa]">Python</span>
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#a78bfa]">TensorFlow</span>
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#a78bfa]">Keras</span>
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#a78bfa]">Transformer</span>
+        </div>
+        <div class="flex flex-wrap gap-4 text-base font-medium mb-4">
+          <a href="https://github.com/Adit-Mugdha-das/Transformers-Architecture-with-TensorFlow" target="_blank" class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#a78bfa] transition-transform">GitHub</a>
+          <a href="https://github.com/Adit-Mugdha-das/Transformers-Architecture-with-TensorFlow/blob/main/README.md" target="_blank" class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#a78bfa] transition-transform">Read More</a>
+          <a href="{{ asset('downloads/05-Programming Assignment Transformers Architecture.zip') }}" download class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#a78bfa] transition-transform">Download</a>
+        </div>
+        <p class="text-purple-400 font-semibold text-lg mt-3">🧠 End-to-End Transformer Model with Attention in TensorFlow</p>
+      </div>
+
+
+
+      <!-- Emojify - Sequence Models Coursework Project Card -->
+<div class="bg-black/60 border border-purple-400/20 rounded-xl p-6 shadow-lg hover:shadow-[0_0_12px_#facc15] hover:scale-[1.03] transition-transform duration-500" data-aos="zoom-in" data-aos-duration="700">
+  <img src="{{ asset('images/emojify_sequence_model.png') }}" class="rounded-lg mb-4 w-full h-48 object-cover cursor-zoom-in hover:drop-shadow-[0_0_3px_#facc15]" alt="Emojify Screenshot" @click="modalImage = '{{ asset('images/emojify_sequence_model.png') }}'; modalOpen = true">
+  <h2 class="text-2xl font-extrabold text-purple-300 mb-2 tracking-wide drop-shadow-[0_0_4px_#facc15]">Emojify - Sequence Models</h2>
+  <p class="text-[1.15rem] text-gray-300 mb-4">Built LSTM-based text classification models that map input sentences to emojis using pre-trained GloVe vectors and sequence modeling.</p>
+  <p class="text-base text-gray-500 font-semibold mb-3 transition duration-300 hover:text-white">
+    <span class="text-gray-200">Course: Deep Learning Specialization – Course 5, Week 2</span>
+  </p>
+  <div class="flex flex-wrap gap-2 mb-4 text-base font-semibold">
+    <span class="bg-amber-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#facc15]">Python</span>
+    <span class="bg-amber-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#facc15]">Keras</span>
+    <span class="bg-amber-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#facc15]">GloVe</span>
+    <span class="bg-amber-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#facc15]">LSTM</span>
+  </div>
+  <div class="flex flex-wrap gap-4 text-base font-medium mb-4">
+    <a href="https://github.com/Adit-Mugdha-das/Emojify" target="_blank" class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#facc15] transition-transform">GitHub</a>
+    <a href="https://github.com/Adit-Mugdha-das/Emojify/blob/main/README.md" target="_blank" class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#facc15] transition-transform">Read More</a>
+    <a href="{{ asset('downloads/12-Programming Assignment Emojify.zip') }}" download class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#facc15] transition-transform">Download</a>
+  </div>
+  <p class="text-purple-400 font-semibold text-lg mt-3">😊 Mapping Sentences to Emojis using Word Embeddings + LSTM</p>
+</div>
+
+
+
+    <!-- Trigger Word Detection Coursework Project Card -->
+    <div class="bg-black/60 border border-purple-400/20 rounded-xl p-6 shadow-lg hover:shadow-[0_0_12px_#f472b6] hover:scale-[1.03] transition-transform duration-500" data-aos="zoom-in" data-aos-duration="700">
+      <img src="{{ asset('images/trigger_word_detection.png') }}" class="rounded-lg mb-4 w-full h-48 object-cover cursor-zoom-in hover:drop-shadow-[0_0_3px_#f472b6]" alt="Trigger Word Detection Screenshot" @click="modalImage = '{{ asset('images/trigger_word_detection.png') }}'; modalOpen = true">
+      <h2 class="text-2xl font-extrabold text-purple-300 mb-2 tracking-wide drop-shadow-[0_0_4px_#f472b6]">Trigger Word Detection</h2>
+      <p class="text-[1.15rem] text-gray-300 mb-4">Built an audio-based trigger word detection system using spectrogram features and LSTM-based sequence modeling to detect "activate" in streaming speech.</p>
+      <p class="text-base text-gray-500 font-semibold mb-3 transition duration-300 hover:text-white">
+        <span class="text-gray-200">Course: Deep Learning Specialization – Course 5, Week 3</span>
+      </p>
+      <div class="flex flex-wrap gap-2 mb-4 text-base font-semibold">
+        <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">Python</span>
+        <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">TensorFlow</span>
+        <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">Librosa</span>
+        <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">LSTM</span>
+      </div>
+      <div class="flex flex-wrap gap-4 text-base font-medium mb-4">
+        <a href="https://github.com/Adit-Mugdha-das/Trigger-Word-Detection" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">GitHub</a>
+        <a href="https://github.com/Adit-Mugdha-das/Trigger-Word-Detection/blob/main/README.md" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Read More</a>
+        <a href="{{ asset('downloads/Trigger Word Detection.zip') }}" download class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Download</a>
+      </div>
+      <p class="text-purple-400 font-semibold text-lg mt-3">🎧 Detecting the Word “Activate” from Live Audio with LSTMs</p>
+    </div>
+
+
+
+    <!-- Neural Machine Translation with Attention Coursework Project Card -->
+    <div class="bg-black/60 border border-purple-400/20 rounded-xl p-6 shadow-lg hover:shadow-[0_0_12px_#f472b6] hover:scale-[1.03] transition-transform duration-500" data-aos="zoom-in" data-aos-duration="700">
+      <img src="{{ asset('images/neural_machine_translation.png') }}" class="rounded-lg mb-4 w-full h-48 object-cover cursor-zoom-in hover:drop-shadow-[0_0_3px_#f472b6]" alt="Neural Machine Translation Screenshot" @click="modalImage = '{{ asset('images/neural_machine_translation.png') }}'; modalOpen = true">
+      <h2 class="text-2xl font-extrabold text-purple-300 mb-2 tracking-wide drop-shadow-[0_0_4px_#f472b6]">Neural Machine Translation with Attention</h2>
+      <p class="text-[1.15rem] text-gray-300 mb-4">Implemented a seq2seq model with attention to translate English sentences into French. Demonstrates attention-enhanced decoding for improved context and accuracy.</p>
+      <p class="text-base text-gray-500 font-semibold mb-3 transition duration-300 hover:text-white">
+        <span class="text-gray-200">Course: Deep Learning Specialization – Course 5, Week 3</span>
+      </p>
+      <div class="flex flex-wrap gap-2 mb-4 text-base font-semibold">
+        <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">Python</span>
+        <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">TensorFlow</span>
+        <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">Keras</span>
+        <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">Attention Mechanism</span>
+      </div>
+      <div class="flex flex-wrap gap-4 text-base font-medium mb-4">
+        <a href="https://github.com/Adit-Mugdha-das/Neural-Machine-Translation-with-Attention" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">GitHub</a>
+        <a href="https://github.com/Adit-Mugdha-das/Neural-Machine-Translation-with-Attention/blob/main/README.md" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Read More</a>
+        <a href="{{ asset('downloads/11-Programming Assignment Neural Machine Translation with Attention.zip') }}" download class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Download</a>
+      </div>
+      <p class="text-purple-400 font-semibold text-lg mt-3">🌍 English-to-French Translation with Seq2Seq + Attention</p>
+    </div>
+
+
+
+      <!-- Word Vector Debiasing Coursework Project Card -->
+    <div class="bg-black/60 border border-purple-400/20 rounded-xl p-6 shadow-lg hover:shadow-[0_0_12px_#f472b6] hover:scale-[1.03] transition-transform duration-500" data-aos="zoom-in" data-aos-duration="700">
+      <img src="{{ asset('images/word_vector_debiasing.png') }}" class="rounded-lg mb-4 w-full h-48 object-cover cursor-zoom-in hover:drop-shadow-[0_0_3px_#f472b6]" alt="Word Vector Debiasing Screenshot" @click="modalImage = '{{ asset('images/word_vector_debiasing.png') }}'; modalOpen = true">
+      <h2 class="text-2xl font-extrabold text-purple-300 mb-2 tracking-wide drop-shadow-[0_0_4px_#f472b6]">Operations on Word Vectors – Debiasing</h2>
+      <p class="text-[1.15rem] text-gray-300 mb-4">Implemented vector arithmetic and bias mitigation on GloVe embeddings. Applied neutralization and equalization to address gender bias in NLP tasks.</p>
+      <p class="text-base text-gray-500 font-semibold mb-3 transition duration-300 hover:text-white">
+        <span class="text-gray-200">Course: Deep Learning Specialization – Course 5, Week 2</span>
+      </p>
+      <div class="flex flex-wrap gap-2 mb-4 text-base font-semibold">
+        <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">Python</span>
+        <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">NumPy</span>
+        <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">GloVe</span>
+        <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">NLP</span>
+      </div>
+      <div class="flex flex-wrap gap-4 text-base font-medium mb-4">
+        <a href="https://github.com/Adit-Mugdha-das/Operations-on-Word-Vectors---Debiasing" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">GitHub</a>
+        <a href="https://github.com/Adit-Mugdha-das/Operations-on-Word-Vectors---Debiasing/blob/main/README.md" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Read More</a>
+        <a href="{{ asset('downloads/11-Programming Assignment Operations on Word Vectors - Debiasing.zip') }}" download class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Download</a>
+      </div>
+      <p class="text-purple-400 font-semibold text-lg mt-3">🧠 Exploring Fairness and Bias Mitigation in Word Embeddings</p>
+    </div>
+
+
+
+      <!-- Jazz Improvisation with LSTM Coursework Project Card -->
+      <div class="bg-black/60 border border-purple-400/20 rounded-xl p-6 shadow-lg hover:shadow-[0_0_12px_#f472b6] hover:scale-[1.03] transition-transform duration-500" data-aos="zoom-in" data-aos-duration="700">
+        <img src="{{ asset('images/jazz_improvisation_lstm.png') }}" class="rounded-lg mb-4 w-full h-48 object-cover cursor-zoom-in hover:drop-shadow-[0_0_3px_#f472b6]" alt="Jazz Improvisation Screenshot" @click="modalImage = '{{ asset('images/jazz_improvisation_lstm.png') }}'; modalOpen = true">
+        <h2 class="text-2xl font-extrabold text-purple-300 mb-2 tracking-wide drop-shadow-[0_0_4px_#f472b6]">Jazz Improvisation with LSTM</h2>
+        <p class="text-[1.15rem] text-gray-300 mb-4">Implemented an LSTM-based model to generate jazz music sequences, capturing long-term musical patterns and improvisation using deep learning.</p>
+        <p class="text-base text-gray-500 font-semibold mb-3 transition duration-300 hover:text-white">
+          <span class="text-gray-200">Course: Deep Learning Specialization – Course 5, Week 1</span>
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4 text-base font-semibold">
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">Python</span>
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">Keras</span>
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">LSTM</span>
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">Music Generation</span>
+        </div>
+        <div class="flex flex-wrap gap-4 text-base font-medium mb-4">
+          <a href="https://github.com/Adit-Mugdha-das/Jazz-Improvisation-with-LSTM" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">GitHub</a>
+          <a href="https://github.com/Adit-Mugdha-das/Jazz-Improvisation-with-LSTM/blob/main/README.md" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Read More</a>
+          <a href="{{ asset('downloads/Jazz Improvisation with LSTM.zip') }}" download class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Download</a>
+        </div>
+        <p class="text-purple-400 font-semibold text-lg mt-3">🎷 AI-Powered Jazz Sequence Generation using LSTM Networks</p>
+      </div>
+
+
+
       <!-- Dinosaur Island - Character-Level Language Modeling Coursework Project Card -->
-    <div class="bg-black/60 border border-fuchsia-400/20 rounded-xl p-6 shadow-lg hover:shadow-[0_0_12px_#f472b6] hover:scale-[1.03] transition-transform duration-500" data-aos="zoom-in" data-aos-duration="700">
+    <div class="bg-black/60 border border-purple-400/20 rounded-xl p-6 shadow-lg hover:shadow-[0_0_12px_#f472b6] hover:scale-[1.03] transition-transform duration-500" data-aos="zoom-in" data-aos-duration="700">
       <img src="{{ asset('images/dinosaur_language_modeling.png') }}" class="rounded-lg mb-4 w-full h-48 object-cover cursor-zoom-in hover:drop-shadow-[0_0_3px_#f472b6]" alt="Dinosaur Island Screenshot" @click="modalImage = '{{ asset('images/dinosaur_language_modeling.png') }}'; modalOpen = true">
-      <h2 class="text-2xl font-extrabold text-fuchsia-300 mb-2 tracking-wide drop-shadow-[0_0_4px_#f472b6]">Dinosaur Island - Character-Level Language Modeling</h2>
+      <h2 class="text-2xl font-extrabold text-purple-300 mb-2 tracking-wide drop-shadow-[0_0_4px_#f472b6]">Dinosaur Island - Character-Level Language Modeling</h2>
       <p class="text-[1.15rem] text-gray-300 mb-4">Built a character-level RNN from scratch using NumPy to generate dinosaur names. Demonstrates sequence modeling, sampling, and training stabilization techniques.</p>
       <p class="text-base text-gray-500 font-semibold mb-3 transition duration-300 hover:text-white">
         <span class="text-gray-200">Course: Deep Learning Specialization – Course 5, Week 1</span>
       </p>
       <div class="flex flex-wrap gap-2 mb-4 text-base font-semibold">
-        <span class="bg-fuchsia-400/10 text-fuchsia-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">Python</span>
-        <span class="bg-fuchsia-400/10 text-fuchsia-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">NumPy</span>
-        <span class="bg-fuchsia-400/10 text-fuchsia-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">RNN</span>
-        <span class="bg-fuchsia-400/10 text-fuchsia-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">Jupyter Notebook</span>
+        <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">Python</span>
+        <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">NumPy</span>
+        <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">RNN</span>
+        <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">Jupyter Notebook</span>
       </div>
       <div class="flex flex-wrap gap-4 text-base font-medium mb-4">
-        <a href="https://github.com/Adit-Mugdha-das/Recurrent-Neural-Network-" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">GitHub</a>
-        <a href="https://github.com/Adit-Mugdha-das/Recurrent-Neural-Network-/blob/main/README.md" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Read More</a>
-        <a href="{{ asset('downloads/01-Programming Assignment Building your Recurrent Neural Network - Step by Step.zip') }}" download class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Download</a>
+        <a href="https://github.com/Adit-Mugdha-das/Recurrent-Neural-Network-" target="_blank" class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">GitHub</a>
+        <a href="https://github.com/Adit-Mugdha-das/Recurrent-Neural-Network-/blob/main/README.md" target="_blank" class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Read More</a>
+        <a href="{{ asset('downloads/01-Programming Assignment Building your Recurrent Neural Network - Step by Step.zip') }}" download class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Download</a>
       </div>
-      <p class="text-fuchsia-400 font-semibold text-lg mt-3">🦕 Generating Dinosaur Names Using RNNs and NumPy</p>
+      <p class="text-purple-400 font-semibold text-lg mt-3">🦕 Generating Dinosaur Names Using RNNs and NumPy</p>
     </div>
 
 
 
     <!-- Recurrent Neural Network Coursework Project Card -->
-      <div class="bg-black/60 border border-fuchsia-400/20 rounded-xl p-6 shadow-lg hover:shadow-[0_0_12px_#f472b6] hover:scale-[1.03] transition-transform duration-500" data-aos="zoom-in" data-aos-duration="700">
+      <div class="bg-black/60 border border-purple-400/20 rounded-xl p-6 shadow-lg hover:shadow-[0_0_12px_#f472b6] hover:scale-[1.03] transition-transform duration-500" data-aos="zoom-in" data-aos-duration="700">
         <img src="{{ asset('images/rnn_step_by_step.png') }}" class="rounded-lg mb-4 w-full h-48 object-cover cursor-zoom-in hover:drop-shadow-[0_0_3px_#f472b6]" alt="RNN Screenshot" @click="modalImage = '{{ asset('images/rnn_step_by_step.png') }}'; modalOpen = true">
-        <h2 class="text-2xl font-extrabold text-fuchsia-300 mb-2 tracking-wide drop-shadow-[0_0_4px_#f472b6]">Building My Recurrent Neural Network - Step by Step</h2>
+        <h2 class="text-2xl font-extrabold text-purple-300 mb-2 tracking-wide drop-shadow-[0_0_4px_#f472b6]">Building My Recurrent Neural Network - Step by Step</h2>
         <p class="text-[1.15rem] text-gray-300 mb-4">Step-by-step implementation of a character-level RNN using NumPy to understand sequence modeling and BPTT without deep learning libraries.</p>
         <p class="text-base text-gray-500 font-semibold mb-3 transition duration-300 hover:text-white">
           <span class="text-gray-200">Course: Deep Learning Specialization – Course 5, Week 1</span>
         </p>
         <div class="flex flex-wrap gap-2 mb-4 text-base font-semibold">
-          <span class="bg-fuchsia-400/10 text-fuchsia-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">Python</span>
-          <span class="bg-fuchsia-400/10 text-fuchsia-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">NumPy</span>
-          <span class="bg-fuchsia-400/10 text-fuchsia-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">RNN</span>
-          <span class="bg-fuchsia-400/10 text-fuchsia-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">Char-level Model</span>
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">Python</span>
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">NumPy</span>
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">RNN</span>
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">Char-level Model</span>
         </div>
         <div class="flex flex-wrap gap-4 text-base font-medium mb-4">
           <a href="https://github.com/Adit-Mugdha-das/Recurrent-Neural-Network-" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">GitHub</a>
           <a href="https://github.com/Adit-Mugdha-das/Recurrent-Neural-Network-/blob/main/README.md" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Read More</a>
           <a href="{{ asset('downloads/Recurrent Neural Network.zip') }}" download class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Download</a>
         </div>
-        <p class="text-fuchsia-400 font-semibold text-lg mt-3">🔁 Character-Level Sequence Generation via Custom RNN</p>
+        <p class="text-purple-400 font-semibold text-lg mt-3">🔁 Character-Level Sequence Generation via Custom RNN</p>
       </div>
 
 
 
 
             <!-- Neural Style Transfer with VGG-19 Coursework Project Card -->
-      <div class="bg-black/60 border border-fuchsia-400/20 rounded-xl p-6 shadow-lg hover:shadow-[0_0_12px_#f472b6] hover:scale-[1.03] transition-transform duration-500" data-aos="zoom-in" data-aos-duration="700">
+      <div class="bg-black/60 border border-purple-400/20 rounded-xl p-6 shadow-lg hover:shadow-[0_0_12px_#f472b6] hover:scale-[1.03] transition-transform duration-500" data-aos="zoom-in" data-aos-duration="700">
         <img src="{{ asset('images/neural_style_transfer.png') }}" class="rounded-lg mb-4 w-full h-48 object-cover cursor-zoom-in hover:drop-shadow-[0_0_3px_#f472b6]" alt="Neural Style Transfer Screenshot" @click="modalImage = '{{ asset('images/neural_style_transfer.png') }}'; modalOpen = true">
-        <h2 class="text-2xl font-extrabold text-fuchsia-300 mb-2 tracking-wide drop-shadow-[0_0_4px_#f472b6]">Neural Style Transfer with VGG-19</h2>
+        <h2 class="text-2xl font-extrabold text-purple-300 mb-2 tracking-wide drop-shadow-[0_0_4px_#f472b6]">Neural Style Transfer with VGG-19</h2>
         <p class="text-[1.15rem] text-gray-300 mb-4">Implemented neural style transfer to blend content and artistic style using deep convolutional features from a VGG-19 model.</p>
         <p class="text-base text-gray-500 font-semibold mb-3 transition duration-300 hover:text-white">
           <span class="text-gray-200">Course: Deep Learning Specialization – Course 4, Week 4</span>
         </p>
         <div class="flex flex-wrap gap-2 mb-4 text-base font-semibold">
-          <span class="bg-fuchsia-400/10 text-fuchsia-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">Python</span>
-          <span class="bg-fuchsia-400/10 text-fuchsia-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">TensorFlow</span>
-          <span class="bg-fuchsia-400/10 text-fuchsia-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">VGG-19</span>
-          <span class="bg-fuchsia-400/10 text-fuchsia-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">Jupyter Notebook</span>
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">Python</span>
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">TensorFlow</span>
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">VGG-19</span>
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">Jupyter Notebook</span>
         </div>
         <div class="flex flex-wrap gap-4 text-base font-medium mb-4">
           <a href="https://github.com/Adit-Mugdha-das/Art-Generation-with-Neural-Style-Transfer" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">GitHub</a>
           <a href="https://github.com/Adit-Mugdha-das/Art-Generation-with-Neural-Style-Transfer/blob/main/README.md" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Read More</a>
           <a href="{{ asset('downloads/Art Generation with Neural Style Transfer.zip') }}" download class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Download</a>
         </div>
-        <p class="text-fuchsia-400 font-semibold text-lg mt-3">🎨 Artistic Image Generation via Deep Style Transfer</p>
+        <p class="text-purple-400 font-semibold text-lg mt-3">🎨 Artistic Image Generation via Deep Style Transfer</p>
       </div>
 
 
