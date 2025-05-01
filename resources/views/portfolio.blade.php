@@ -96,7 +96,8 @@
 
             <!-- Dropdown Links -->
             <ul x-show="navOpen" x-transition
-                class="mt-2 bg-black/90 backdrop-blur-md rounded-lg p-4 space-y-2 shadow-lg text-sm w-48">
+                class="mt-2 bg-black/90 backdrop-blur-md rounded-xl px-6 py-4 space-y-3 shadow-2xl text-base w-64">
+
                 <li><a @click="navOpen = false" href="{{ url('/about') }}" class="block hover:text-purple-300">About</a></li>
                 <li><a @click="navOpen = false" href="{{ url('/education') }}" class="block hover:text-purple-300">Education</a></li>
                 <li><a @click="navOpen = false" href="{{ url('/skills') }}" class="block hover:text-purple-300">Skills</a></li>
@@ -111,8 +112,8 @@
         <!-- Hero Section -->
         <section class="flex flex-col items-center justify-center text-center py-16 px-4 sm:px-6 md:px-10 lg:px-20">
             <img src="{{ asset('images/profile.jpeg') }}" alt="Mugdha"
-                class="w-60 h-60 sm:w-72 sm:h-72 md:w-80 md:h-80 mb-6 object-cover border-4 border-[#d8b4fe] drop-shadow-[0_0_10px_#d8b4fe] shadow-xl transition-transform duration-300 hover:scale-105 animate__animated animate__fadeInDown cursor-zoom-in"
-                @click="modalImage = '{{ asset('images/profile.jpeg') }}'; modalOpen = true" />
+            class="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 mb-6 object-cover border-4 border-[#d8b4fe] drop-shadow-[0_0_10px_#d8b4fe] shadow-xl transition-transform duration-300 hover:scale-105 animate__animated animate__fadeInDown cursor-zoom-in"
+            @click="modalImage = '{{ asset('images/profile.jpeg') }}'; modalOpen = true" />
 
             <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 tracking-wide neon-glow animate__animated animate__fadeInUp animate__delay-1s">
                 Hello, I'm Mugdha
