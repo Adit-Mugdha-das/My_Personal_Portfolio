@@ -157,14 +157,16 @@
     </style>
 </head>
 <body class="text-white overflow-x-hidden bg-[#0f172a]">
-    <div id="vanta-bg" x-data="{ navOpen: false, dropdownOpen: false }">
-
+    <div id="vanta-bg" x-data="{ navOpen: false }">
 
         <!-- Navbar -->
         <nav class="bg-black/50 backdrop-blur-md text-white px-6 py-4 flex justify-between items-center shadow-md rounded-b-xl">
             <div class="font-bold text-purple-300 text-xl tracking-wider neon-glow">Adit Mugdha Das</div>
 
-           
+            <!-- Hamburger Icon -->
+            <button @click="navOpen = !navOpen" class="md:hidden text-purple-300 text-2xl focus:outline-none">
+                <i :class="navOpen ? 'fas fa-times' : 'fas fa-bars'"></i>
+            </button>
 
             <!-- Nav Links -->
             <ul class="hidden md:flex gap-6 text-sm md:text-base">
@@ -190,30 +192,6 @@
                 <li><a href="{{ url('/contact') }}">Contact</a></li>
             </ul>
         </nav>
-
-
-        <!-- Floating Hamburger Button -->
-        <div class="absolute top-[90px] left-6 z-50" x-data>
-            <button @click="navOpen = !navOpen" ...
-                class="text-purple-300 text-2xl focus:outline-none">
-                <i :class="navOpen ? 'fas fa-times' : 'fas fa-bars'"></i>
-
-            </>
-
-            <!-- Dropdown Links -->
-            <ul x-show="navOpen" x-transition @click.away="navOpen = false"
-
-            class="mt-4 bg-black/90 backdrop-blur-md rounded-2xl px-8 py-6 space-y-4 shadow-2xl text-xl w-96">
-                <li><a @click="navOpen = false" href="{{ url('/about') }}" class="block hover:text-purple-300">About</a></li>
-                <li><a @click="navOpen = false" href="{{ url('/education') }}" class="block hover:text-purple-300">Education</a></li>
-                <li><a @click="navOpen = false" href="{{ url('/skills') }}" class="block hover:text-purple-300">Skills</a></li>
-                <li><a @click="navOpen = false" href="{{ url('/projects') }}" class="block hover:text-purple-300">Projects</a></li>
-                <li><a @click="navOpen = false" href="{{ url('/certifications') }}" class="block hover:text-purple-300">Certifications</a></li>
-                <li><a @click="navOpen = false" href="{{ url('/test') }}" class="block hover:text-purple-300">Honors & Awards</a></li>
-                <li><a @click="navOpen = false" href="{{ url('/contact') }}" class="block hover:text-purple-300">Contact</a></li>
-            </>
-        </div>
-
 
         <!-- About Section -->
         <section class="about-wrapper flex-grow">
