@@ -55,10 +55,7 @@
             <!-- Logo with always-visible hamburger below -->
         <div class="flex flex-col items-start gap-1">
             <div class="font-bold text-purple-300 text-xl tracking-wider neon-glow">Adit Mugdha Das</div>
-            <button @click="navOpen = !navOpen"
-                class="text-purple-300 text-xl focus:outline-none">
-                <i :class="navOpen ? 'fas fa-times' : 'fas fa-bars'"></i>
-            </button>
+            
         </div>
 
 
@@ -88,6 +85,28 @@
                 <li><a href="{{ url('/contact') }}">Contact</a></li>
             </ul>
         </nav>
+
+        <!-- Floating Hamburger Button Below Navbar -->
+        <!-- Floating Hamburger Button Below Navbar -->
+        <div class="absolute top-[90px] left-6 z-50" x-data>
+            <button @click="navOpen = !navOpen"
+                class="text-purple-300 text-2xl focus:outline-none">
+                <i :class="navOpen ? 'fas fa-times' : 'fas fa-bars'"></i>
+            </button>
+
+            <!-- Dropdown Links -->
+            <ul x-show="navOpen" x-transition
+                class="mt-2 bg-black/90 backdrop-blur-md rounded-lg p-4 space-y-2 shadow-lg text-sm w-48">
+                <li><a @click="navOpen = false" href="{{ url('/about') }}" class="block hover:text-purple-300">About</a></li>
+                <li><a @click="navOpen = false" href="{{ url('/education') }}" class="block hover:text-purple-300">Education</a></li>
+                <li><a @click="navOpen = false" href="{{ url('/skills') }}" class="block hover:text-purple-300">Skills</a></li>
+                <li><a @click="navOpen = false" href="{{ url('/projects') }}" class="block hover:text-purple-300">Projects</a></li>
+                <li><a @click="navOpen = false" href="{{ url('/certifications') }}" class="block hover:text-purple-300">Certifications</a></li>
+                <li><a @click="navOpen = false" href="{{ url('/test') }}" class="block hover:text-purple-300">Honors & Awards</a></li>
+                <li><a @click="navOpen = false" href="{{ url('/contact') }}" class="block hover:text-purple-300">Contact</a></li>
+            </ul>
+        </div>
+
 
         <!-- Hero Section -->
         <section class="flex flex-col items-center justify-center text-center py-16 px-4 sm:px-6 md:px-10 lg:px-20">
