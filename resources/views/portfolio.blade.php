@@ -52,12 +52,17 @@
         <!-- Navbar -->
         <nav class="bg-black/50 backdrop-blur-md text-white px-6 py-4 flex justify-between items-center shadow-md rounded-b-xl" x-data="{ navOpen: false }">
             <!-- Logo -->
+            <!-- Logo with always-visible hamburger below -->
+        <div class="flex flex-col items-start gap-1">
             <div class="font-bold text-purple-300 text-xl tracking-wider neon-glow">Adit Mugdha Das</div>
-
-            <!-- Hamburger Icon (Mobile Only) -->
-            <button @click="navOpen = !navOpen" class="md:hidden text-purple-300 text-2xl focus:outline-none">
+            <button @click="navOpen = !navOpen"
+                class="text-purple-300 text-xl focus:outline-none">
                 <i :class="navOpen ? 'fas fa-times' : 'fas fa-bars'"></i>
             </button>
+        </div>
+
+
+            
 
             <!-- Nav Links -->
             <ul class="hidden md:flex gap-6 text-sm md:text-base">
@@ -102,18 +107,17 @@
                 I thrive on solving real-world problems and crafting unique, innovative tech with clean, elegant code.
             </p>
 
-                    <div class="flex flex-col sm:flex-row gap-4 mt-4 animate__animated animate__fadeInUp animate__delay-3s">
-            <a href="{{ url('/download-cv') }}"
-            class="px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button text-center">
-            Download CV
-            </a>
-
-            <a href="{{ asset('documents/Mugdha_CV.pdf') }}" target="_blank"
-            class="px-5 py-3 text-sm sm:text-base bg-transparent border border-fuchsia-400 text-fuchsia-400 font-semibold rounded-lg shadow-lg hover:bg-fuchsia-200 hover:text-black transition-all duration-300 neon-button">
-            View CV
-            </a>
-
-        </div>
+            <div class="flex flex-col sm:flex-row gap-4 mt-4 animate__animated animate__fadeInUp animate__delay-3s">
+                <a href="{{ url('/download-cv') }}"
+                class="px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button text-center">
+                Download CV
+                </a>
+                
+                <a href="{{ asset('documents/Mugdha_CV.pdf') }}"
+                class="px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button text-center">
+                View CV
+                </a>
+            </div>
 
 
             <div class="flex flex-wrap justify-center gap-6 sm:gap-8 mt-6 text-white text-3xl sm:text-4xl animate__animated animate__fadeInUp animate__delay-4s">
