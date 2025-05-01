@@ -102,13 +102,21 @@
                 I thrive on solving real-world problems and crafting unique, innovative tech with clean, elegant code.
             </p>
 
+                    <div class="flex flex-col sm:flex-row gap-4 mt-4 animate__animated animate__fadeInUp animate__delay-3s">
             <a href="{{ url('/download-cv') }}"
-               class="px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button animate__animated animate__fadeInUp animate__delay-3s">
-               Download CV
+            class="px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button text-center">
+            Download CV
             </a>
 
+            <a href="{{ asset('cv/mugdha_cv.pdf') }}" target="_blank"
+            class="px-5 py-3 text-sm sm:text-base bg-transparent border border-white text-white font-semibold rounded-lg shadow-lg neon-button text-center hover:bg-white hover:text-black transition-all duration-300">
+            View CV
+            </a>
+        </div>
+
+
             <div class="flex flex-wrap justify-center gap-6 sm:gap-8 mt-6 text-white text-3xl sm:text-4xl animate__animated animate__fadeInUp animate__delay-4s">
-                <a href="https://www.linkedin.com/in/adit-mugdha-das-0a6723314/" target="_blank"
+               <a href="https://www.linkedin.com/in/adit-mugdha-das-0a6723314/" target="_blank"
                    class="hover:text-blue-400 hover:drop-shadow-[0_0_8px_#3b82f6] transition-transform transform duration-300 hover:scale-110" title="LinkedIn">
                     <i class="fab fa-linkedin"></i>
                 </a>
