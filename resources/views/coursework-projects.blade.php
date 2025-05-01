@@ -95,10 +95,10 @@
     <span class="text-gray-200">Course: Deep Learning Specialization – Course 5, Week 2</span>
   </p>
   <div class="flex flex-wrap gap-2 mb-4 text-base font-semibold">
-    <span class="bg-amber-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#facc15]">Python</span>
-    <span class="bg-amber-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#facc15]">Keras</span>
-    <span class="bg-amber-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#facc15]">GloVe</span>
-    <span class="bg-amber-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#facc15]">LSTM</span>
+    <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#facc15]">Python</span>
+    <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#facc15]">Keras</span>
+    <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#facc15]">GloVe</span>
+    <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#facc15]">LSTM</span>
   </div>
   <div class="flex flex-wrap gap-4 text-base font-medium mb-4">
     <a href="https://github.com/Adit-Mugdha-das/Emojify" target="_blank" class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#facc15] transition-transform">GitHub</a>
@@ -125,9 +125,9 @@
         <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">LSTM</span>
       </div>
       <div class="flex flex-wrap gap-4 text-base font-medium mb-4">
-        <a href="https://github.com/Adit-Mugdha-das/Trigger-Word-Detection" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">GitHub</a>
-        <a href="https://github.com/Adit-Mugdha-das/Trigger-Word-Detection/blob/main/README.md" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Read More</a>
-        <a href="{{ asset('downloads/Trigger Word Detection.zip') }}" download class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Download</a>
+        <a href="https://github.com/Adit-Mugdha-das/Trigger-Word-Detection" target="_blank" class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">GitHub</a>
+        <a href="https://github.com/Adit-Mugdha-das/Trigger-Word-Detection/blob/main/README.md" target="_blank" class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Read More</a>
+        <a href="{{ asset('downloads/Trigger Word Detection.zip') }}" download class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Download</a>
       </div>
       <p class="text-purple-400 font-semibold text-lg mt-3">🎧 Detecting the Word “Activate” from Live Audio with LSTMs</p>
     </div>
@@ -149,9 +149,9 @@
         <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">Attention Mechanism</span>
       </div>
       <div class="flex flex-wrap gap-4 text-base font-medium mb-4">
-        <a href="https://github.com/Adit-Mugdha-das/Neural-Machine-Translation-with-Attention" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">GitHub</a>
-        <a href="https://github.com/Adit-Mugdha-das/Neural-Machine-Translation-with-Attention/blob/main/README.md" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Read More</a>
-        <a href="{{ asset('downloads/11-Programming Assignment Neural Machine Translation with Attention.zip') }}" download class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Download</a>
+        <a href="https://github.com/Adit-Mugdha-das/Neural-Machine-Translation-with-Attention" target="_blank" class="purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">GitHub</a>
+        <a href="https://github.com/Adit-Mugdha-das/Neural-Machine-Translation-with-Attention/blob/main/README.md" target="_blank" class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Read More</a>
+        <a href="{{ asset('downloads/11-Programming Assignment Neural Machine Translation with Attention.zip') }}" download class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Download</a>
       </div>
       <p class="text-purple-400 font-semibold text-lg mt-3">🌍 English-to-French Translation with Seq2Seq + Attention</p>
     </div>
@@ -173,9 +173,9 @@
         <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">NLP</span>
       </div>
       <div class="flex flex-wrap gap-4 text-base font-medium mb-4">
-        <a href="https://github.com/Adit-Mugdha-das/Operations-on-Word-Vectors---Debiasing" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">GitHub</a>
-        <a href="https://github.com/Adit-Mugdha-das/Operations-on-Word-Vectors---Debiasing/blob/main/README.md" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Read More</a>
-        <a href="{{ asset('downloads/11-Programming Assignment Operations on Word Vectors - Debiasing.zip') }}" download class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Download</a>
+        <a href="https://github.com/Adit-Mugdha-das/Operations-on-Word-Vectors---Debiasing" target="_blank" class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">GitHub</a>
+        <a href="https://github.com/Adit-Mugdha-das/Operations-on-Word-Vectors---Debiasing/blob/main/README.md" target="_blank" class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Read More</a>
+        <a href="{{ asset('downloads/11-Programming Assignment Operations on Word Vectors - Debiasing.zip') }}" download class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Download</a>
       </div>
       <p class="text-purple-400 font-semibold text-lg mt-3">🧠 Exploring Fairness and Bias Mitigation in Word Embeddings</p>
     </div>
@@ -197,9 +197,9 @@
           <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#f472b6]">Music Generation</span>
         </div>
         <div class="flex flex-wrap gap-4 text-base font-medium mb-4">
-          <a href="https://github.com/Adit-Mugdha-das/Jazz-Improvisation-with-LSTM" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">GitHub</a>
-          <a href="https://github.com/Adit-Mugdha-das/Jazz-Improvisation-with-LSTM/blob/main/README.md" target="_blank" class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Read More</a>
-          <a href="{{ asset('downloads/Jazz Improvisation with LSTM.zip') }}" download class="text-fuchsia-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Download</a>
+          <a href="https://github.com/Adit-Mugdha-das/Jazz-Improvisation-with-LSTM" target="_blank" class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">GitHub</a>
+          <a href="https://github.com/Adit-Mugdha-das/Jazz-Improvisation-with-LSTM/blob/main/README.md" target="_blank" class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Read More</a>
+          <a href="{{ asset('downloads/Jazz Improvisation with LSTM.zip') }}" download class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#f472b6] transition-transform">Download</a>
         </div>
         <p class="text-purple-400 font-semibold text-lg mt-3">🎷 AI-Powered Jazz Sequence Generation using LSTM Networks</p>
       </div>
