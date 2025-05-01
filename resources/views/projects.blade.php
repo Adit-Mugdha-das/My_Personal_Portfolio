@@ -7,6 +7,8 @@
 
  <!-- <link rel="stylesheet" href="{{ secure_asset('build/assets/app-Ct2FSlyM.css') }}">
 <script src="{{ secure_asset('build/assets/app-eMHK6VFw.js') }}" defer></script>-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-7O4j4aV9IhK0o1VXJk0zK0eqJdJ5k+cNQ7I7Yb4Gg29uFlXYvD0qgRhLoO5VL/fqvVlH8MPkX8YH1UR5syGHqA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -31,9 +33,7 @@
  <!-- Navbar -->
 <nav class="bg-black/50 backdrop-blur-md text-white px-6 py-4 flex justify-between items-center shadow-md rounded-b-xl">
   <div class="font-bold text-purple-300 text-xl tracking-wider neon-glow">Adit Mugdha Das</div>
-  <button @click="navOpen = !navOpen" class="md:hidden text-purple-300 text-2xl focus:outline-none">
-    <i :class="navOpen ? 'fas fa-times' : 'fas fa-bars'"></i>
-  </button>
+  
   <!-- Desktop Nav -->
   <ul class="hidden md:flex gap-6 text-sm md:text-base">
     <li><a href="{{ url('/') }}" class="hover:text-purple-300 transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_#c084fc]">Home</a></li>
