@@ -175,6 +175,11 @@
         <li>Object Detection, YOLO Algorithm</li>
         <li>Neural Style Transfer</li>
         <li>U-NET, Siamese Network</li>
+        <li>Recurrent Neural Networks (RNNs)</li>
+        <li>GRUs and LSTMs</li>
+        <li>Natural Language Processing (NLP)</li>
+        <li>Transformer Models</li>
+        <li>HuggingFace Tokenizers</li>
         </ul>
       </div>
 

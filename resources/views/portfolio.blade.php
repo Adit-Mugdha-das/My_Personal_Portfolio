@@ -40,6 +40,18 @@
         }
     </style>
 </head>
+
+<script>
+    document.addEventListener('touchstart', function (e) {
+        document.body.__x.$data.touchStartX = e.changedTouches[0].screenX;
+    });
+
+    document.addEventListener('touchend', function (e) {
+        document.body.__x.$data.touchEndX = e.changedTouches[0].screenX;
+        document.body.__x.$data.handleSwipe();
+    });
+</script>
+
 <body class="text-white overflow-x-hidden">
 
     <!-- 🔄 Preloader -->
@@ -47,7 +59,24 @@
         <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-fuchsia-500 border-solid border-t-transparent"></div>
     </div>
 
-    <div id="vanta-bg" class="min-h-screen w-full relative" x-data="{ modalOpen: false, modalImage: '', navOpen: false }">
+    <div id="vanta-bg" class="min-h-screen w-full relative" x-data="{
+    modalOpen: false,
+    modalImage: '',
+    navOpen: false,
+    touchStartX: 0,
+    touchEndX: 0,
+    handleSwipe() {
+        const deltaX = this.touchEndX - this.touchStartX;
+        if (Math.abs(deltaX) > 50) {
+            if (deltaX < 0) {
+                window.location.href = '{{ url('/about') }}';
+            } else {
+                window.location.href = '{{ url('/contact') }}';
+            }
+        }
+    }
+}"
+>
 
         <!-- Navbar -->
         <nav class="bg-black/50 backdrop-blur-md text-white px-6 py-4 flex justify-between items-center shadow-md rounded-b-xl" x-data="{ navOpen: false }">

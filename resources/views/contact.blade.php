@@ -111,7 +111,8 @@
     </style>
 </head>
 <body class="text-white">
-<div id="vanta-bg" class="min-h-screen" x-data="{ open: false }">
+<div id="vanta-bg" class="min-h-screen" x-data="{ navOpen: false }">
+
 
     <!-- Navbar -->
     <nav class="bg-black/50 backdrop-blur-md text-white px-6 py-4 flex justify-between items-center shadow-md rounded-b-xl">
