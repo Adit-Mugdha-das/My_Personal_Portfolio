@@ -231,19 +231,18 @@
                 <i :class="navOpen ? 'fas fa-times' : 'fas fa-bars'"></i>
             </button>
 
-            <!-- Dropdown Links -->
             <ul x-show="navOpen" x-cloak x-transition
-                class="mt-4 bg-black/90 backdrop-blur-md rounded-2xl px-8 py-6 space-y-4 shadow-2xl text-xl w-96">
-                <li><a @click="navOpen = false" href="{{ url('/portfolio') }}" class="block hover:text-purple-300">Home</a></li>
-                <li><a @click="navOpen = false" href="{{ url('/about') }}" class="block hover:text-purple-300">About</a></li>
-                <li><a @click="navOpen = false" href="{{ url('/education') }}" class="block hover:text-purple-300">Education</a></li>
-                <li><a @click="navOpen = false" href="{{ url('/skills') }}" class="block hover:text-purple-300">Skills</a></li>
-                <li><a @click="navOpen = false" href="{{ url('/projects') }}" class="block hover:text-purple-300">Projects</a></li>
-                <li><a @click="navOpen = false" href="{{ url('/certifications') }}" class="block hover:text-purple-300">Certifications</a></li>
-                <li><a @click="navOpen = false" href="{{ url('/test') }}" class="block hover:text-purple-300">Honors & Awards</a></li>
-                <li><a @click="navOpen = false" href="{{ url('/contact') }}" class="block hover:text-purple-300">Contact</a></li>
-            </ul>
-        </div>
+    class="mt-4 bg-black/90 backdrop-blur-md rounded-2xl px-8 py-6 space-y-4 shadow-2xl text-xl w-96">
+    <li><a @click="navOpen = false" href="{{ url('/') }}" class="block {{ Request::is('/') ? 'text-purple-400 font-semibold drop-shadow-[0_0_8px_#c084fc] scale-110' : 'hover:text-purple-300' }}">Home</a></li>
+    <li><a @click="navOpen = false" href="{{ url('/about') }}" class="block {{ Request::is('about') ? 'text-purple-400 font-semibold drop-shadow-[0_0_8px_#c084fc] scale-110' : 'hover:text-purple-300' }}">About</a></li>
+    <li><a @click="navOpen = false" href="{{ url('/education') }}" class="block {{ Request::is('education') ? 'text-purple-400 font-semibold drop-shadow-[0_0_8px_#c084fc] scale-110' : 'hover:text-purple-300' }}">Education</a></li>
+    <li><a @click="navOpen = false" href="{{ url('/skills') }}" class="block {{ Request::is('skills') ? 'text-purple-400 font-semibold drop-shadow-[0_0_8px_#c084fc] scale-110' : 'hover:text-purple-300' }}">Skills</a></li>
+    <li><a @click="navOpen = false" href="{{ url('/projects') }}" class="block {{ Request::is('projects') ? 'text-purple-400 font-semibold drop-shadow-[0_0_8px_#c084fc] scale-110' : 'hover:text-purple-300' }}">Projects</a></li>
+    <li><a @click="navOpen = false" href="{{ url('/certifications') }}" class="block {{ Request::is('certifications') ? 'text-purple-300 font-semibold drop-shadow-[0_0_8px_#c084fc] scale-110' : 'hover:text-purple-300' }}">Certifications</a></li>
+    <li><a @click="navOpen = false" href="{{ url('/test') }}" class="block {{ Request::is('test') ? 'text-purple-400 font-semibold drop-shadow-[0_0_8px_#c084fc] scale-110' : 'hover:text-purple-300' }}">Honors & Awards</a></li>
+    <li><a @click="navOpen = false" href="{{ url('/contact') }}" class="block {{ Request::is('contact') ? 'text-purple-400 font-semibold drop-shadow-[0_0_8px_#c084fc] scale-110' : 'hover:text-purple-300' }}">Contact</a></li>
+</ul>
+
 
 
         <!-- About Section -->

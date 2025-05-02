@@ -107,14 +107,14 @@
 
     <ul x-show="navOpen" x-cloak x-transition
         class="mt-4 bg-black/90 backdrop-blur-md rounded-2xl px-8 py-6 space-y-4 shadow-2xl text-xl w-96">
-        <li><a @click="navOpen = false" href="{{ url('/portfolio') }}" class="block hover:text-purple-300">Home</a></li>
-        <li><a @click="navOpen = false" href="{{ url('/about') }}" class="block hover:text-purple-300">About</a></li>
-        <li><a @click="navOpen = false" href="{{ url('/education') }}" class="block text-purple-300">Education</a></li>
-        <li><a @click="navOpen = false" href="{{ url('/skills') }}" class="block hover:text-purple-300">Skills</a></li>
-        <li><a @click="navOpen = false" href="{{ url('/projects') }}" class="block hover:text-purple-300">Projects</a></li>
-        <li><a @click="navOpen = false" href="{{ url('/certifications') }}" class="block hover:text-purple-300">Certifications</a></li>
-        <li><a @click="navOpen = false" href="{{ url('/test') }}" class="block hover:text-purple-300">Honors & Awards</a></li>
-        <li><a @click="navOpen = false" href="{{ url('/contact') }}" class="block hover:text-purple-300">Contact</a></li>
+        <li><a @click="navOpen = false" href="{{ url('/portfolio') }}" class="block hover:text-purple-400">Home</a></li>
+        <li><a @click="navOpen = false" href="{{ url('/about') }}" class="block hover:text-purple-400">About</a></li>
+        <li><a @click="navOpen = false" href="{{ url('/education') }}" class="block text-purple-400">Education</a></li>
+        <li><a @click="navOpen = false" href="{{ url('/skills') }}" class="block hover:text-purple-400">Skills</a></li>
+        <li><a @click="navOpen = false" href="{{ url('/projects') }}" class="block hover:text-purple-400">Projects</a></li>
+        <li><a @click="navOpen = false" href="{{ url('/certifications') }}" class="block hover:text-purple-400">Certifications</a></li>
+        <li><a @click="navOpen = false" href="{{ url('/test') }}" class="block hover:text-purple-400">Honors & Awards</a></li>
+        <li><a @click="navOpen = false" href="{{ url('/contact') }}" class="block hover:text-purple-400">Contact</a></li>
     </ul>
 </div>
 
