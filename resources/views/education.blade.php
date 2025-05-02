@@ -13,6 +13,36 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+  function swipeComponent() {
+    return {
+      navOpen: false,
+      show: false,
+      touchStartX: 0,
+      touchEndX: 0,
+      initSwipe() {
+        window.addEventListener('touchstart', e => {
+          this.touchStartX = e.changedTouches[0].screenX;
+        });
+        window.addEventListener('touchend', e => {
+          this.touchEndX = e.changedTouches[0].screenX;
+          this.handleSwipe();
+        });
+      },
+      handleSwipe() {
+        const deltaX = this.touchEndX - this.touchStartX;
+        if (Math.abs(deltaX) > 50) {
+          if (deltaX < 0) {
+            window.location.href = "{{ url('/skills') }}";
+          } else {
+            window.location.href = "{{ url('/about') }}";
+          }
+        }
+      }
+    };
+  }
+</script>
+
 
     <style>
         .neon-glow {
@@ -39,7 +69,8 @@
     </style>
 </head>
 <body class="text-white overflow-x-hidden">
-<div id="vanta-bg" class="min-h-screen w-full relative" x-data="{ navOpen: false, show: false }" x-init="$watch('show', val => document.body.classList.toggle('overflow-hidden', val))">
+<div id="vanta-bg" class="min-h-screen w-full relative" x-data="swipeComponent()" x-init="initSwipe(); $watch('show', val => document.body.classList.toggle('overflow-hidden', val))">
+
 
     <!-- Navbar -->
     <nav class="bg-black/50 backdrop-blur-md text-white px-6 py-4 flex justify-between items-center shadow-md rounded-b-xl">
@@ -76,6 +107,7 @@
 
     <ul x-show="navOpen" x-cloak x-transition
         class="mt-4 bg-black/90 backdrop-blur-md rounded-2xl px-8 py-6 space-y-4 shadow-2xl text-xl w-96">
+        <li><a @click="navOpen = false" href="{{ url('/portfolio') }}" class="block hover:text-purple-300">Home</a></li>
         <li><a @click="navOpen = false" href="{{ url('/about') }}" class="block hover:text-purple-300">About</a></li>
         <li><a @click="navOpen = false" href="{{ url('/education') }}" class="block text-purple-300">Education</a></li>
         <li><a @click="navOpen = false" href="{{ url('/skills') }}" class="block hover:text-purple-300">Skills</a></li>

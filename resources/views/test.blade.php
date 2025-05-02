@@ -24,6 +24,48 @@
 
   <!-- Alpine.js -->
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script>
+  function swipeComponent() {
+    return {
+      navOpen: false,
+      imageModalOpen: false,
+      translationModalOpen: false,
+      modalImage: '',
+      modalContent: '',
+      openImageModal(image) {
+        this.modalImage = image;
+        this.imageModalOpen = true;
+      },
+      openTranslationModal(image, contentId) {
+        this.modalImage = image;
+        this.modalContent = contentId;
+        this.translationModalOpen = true;
+      },
+      touchStartX: 0,
+      touchEndX: 0,
+      initSwipe() {
+        window.addEventListener('touchstart', e => {
+          this.touchStartX = e.changedTouches[0].screenX;
+        });
+        window.addEventListener('touchend', e => {
+          this.touchEndX = e.changedTouches[0].screenX;
+          this.handleSwipe();
+        });
+      },
+      handleSwipe() {
+        const deltaX = this.touchEndX - this.touchStartX;
+        if (Math.abs(deltaX) > 50) {
+          if (deltaX < 0) {
+            window.location.href = "{{ url('/contact') }}"; // swipe left → Contact
+          } else {
+            window.location.href = "{{ url('/certifications') }}"; // swipe right → Certifications
+          }
+        }
+      }
+    };
+  }
+</script>
+
 
   <style>
     .neon-glow {
@@ -49,23 +91,8 @@
 </head>
 <body class="text-white overflow-x-hidden">
 <!-- Put this inside <div id="vanta-bg" ...> -->
-<div id="vanta-bg" class="min-h-screen" x-data="{
-  navOpen: false,
-  imageModalOpen: false,
-  translationModalOpen: false,
-  modalImage: '',
-  modalContent: '',
-  openImageModal(image) {
-    this.modalImage = image;
-    this.imageModalOpen = true;
-  },
-  openTranslationModal(image, contentId) {
-    this.modalImage = image;
-    this.modalContent = contentId;
-    this.translationModalOpen = true;
-  }
-}"
->
+<div id="vanta-bg" class="min-h-screen" x-data="swipeComponent()" x-init="initSwipe()">
+
 
 
   <!-- Navbar -->
@@ -104,6 +131,7 @@
 
   <ul x-show="navOpen" x-cloak x-transition
       class="mt-4 bg-black/90 backdrop-blur-md rounded-2xl px-8 py-6 space-y-4 shadow-2xl text-xl w-96">
+      <li><a @click="navOpen = false" href="{{ url('/portfolio') }}" class="block hover:text-purple-300">Home</a></li>
     <li><a @click="navOpen = false" href="{{ url('/about') }}" class="block hover:text-purple-300">About</a></li>
     <li><a @click="navOpen = false" href="{{ url('/education') }}" class="block hover:text-purple-300">Education</a></li>
     <li><a @click="navOpen = false" href="{{ url('/skills') }}" class="block hover:text-purple-300">Skills</a></li>
