@@ -22,6 +22,7 @@
         0 0 40px #a855f7,
         0 0 80px #9333ea;
     }
+    [x-cloak] { display: none !important; }
   </style>
 </head>
 <body class="text-white overflow-x-hidden">
@@ -56,6 +57,25 @@
       <li><a href="{{ url('/contact') }}">Contact</a></li>
     </ul>
   </nav>
+
+
+  <!-- Floating Hamburger Button -->
+<div class="absolute top-[90px] left-6 z-50">
+  <button @click="navOpen = !navOpen" class="text-purple-300 text-2xl focus:outline-none">
+    <i :class="navOpen ? 'fas fa-times' : 'fas fa-bars'"></i>
+  </button>
+
+  <ul x-show="navOpen" x-cloak x-transition
+      class="mt-4 bg-black/90 backdrop-blur-md rounded-2xl px-8 py-6 space-y-4 shadow-2xl text-xl w-96">
+    <li><a @click="navOpen = false" href="{{ url('/about') }}" class="block hover:text-purple-300">About</a></li>
+    <li><a @click="navOpen = false" href="{{ url('/education') }}" class="block hover:text-purple-300">Education</a></li>
+    <li><a @click="navOpen = false" href="{{ url('/skills') }}" class="block hover:text-purple-300">Skills</a></li>
+    <li><a @click="navOpen = false" href="{{ url('/projects') }}" class="block text-purple-300">Projects</a></li>
+    <li><a @click="navOpen = false" href="{{ url('/certifications') }}" class="block hover:text-purple-300">Certifications</a></li>
+    <li><a @click="navOpen = false" href="{{ url('/test') }}" class="block hover:text-purple-300">Honors & Awards</a></li>
+    <li><a @click="navOpen = false" href="{{ url('/contact') }}" class="block hover:text-purple-300">Contact</a></li>
+  </ul>
+</div>
 
 
   <!-- Section -->
