@@ -160,41 +160,54 @@
     <div id="vanta-bg" x-data="{ navOpen: false }">
 
         <!-- Navbar -->
-        <!-- Header Section with Hamburger Always Visible -->
-<div class="px-6 py-4 bg-black/50 backdrop-blur-md text-white shadow-md rounded-b-xl z-20" x-data="{ navOpen: false }">
-    <!-- Name -->
-    <div class="font-bold text-purple-300 text-xl tracking-wider neon-glow">Adit Mugdha Das</div>
+        <nav class="bg-black/50 backdrop-blur-md text-white px-6 py-4 flex justify-between items-center shadow-md rounded-b-xl">
+            <div class="font-bold text-purple-300 text-xl tracking-wider neon-glow">Adit Mugdha Das</div>
 
-    <!-- Hamburger Icon -->
-    <div class="mt-3">
-        <button class="text-white text-2xl focus:outline-none" @click="navOpen = !navOpen">
-            <i :class="navOpen ? 'fas fa-times' : 'fas fa-bars'"></i>
-        </button>
-    </div>
+            <!-- Nav Links -->
+            <ul class="hidden md:flex gap-6 text-sm md:text-base">
+                <li><a href="{{ url('/') }}" class="hover:text-purple-300 transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_#c084fc]">Home</a></li>
+                <li><a href="{{ url('/about') }}" class="text-purple-300 font-semibold drop-shadow-[0_0_8px_#c084fc] scale-110">About</a></li>
+                <li><a href="{{ url('/education') }}" class="hover:text-purple-300 transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_#c084fc]">Education</a></li>
+                <li><a href="{{ url('/skills') }}" class="hover:text-purple-300 transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_#c084fc]">Skills</a></li>
+                <li><a href="{{ url('/projects') }}" class="hover:text-purple-300 transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_#c084fc]">Projects</a></li>
+                <li><a href="{{ url('/certifications') }}" class="hover:text-purple-300 transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_#c084fc]">Certifications</a></li>
+                <li><a href="{{ url('/test') }}" class="hover:text-purple-300 transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_#c084fc]">Honors & Awards</a></li>
+                <li><a href="{{ url('/contact') }}" class="hover:text-purple-300 transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_#c084fc]">Contact</a></li>
+            </ul>
 
-    <!-- Navbar Links (Visible on All Screens) -->
-    <ul class="flex flex-wrap gap-4 mt-4 text-sm md:text-base">
-        <li><a href="{{ url('/') }}" class="hover:text-purple-300 transition hover:scale-110">Home</a></li>
-        <li><a href="{{ url('/about') }}" class="text-purple-300 font-semibold scale-110">About</a></li>
-        <li><a href="{{ url('/education') }}" class="hover:text-purple-300 transition hover:scale-110">Education</a></li>
-        <li><a href="{{ url('/skills') }}" class="hover:text-purple-300 transition hover:scale-110">Skills</a></li>
-        <li><a href="{{ url('/projects') }}" class="hover:text-purple-300 transition hover:scale-110">Projects</a></li>
-        <li><a href="{{ url('/certifications') }}" class="hover:text-purple-300 transition hover:scale-110">Certifications</a></li>
-        <li><a href="{{ url('/test') }}" class="hover:text-purple-300 transition hover:scale-110">Honors & Awards</a></li>
-        <li><a href="{{ url('/contact') }}" class="hover:text-purple-300 transition hover:scale-110">Contact</a></li>
-    </ul>
+            <!-- Mobile Nav -->
+            <ul x-show="navOpen" class="md:hidden absolute top-[64px] left-0 w-full bg-black/80 backdrop-blur-md p-6 flex flex-col gap-4 z-50">
+                <li><a href="{{ url('/') }}">Home</a></li>
+                <li><a href="{{ url('/about') }}" class="text-purple-300">About</a></li>
+                <li><a href="{{ url('/education') }}">Education</a></li>
+                <li><a href="{{ url('/skills') }}">Skills</a></li>
+                <li><a href="{{ url('/projects') }}">Projects</a></li>
+                <li><a href="{{ url('/certifications') }}">Certifications</a></li>
+                <li><a href="{{ url('/test') }}">Honors & Awards</a></li>
+                <li><a href="{{ url('/contact') }}">Contact</a></li>
+            </ul>
+        </nav>
 
-    <!-- Optional Dropdown from Hamburger -->
-    <div x-show="navOpen" @click.outside="navOpen = false" x-transition
-         class="mt-4 bg-black/80 backdrop-blur-md p-6 rounded-xl shadow-lg z-50">
-        <p class="text-sm text-gray-300 mb-2">Quick Links:</p>
-        <ul class="flex flex-col gap-3">
-            <li><a href="{{ url('/cv') }}" class="text-purple-400 hover:underline">Download CV</a></li>
-            <li><a href="{{ url('/blog') }}" class="text-purple-400 hover:underline">Blog</a></li>
-            <li><a href="{{ url('/contact') }}" class="text-purple-400 hover:underline">Contact Me</a></li>
-        </ul>
-    </div>
-</div>
+
+        <!-- Floating Hamburger Button Below Navbar -->
+        <div class="absolute top-[90px] left-6 z-50" x-data>
+            <button @click="navOpen = !navOpen"
+                class="text-purple-300 text-2xl focus:outline-none">
+                <i :class="navOpen ? 'fas fa-times' : 'fas fa-bars'"></i>
+            </button>
+
+            <!-- Dropdown Links -->
+            <ul x-show="navOpen" x-transition
+                class="mt-4 bg-black/90 backdrop-blur-md rounded-2xl px-8 py-6 space-y-4 shadow-2xl text-xl w-96">
+                <li><a @click="navOpen = false" href="{{ url('/about') }}" class="block hover:text-purple-300">About</a></li>
+                <li><a @click="navOpen = false" href="{{ url('/education') }}" class="block hover:text-purple-300">Education</a></li>
+                <li><a @click="navOpen = false" href="{{ url('/skills') }}" class="block hover:text-purple-300">Skills</a></li>
+                <li><a @click="navOpen = false" href="{{ url('/projects') }}" class="block hover:text-purple-300">Projects</a></li>
+                <li><a @click="navOpen = false" href="{{ url('/certifications') }}" class="block hover:text-purple-300">Certifications</a></li>
+                <li><a @click="navOpen = false" href="{{ url('/test') }}" class="block hover:text-purple-300">Honors & Awards</a></li>
+                <li><a @click="navOpen = false" href="{{ url('/contact') }}" class="block hover:text-purple-300">Contact</a></li>
+            </ul>
+        </div>
 
 
         <!-- About Section -->
