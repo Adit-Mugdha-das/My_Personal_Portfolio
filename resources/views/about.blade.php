@@ -196,7 +196,7 @@
         <!-- Floating Hamburger Button Below Navbar -->
         <div class="absolute top-[90px] left-6 z-50" x-data>
             <button @click="navOpen = !navOpen"
-                class="text-purple-300 text-2xl focus:outline-none">
+                class="text-purple-400 text-2xl focus:outline-none">
                 <i :class="navOpen ? 'fas fa-times' : 'fas fa-bars'"></i>
             </button>
 
