@@ -17,6 +17,36 @@
 
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
+    <script>
+  function swipeComponent() {
+    return {
+      navOpen: false,
+      touchStartX: 0,
+      touchEndX: 0,
+      initSwipe() {
+        window.addEventListener('touchstart', e => {
+          this.touchStartX = e.changedTouches[0].screenX;
+        });
+        window.addEventListener('touchend', e => {
+          this.touchEndX = e.changedTouches[0].screenX;
+          this.handleSwipe();
+        });
+      },
+      handleSwipe() {
+        const deltaX = this.touchEndX - this.touchStartX;
+        if (Math.abs(deltaX) > 50) {
+          if (deltaX < 0) {
+            window.location.href = "{{ url('/education') }}";
+          } else {
+            window.location.href = "{{ url('/') }}";
+          }
+        }
+      }
+    };
+  }
+</script>
+
+
     <style>
         html, body {
             height: 100%;
@@ -160,7 +190,8 @@
     </style>
 </head>
 <body class="text-white overflow-x-hidden bg-[#0f172a]">
-    <div id="vanta-bg" x-data="{ navOpen: false }">
+<div id="vanta-bg" x-data="swipeComponent()" x-init="initSwipe()">
+
 
         <!-- Navbar -->
         <nav class="bg-black/50 backdrop-blur-md text-white px-6 py-4 flex justify-between items-center shadow-md rounded-b-xl">
