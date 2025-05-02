@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <title>Projects - Mugdha</title>
   @vite(['resources/css/app.css', 'resources/js/app.js'])
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
 
  <!-- <link rel="stylesheet" href="{{ secure_asset('build/assets/app-Ct2FSlyM.css') }}">
 <script src="{{ secure_asset('build/assets/app-eMHK6VFw.js') }}" defer></script>-->
