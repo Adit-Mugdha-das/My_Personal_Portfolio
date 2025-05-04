@@ -146,8 +146,11 @@
             </button>
 
             <!-- Dropdown Links -->
-            <ul x-show="navOpen" x-transition
-                class="mt-4 bg-black/90 backdrop-blur-md rounded-2xl px-8 py-6 space-y-4 shadow-2xl text-xl w-96">
+            <!-- Dropdown Links -->
+                <ul x-show="navOpen" x-transition
+                    @click.away="navOpen = false"
+                    class="mt-4 bg-black/90 backdrop-blur-md rounded-2xl px-8 py-6 space-y-4 shadow-2xl text-xl w-96">
+
 
                 <li><a @click="navOpen = false" href="{{ url('/') }}" class="block text-purple-400 font-semibold drop-shadow-[0_0_8px_#c084fc] scale-110">Home</a></li>
 
@@ -180,37 +183,25 @@
                 I thrive on solving real-world problems and crafting unique, innovative tech with clean, elegant code.
             </p>
 
-            <div class="flex flex-col sm:flex-row gap-4 mt-4 animate__animated animate__fadeInUp animate__delay-3s"
-                x-data="{ isMobile: window.innerWidth <= 768 }"
-                x-init="window.addEventListener('resize', () => { isMobile = window.innerWidth <= 768 })">
-
-                    
-                    <a href="{{ url('/download-cv') }}"
-                class="px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button text-center
-                        transition-transform duration-300 transform hover:-translate-y-1 hover:scale-105">
+            <div class="flex flex-col sm:flex-row gap-4 mt-4 animate__animated animate__fadeInUp animate__delay-3s">
+                <a href="{{ url('/download-cv') }}"
+                class="px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button text-center">
                 Download CV
                 </a>
-
-                <template x-if="!isMobile">
-                    <a href="{{ asset('documents/Mugdha_CV.pdf') }}"
+                
+                <a
+                    x-data
+                    x-init="
+                        if (window.innerWidth <= 768) {
+                            $el.href = 'https://docs.google.com/viewer?url={{ urlencode(asset('documents/Mugdha_CV.pdf')) }}&embedded=true';
+                        } else {
+                            $el.href = '{{ asset('documents/Mugdha_CV.pdf') }}';
+                        }
+                    "
                     target="_blank" rel="noopener noreferrer"
-                    class="px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button text-center
-                            transition-transform duration-300 transform hover:-translate-y-1 hover:scale-105">
+                    class="px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button text-center">
                     View CV
-                    </a>
-                </template>
-
-                <template x-if="isMobile">
-                    <a href="https://docs.google.com/viewer?url={{ urlencode(asset('documents/Mugdha_CV.pdf')) }}&embedded=true"
-                    target="_blank" rel="noopener noreferrer"
-                    class="px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button text-center
-                            transition-transform duration-300 transform hover:-translate-y-1 hover:scale-105">
-                    View CV
-                    </a>
-                </template>
-
-            </div>
-
+                </a>
 
 
             </div>
