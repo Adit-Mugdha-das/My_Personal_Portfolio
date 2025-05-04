@@ -173,7 +173,7 @@
                 Download CV
                 </a>
                 
-                <a href="{{ asset('documents/Mugdha_CV.pdf') }}"
+                <a href="{{ asset('documents/Mugdha_CV.pdf') }}" target="_blank" rel="noopener noreferrer"
                 class="px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button text-center">
                 View CV
                 </a>
