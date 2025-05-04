@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ContactController;
+use Illuminate\Support\Facades\Response;
+
 
 // Home Page
 Route::get('/', [PortfolioController::class, 'index']);
@@ -51,6 +53,14 @@ Route::get('/coursework-projects', function () {
     return view('coursework-projects');
 });
 
+Route::get('/view-cv', function () {
+    $path = public_path('documents/Mugdha_CV.pdf');
+
+    return Response::make(file_get_contents($path), 200, [
+        'Content-Type' => 'application/pdf',
+        'Content-Disposition' => 'inline; filename="Mugdha_CV.pdf"',
+    ]);
+});
 
 // Contact Form Submit
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
