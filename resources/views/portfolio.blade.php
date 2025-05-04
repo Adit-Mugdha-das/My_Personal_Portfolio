@@ -222,17 +222,16 @@
                 </a>
             </div>
 
-            <div class="mt-8 block  text-white text-sm text-center">
-            <p class="mb-2">Swipe to navigate</p>
+            <div x-data="{ showSwipe: true }" x-init="setTimeout(() => showSwipe = false, 4000)" x-show="showSwipe" x-transition
+            class="mt-8 text-white text-sm text-center">
+            <p class="mb-3 text-base sm:text-lg font-semibold animate__animated animate__fadeIn">Swipe to navigate</p>
             <div class="relative w-full flex justify-center overflow-hidden">
-                <div class="flex gap-6 animate-slide-left text-purple-400 text-2xl">
-                <i class="fa-solid fa-arrow-left"></i>
-                <i class="fa-solid fa-arrow-right"></i>
+                <div class="flex gap-10 text-purple-400 text-4xl animate-slide-left">
+                    <i class="fas fa-arrow-left"></i>
+                    <i class="fas fa-arrow-right"></i>
                 </div>
             </div>
-            </div>
-
-
+        </div>
 
         </section>
 
