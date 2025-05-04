@@ -4,11 +4,41 @@
   <meta charset="UTF-8" />
   <title>Coursework Projects - Mugdha</title>
   @vite(['resources/css/app.css', 'resources/js/app.js'])
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
+  <script>
+  function swipeComponent() {
+    return {
+      touchStartX: 0,
+      touchEndX: 0,
+      initSwipe() {
+        window.addEventListener('touchstart', e => {
+          this.touchStartX = e.changedTouches[0].screenX;
+        });
+        window.addEventListener('touchend', e => {
+          this.touchEndX = e.changedTouches[0].screenX;
+          this.handleSwipe();
+        });
+      },
+      handleSwipe() {
+        const deltaX = this.touchEndX - this.touchStartX;
+        if (Math.abs(deltaX) > 50) {
+          if (deltaX < 0) {
+            window.location.href = "{{ url('/') }}"; // Swipe left → Home
+          } else {
+            window.location.href = "{{ url('/projects') }}"; // Swipe right → Personal Projects
+          }
+        }
+      }
+    }
+  }
+</script>
+
   <style>
     .neon-glow {
       text-shadow:
@@ -18,17 +48,19 @@
         0 0 40px #a855f7,
         0 0 80px #9333ea;
     }
+    
   </style>
 </head>
 <body class="text-white overflow-x-hidden">
-<div id="vanta-bg" class="min-h-screen relative" x-data="{ navOpen: false, modalOpen: false, modalImage: '' }">
+<div id="vanta-bg" class="min-h-screen relative"
+     x-data="{ ...swipeComponent(), navOpen: false, modalOpen: false, modalImage: '' }"
+     x-init="initSwipe()">
+
 
   <!-- Navbar -->
   <nav class="bg-black/50 backdrop-blur-md text-white px-6 py-4 flex justify-between items-center shadow-md rounded-b-xl">
     <div class="font-bold text-purple-300 text-xl tracking-wider neon-glow">Adit Mugdha Das</div>
-    <button @click="navOpen = !navOpen" class="md:hidden text-purple-300 text-2xl focus:outline-none">
-      <i :class="navOpen ? 'fas fa-times' : 'fas fa-bars'"></i>
-    </button>
+   
     <ul class="hidden md:flex gap-6 text-sm md:text-base">
       <li><a href="{{ url('/') }}" class="hover:text-purple-300 transition duration-300">Home</a></li>
       <li><a href="{{ url('/projects') }}" class="hover:text-purple-300 transition duration-300">Personal Projects</a></li>
@@ -897,12 +929,12 @@
     touchControls: true,
     minHeight: 200.00,
     minWidth: 200.00,
-    scale: 1.0,
-    scaleMobile: 1.0,
-    color: 0xa855f7,
-    backgroundColor: 0x0b1120
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0x8e44ad,
+    backgroundColor: 0x0f172a
   });
-  
 </script>
+
 </body>
 </html>
