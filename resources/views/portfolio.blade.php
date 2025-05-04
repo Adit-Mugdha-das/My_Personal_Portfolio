@@ -173,10 +173,12 @@
                 Download CV
                 </a>
                 
-                <a href="{{ url('/view-cv') }}" target="_blank" rel="noopener noreferrer"
+                <a href="https://docs.google.com/viewer?url={{ urlencode(asset('documents/Mugdha_CV.pdf')) }}&embedded=true" 
+                target="_blank" rel="noopener noreferrer"
                 class="px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button text-center">
                 View CV
                 </a>
+
 
             </div>
 
