@@ -78,12 +78,11 @@
 
         @keyframes slide-left {
         0%   { transform: translateX(0); }
-        50%  { transform: translateX(-10px); }
+        50%  { transform: translateX(-20px); }
         100% { transform: translateX(0); }
         }
-
         .animate-slide-left {
-        animation: slide-left 2s infinite ease-in-out;
+        animation: slide-left 1.2s ease-in-out infinite;
         }
 
     </style>
@@ -223,7 +222,7 @@
                 </a>
             </div>
 
-            <div class="mt-8 block sm:hidden text-white text-sm text-center">
+            <div class="mt-8 block  text-white text-sm text-center">
             <p class="mb-2">Swipe to navigate</p>
             <div class="relative w-full flex justify-center overflow-hidden">
                 <div class="flex gap-6 animate-slide-left text-purple-400 text-2xl">
