@@ -10,6 +10,9 @@
 
     <!-- Font Awesome for social icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/solid.min.css" />
 
     <!-- Animate.css for entrance animation -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -223,12 +226,13 @@
             <div class="mt-8 block sm:hidden text-white text-sm text-center">
             <p class="mb-2">Swipe to navigate</p>
             <div class="relative w-full flex justify-center overflow-hidden">
-                <div class="flex gap-4 animate-slide-left text-purple-400 text-2xl">
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-right"></i>
+                <div class="flex gap-6 animate-slide-left text-purple-400 text-2xl">
+                <i class="fa-solid fa-arrow-left"></i>
+                <i class="fa-solid fa-arrow-right"></i>
                 </div>
             </div>
             </div>
+
 
 
         </section>
