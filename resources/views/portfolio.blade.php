@@ -72,6 +72,17 @@
             background-color: #f3e8ff;
             box-shadow: 0 0 15px #a855f7, 0 0 30px #9333ea;
         }
+
+        @keyframes slide-left {
+        0%   { transform: translateX(0); }
+        50%  { transform: translateX(-10px); }
+        100% { transform: translateX(0); }
+        }
+
+        .animate-slide-left {
+        animation: slide-left 2s infinite ease-in-out;
+        }
+
     </style>
 </head>
 
@@ -179,7 +190,6 @@
                 View CV
                 </a>
 
-
             </div>
 
 
@@ -209,6 +219,18 @@
                     <i class="fab fa-facebook"></i>
                 </a>
             </div>
+
+            <div class="mt-8 block sm:hidden text-white text-sm text-center">
+            <p class="mb-2">Swipe to navigate</p>
+            <div class="relative w-full flex justify-center overflow-hidden">
+                <div class="flex gap-4 animate-slide-left text-purple-400 text-2xl">
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-right"></i>
+                </div>
+            </div>
+            </div>
+
+
         </section>
 
         <!-- Modal -->
