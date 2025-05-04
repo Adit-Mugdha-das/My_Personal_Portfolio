@@ -186,11 +186,26 @@
                 Download CV
                 </a>
                 
-                <a href="https://docs.google.com/viewer?url={{ urlencode(asset('documents/Mugdha_CV.pdf')) }}&embedded=true" 
+                <div x-data="{ isMobile: false }" x-init="isMobile = window.innerWidth <= 768">
+    <template x-if="!isMobile">
+        <!-- Desktop: Open PDF directly -->
+        <a href="{{ asset('documents/Mugdha_CV.pdf') }}"
+           target="_blank" rel="noopener noreferrer"
+           class="px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button text-center">
+           View CV
+                </a>
+            </template>
+
+            <template x-if="isMobile">
+                <!-- Mobile: Google Docs Viewer -->
+                <a href="https://docs.google.com/viewer?url={{ urlencode(asset('documents/Mugdha_CV.pdf')) }}&embedded=true"
                 target="_blank" rel="noopener noreferrer"
                 class="px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button text-center">
                 View CV
                 </a>
+            </template>
+        </div>
+
 
             </div>
 
