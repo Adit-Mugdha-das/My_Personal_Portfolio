@@ -265,19 +265,7 @@
       </p>
     </div>
 
-    <!-- LeetCode 50 Days Badge 2025 -->
-    <div class="bg-black/60 border border-fuchsia-400/20 rounded-xl p-6 shadow-lg transition-transform duration-1000 ease-in-out transform hover:scale-[1.03] hover:shadow-[0_0_20px_#c084fc]">
-      <img src="{{ asset('images/leetcode_50days.png') }}"
-           alt="LeetCode 50 Days Badge"
-           class="rounded-lg mb-4 w-full cursor-zoom-in transition duration-300 hover:shadow-[0_0_25px_#c084fc] hover-border-purple"
-           @click="openImageModal('{{ asset('images/leetcode_50days.png') }}')">
-      <h3 class="text-2xl font-bold text-fuchsia-300 mb-2 text-center">LeetCode 50 Days Badge</h3>
-      <p class="text-base text-purple-200 font-semibold mb-2 text-center">2025</p>
-      <p class="text-sm text-gray-300 text-center">
-        Earned for solving coding problems consistently for 50+ days in 2025.<br>
-        <a href="https://leetcode.com/u/Mugdha_118/" target="_blank" class="text-fuchsia-400 underline">View My Profile</a>
-      </p>
-    </div>
+  
 
     <!-- LeetCode 100 Days Badge 2024 -->
     <div class="bg-black/60 border border-fuchsia-400/20 rounded-xl p-6 shadow-lg transition-transform duration-1000 ease-in-out transform hover:scale-[1.03] hover:shadow-[0_0_20px_#c084fc]">
