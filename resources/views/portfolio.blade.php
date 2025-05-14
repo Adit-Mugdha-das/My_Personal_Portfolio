@@ -190,20 +190,14 @@
                 </a>
                 
                 <a
-                href="#"
-                onclick="
-                    const fileId = '117ZzsCkgyUGipfVmoxAVXQGW3mtFuHgF';
-                    const isMobile = window.innerWidth <= 768;
-                    const viewerUrl = isMobile
-                    ? 'https://docs.google.com/viewer?url=' + encodeURIComponent('https://drive.google.com/uc?export=view&id=' + fileId)
-                    : '{{ asset('documents/Mugdha_CV.pdf') }}';
-                    window.open(viewerUrl, '_blank');
-                    return false;
-                "
+                href="https://drive.google.com/file/d/117ZzsCkgyUGipfVmoxAVXQGW3mtFuHgF/preview"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button text-center"
                 >
                 View CV
                 </a>
+
 
 
 
