@@ -190,18 +190,21 @@
                 </a>
                 
                 <a
-                    x-data
-                    x-init="
-                        if (window.innerWidth <= 768) {
-                            $el.href = 'https://docs.google.com/viewer?url={{ urlencode(asset('documents/Mugdha_CV.pdf')) }}&embedded=true';
-                        } else {
-                            $el.href = '{{ asset('documents/Mugdha_CV.pdf') }}';
-                        }
-                    "
-                    target="_blank" rel="noopener noreferrer"
-                    class="px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button text-center">
-                    View CV
+                href="#"
+                onclick="
+                    const pdfUrl = '{{ asset('documents/Mugdha_CV.pdf') }}';
+                    const isMobile = window.innerWidth <= 768;
+                    const viewerUrl = isMobile
+                    ? 'https://docs.google.com/viewer?url=' + encodeURIComponent(pdfUrl) + '&embedded=true'
+                    : pdfUrl;
+                    window.open(viewerUrl, '_blank');
+                    return false;
+                "
+                class="px-5 py-3 text-sm sm:text-base bg-white text-gray-900 font-semibold rounded-lg shadow-lg neon-button text-center"
+                >
+                View CV
                 </a>
+
 
 
             </div>
