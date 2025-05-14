@@ -192,11 +192,11 @@
                 <a
                 href="#"
                 onclick="
-                    const pdfUrl = '{{ asset('documents/Mugdha_CV.pdf') }}';
+                    const fileId = '117ZzsCkgyUGipfVmoxAVXQGW3mtFuHgF';
                     const isMobile = window.innerWidth <= 768;
                     const viewerUrl = isMobile
-                    ? 'https://docs.google.com/viewer?url=' + encodeURIComponent(pdfUrl) + '&embedded=true'
-                    : pdfUrl;
+                    ? 'https://docs.google.com/viewer?url=' + encodeURIComponent('https://drive.google.com/uc?export=view&id=' + fileId)
+                    : '{{ asset('documents/Mugdha_CV.pdf') }}';
                     window.open(viewerUrl, '_blank');
                     return false;
                 "
@@ -204,6 +204,7 @@
                 >
                 View CV
                 </a>
+
 
 
 
