@@ -269,6 +269,15 @@
           'url' => 'https://leetcode.com/u/Mugdha_118/'
         ],
         [
+  'year' => '2025',
+  'image' => 'images/leetcode_50days_2025.png',
+  'title' => 'LeetCode 50 Days Badge – 2025',
+  'desc' => 'Solved problems consistently for 50+ days on LeetCode in 2025 and earned this milestone badge.',
+  'url' => 'https://leetcode.com/u/Mugdha_118/'
+],
+
+
+        [
           'year' => '2024',
           'image' => 'images/leetcode_100days_2024.png',
           'title' => 'LeetCode 100 Days Badge',
