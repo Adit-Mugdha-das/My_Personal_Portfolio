@@ -251,6 +251,16 @@
   <div class="grid gap-8 max-w-5xl mx-auto text-left sm:grid-cols-2 lg:grid-cols-3 text-lg">
     @php
       $milestones = [
+
+        [
+  'year' => '2025',
+  'image' => 'images/leetcode_top150_badge.png',
+  'title' => 'Top Interview 150 Badge',
+  'desc' => 'Completed LeetCode’s curated Top Interview 150 problems set after 3 months of consistent effort. Strengthened problem-solving and interview prep skills.',
+  'url' => 'https://leetcode.com/u/Mugdha_118/'
+],
+
+
         [
           'year' => '2025',
           'image' => 'images/leetcode_100days.png',
