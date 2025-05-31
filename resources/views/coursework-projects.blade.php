@@ -116,6 +116,52 @@
         <p class="text-purple-400 font-semibold text-lg mt-3">🧠 End-to-End Transformer Model with Attention in TensorFlow</p>
       </div>
 
+<!-- Named-Entity Recognition Transformer Coursework Project Card -->
+<div class="bg-black/60 border border-purple-400/20 rounded-xl p-6 shadow-lg hover:shadow-[0_0_12px_#a78bfa] hover:scale-[1.03] transition-transform duration-500" data-aos="zoom-in" data-aos-duration="700">
+  <img src="{{ asset('images/ner_transformer.jpg') }}" class="rounded-lg mb-4 w-full h-48 object-cover cursor-zoom-in hover:drop-shadow-[0_0_3px_#a78bfa]" alt="NER Transformer Screenshot" @click="modalImage = '{{ asset('images/ner_transformer.png') }}'; modalOpen = true">
+  <h2 class="text-2xl font-extrabold text-purple-300 mb-2 tracking-wide drop-shadow-[0_0_4px_#a78bfa]">NER with Transformer Architecture</h2>
+  <p class="text-[1.15rem] text-gray-300 mb-4">Built a Named-Entity Recognition model using Transformers and TensorFlow — part of DeepLearning.AI's Sequence Models course (Week 4).</p>
+  <p class="text-base text-gray-500 font-semibold mb-3 transition duration-300 hover:text-white">
+    <span class="text-gray-200">Course: Deep Learning Specialization – Course 5, Week 4</span>
+  </p>
+  <div class="flex flex-wrap gap-2 mb-4 text-base font-semibold">
+    <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#a78bfa]">Python</span>
+    <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#a78bfa]">TensorFlow</span>
+    <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#a78bfa]">NER</span>
+    <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#a78bfa]">Transformer</span>
+  </div>
+  <div class="flex flex-wrap gap-4 text-base font-medium mb-4">
+    <a href="https://github.com/Adit-Mugdha-das/NER-Transformer-Implementation" target="_blank" class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#a78bfa] transition-transform">GitHub</a>
+    <a href="https://github.com/Adit-Mugdha-das/NER-Transformer-Implementation/blob/main/README.md" target="_blank" class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#a78bfa] transition-transform">Read More</a>
+    <a href="{{ asset('downloads/NER-Transformer-Lab.zip') }}" download class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#a78bfa] transition-transform">Download</a>
+  </div>
+  <p class="text-purple-400 font-semibold text-lg mt-3">🔎 Entity Recognition with Transformer + TensorFlow</p>
+</div>
+
+
+
+      <!-- Transformer Pre-processing Coursework Project Card -->
+<div class="bg-black/60 border border-purple-400/20 rounded-xl p-6 shadow-lg hover:shadow-[0_0_12px_#a78bfa] hover:scale-[1.03] transition-transform duration-500" data-aos="zoom-in" data-aos-duration="700">
+  <img src="{{ asset('images/transformer_preprocessing.png') }}" class="rounded-lg mb-4 w-full h-48 object-cover cursor-zoom-in hover:drop-shadow-[0_0_3px_#a78bfa]" alt="Transformer Preprocessing Screenshot" @click="modalImage = '{{ asset('images/transformer_preprocessing.png') }}'; modalOpen = true">
+  <h2 class="text-2xl font-extrabold text-purple-300 mb-2 tracking-wide drop-shadow-[0_0_4px_#a78bfa]">Transformer Pre-processing Lab</h2>
+  <p class="text-[1.15rem] text-gray-300 mb-4">Covers input embeddings, positional encoding, and token handling as a preprocessing step for Transformers in the Sequence Models course.</p>
+  <p class="text-base text-gray-500 font-semibold mb-3 transition duration-300 hover:text-white">
+    <span class="text-gray-200">Course: Deep Learning Specialization – Course 5, Week 4</span>
+  </p>
+  <div class="flex flex-wrap gap-2 mb-4 text-base font-semibold">
+    <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#a78bfa]">Python</span>
+    <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#a78bfa]">Jupyter</span>
+    <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#a78bfa]">Transformer</span>
+    <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#a78bfa]">Preprocessing</span>
+  </div>
+  <div class="flex flex-wrap gap-4 text-base font-medium mb-4">
+    <a href="https://github.com/Adit-Mugdha-das/Transformer-Preprocessing" target="_blank" class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#a78bfa] transition-transform">GitHub</a>
+    <a href="https://github.com/Adit-Mugdha-das/Transformer-Preprocessing/blob/main/README.md" target="_blank" class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#a78bfa] transition-transform">Read More</a>
+    <a href="{{ asset('downloads/Transformer Preprocessing.zip') }}" download class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#a78bfa] transition-transform">Download</a>
+  </div>
+  <p class="text-purple-400 font-semibold text-lg mt-3">🔧 Embeddings & Positional Encoding for Transformers</p>
+</div>
+
 
 
 <!-- Emojify - Sequence Models Coursework Project Card (Updated Styling) -->
