@@ -138,7 +138,7 @@
   <p class="text-purple-400 font-semibold text-lg mt-3">🔎 Entity Recognition with Transformer + TensorFlow</p>
 </div>
 
-
+      
 
       <!-- Transformer Pre-processing Coursework Project Card -->
 <div class="bg-black/60 border border-purple-400/20 rounded-xl p-6 shadow-lg hover:shadow-[0_0_12px_#a78bfa] hover:scale-[1.03] transition-transform duration-500" data-aos="zoom-in" data-aos-duration="700">

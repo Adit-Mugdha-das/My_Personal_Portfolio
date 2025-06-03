@@ -155,7 +155,7 @@
         <div class="bg-black/60 p-6 rounded-xl shadow-lg border border-fuchsia-400/20 w-full sm:w-[45%] transition hover:scale-[1.03] hover:shadow-[0_0_20px_#c084fc]">
           <h2 class="text-xl font-semibold mb-2 text-fuchsia-400">Web Development</h2>
           <ul class="list-disc list-inside space-y-1">
-            <li>Laravel</li><li>PHP & MySQL</li><li>HTML, CSS, Tailwind</li><li>NODE.JS</li>
+            <li>Laravel</li><li>PHP & MySQL</li><li>HTML, CSS, Tailwind</li><li>NODE.JS, Three JS, Vanta Net</li>
           </ul>
         </div>
 
