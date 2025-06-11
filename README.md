@@ -30,14 +30,3 @@ I am currently building expertise in AI research, aiming to contribute impactful
 
 ---
 
-##  Local Setup
-
-```bash
-git clone https://github.com/aditmugdha/your-portfolio-repo.git
-cd your-portfolio-repo
-composer install
-npm install
-cp .env.example .env
-php artisan key:generate
-npm run dev
-php artisan serve
