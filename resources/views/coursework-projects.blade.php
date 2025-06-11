@@ -164,29 +164,6 @@
 
 
 
-<!-- Emojify - Sequence Models Coursework Project Card (Updated Styling) -->
-      <div class="bg-black/60 border border-purple-400/20 rounded-xl p-6 shadow-lg hover:shadow-[0_0_12px_#a78bfa] hover:scale-[1.03] transition-transform duration-500" data-aos="zoom-in" data-aos-duration="700">
-        <img src="{{ asset('images/emojify_sequence_model.png') }}" class="rounded-lg mb-4 w-full h-48 object-cover cursor-zoom-in hover:drop-shadow-[0_0_3px_#a78bfa]" alt="Emojify Screenshot" @click="modalImage = '{{ asset('images/emojify_sequence_model.png') }}'; modalOpen = true">
-        <h2 class="text-2xl font-extrabold text-purple-300 mb-2 tracking-wide drop-shadow-[0_0_4px_#a78bfa]">Emojify - Sequence Models</h2>
-        <p class="text-[1.15rem] text-gray-300 mb-4">Built LSTM-based text classification models that map input sentences to emojis using pre-trained GloVe vectors and sequence modeling.</p>
-        <p class="text-base text-gray-500 font-semibold mb-3 transition duration-300 hover:text-white">
-          <span class="text-gray-200">Course: Deep Learning Specialization – Course 5, Week 2</span>
-        </p>
-        <div class="flex flex-wrap gap-2 mb-4 text-base font-semibold">
-          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#a78bfa]">Python</span>
-          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#a78bfa]">Keras</span>
-          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#a78bfa]">GloVe</span>
-          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#a78bfa]">LSTM</span>
-        </div>
-        <div class="flex flex-wrap gap-4 text-base font-medium mb-4">
-          <a href="https://github.com/Adit-Mugdha-das/Emojify" target="_blank" class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#a78bfa] transition-transform">GitHub</a>
-          <a href="https://github.com/Adit-Mugdha-das/Emojify/blob/main/README.md" target="_blank" class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#a78bfa] transition-transform">Read More</a>
-          <a href="{{ asset('downloads/12-Programming Assignment Emojify.zip') }}" download class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#a78bfa] transition-transform">Download</a>
-        </div>
-        <p class="text-purple-400 font-semibold text-lg mt-3">😊 Mapping Sentences to Emojis using Word Embeddings + LSTM</p>
-      </div>
-
-
 
       <!-- Trigger Word Detection Coursework Project Card (Updated Styling) -->
       <div class="bg-black/60 border border-purple-400/20 rounded-xl p-6 shadow-lg hover:shadow-[0_0_12px_#a78bfa] hover:scale-[1.03] transition-transform duration-500" data-aos="zoom-in" data-aos-duration="700">
@@ -233,6 +210,30 @@
       </div>
       <p class="text-purple-400 font-semibold text-lg mt-3">🌍 English-to-French Translation with Seq2Seq + Attention</p>
     </div>
+
+
+      
+<!-- Emojify - Sequence Models Coursework Project Card (Updated Styling) -->
+      <div class="bg-black/60 border border-purple-400/20 rounded-xl p-6 shadow-lg hover:shadow-[0_0_12px_#a78bfa] hover:scale-[1.03] transition-transform duration-500" data-aos="zoom-in" data-aos-duration="700">
+        <img src="{{ asset('images/emojify_sequence_model.png') }}" class="rounded-lg mb-4 w-full h-48 object-cover cursor-zoom-in hover:drop-shadow-[0_0_3px_#a78bfa]" alt="Emojify Screenshot" @click="modalImage = '{{ asset('images/emojify_sequence_model.png') }}'; modalOpen = true">
+        <h2 class="text-2xl font-extrabold text-purple-300 mb-2 tracking-wide drop-shadow-[0_0_4px_#a78bfa]">Emojify - Sequence Models</h2>
+        <p class="text-[1.15rem] text-gray-300 mb-4">Built LSTM-based text classification models that map input sentences to emojis using pre-trained GloVe vectors and sequence modeling.</p>
+        <p class="text-base text-gray-500 font-semibold mb-3 transition duration-300 hover:text-white">
+          <span class="text-gray-200">Course: Deep Learning Specialization – Course 5, Week 2</span>
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4 text-base font-semibold">
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#a78bfa]">Python</span>
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#a78bfa]">Keras</span>
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#a78bfa]">GloVe</span>
+          <span class="bg-purple-400/10 text-purple-300 px-3 py-1 rounded-full transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#a78bfa]">LSTM</span>
+        </div>
+        <div class="flex flex-wrap gap-4 text-base font-medium mb-4">
+          <a href="https://github.com/Adit-Mugdha-das/Emojify" target="_blank" class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#a78bfa] transition-transform">GitHub</a>
+          <a href="https://github.com/Adit-Mugdha-das/Emojify/blob/main/README.md" target="_blank" class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#a78bfa] transition-transform">Read More</a>
+          <a href="{{ asset('downloads/12-Programming Assignment Emojify.zip') }}" download class="text-purple-300 underline hover:scale-105 hover:drop-shadow-[0_0_6px_#a78bfa] transition-transform">Download</a>
+        </div>
+        <p class="text-purple-400 font-semibold text-lg mt-3">😊 Mapping Sentences to Emojis using Word Embeddings + LSTM</p>
+      </div>
 
 
       <!-- Word Vector Debiasing Coursework Project Card (Updated Styling) -->
