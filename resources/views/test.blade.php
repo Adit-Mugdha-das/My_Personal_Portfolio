@@ -89,9 +89,9 @@
     [x-cloak] { display: none !important; }
   </style>
 </head>
-<body class="text-white overflow-x-hidden">
-<!-- Put this inside <div id="vanta-bg" ...> -->
-<div id="vanta-bg" class="min-h-screen" x-data="swipeComponent()" x-init="initSwipe()">
+<body class="text-white overflow-x-hidden flex flex-col min-h-screen">
+  <div id="vanta-bg" class="flex-grow flex flex-col" x-data="swipeComponent()" x-init="initSwipe()">
+
 
 
 
@@ -369,5 +369,7 @@
 <script>
   AOS.init();
 </script>
+
+
 </body>
 </html>
