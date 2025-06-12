@@ -260,6 +260,15 @@
   'url' => 'https://leetcode.com/u/Mugdha_118/'
 ],
 
+[
+  'year' => '2025',
+  'image' => 'images/leetcode_75.png',
+  'title' => 'LeetCode 75 Badge',
+  'desc' => 'Completed the official LeetCode 75 Study Plan, covering top foundational problems. Built strong algorithmic and DSA fundamentals.',
+  'url' => 'https://leetcode.com/u/Mugdha_118/'
+],
+
+
 
         [
           'year' => '2025',
