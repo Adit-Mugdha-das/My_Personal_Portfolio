@@ -17,6 +17,13 @@ I am currently building expertise in AI research, aiming to contribute impactful
 - **AOS**, **Vanta.js**
 
 ---
+## Future Goals & Vision
+
+I aspire to delve deeper into AI research, particularly in areas like generative models, ethical machine learning, and real-world applications that can make a positive impact.  
+My long-term goal is to pursue a fully funded PhD and contribute to cutting-edge innovations in the field of Artificial Intelligence.  
+This portfolio is a living reflection of my journey — constantly evolving as I learn, build, and grow.
+
+Thank you for visiting!
 
 ## Pages & Features
 
