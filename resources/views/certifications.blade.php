@@ -149,6 +149,16 @@
     <div class="grid gap-8 max-w-6xl mx-auto text-left sm:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(300px,1fr))]">
       @php
         $certs = [
+        [
+  'title' => 'Deep Learning Specialization (Combined Certificate)',
+  'issuer' => 'DeepLearning.AI',
+  'date' => 'Jun 2025',
+  'id' => 'E1L0MQCNQ528',
+  'skills' => 'Neural Networks, CNNs, RNNs, LSTMs, Transformers, NLP, Dropout, BatchNorm, Xavier Initialization, Music Synthesis, Machine Translation, Attention Mechanism',
+  'image' => 'certificates/deep_learning_specialization_combined.png', // Make sure the file is saved with this name
+  'link' => 'https://www.coursera.org/account/accomplishments/specialization/E1L0MQCNQ528'
+],
+
 
           [
   'title' => 'Deep Learning Specialization',
@@ -158,6 +168,16 @@
   'skills' => 'Recurrent Neural Networks (RNNs), GRUs and LSTMs, Natural Language Processing (NLP), Transformer Models, HuggingFace Tokenizers',
   'image' => 'certificates/deep_learning_specialization.png', // Save the image you uploaded here
   'link' => 'https://www.credly.com/badges/33ce90ae-4119-4015-be6f-5e6f8fc6501f/public_url'
+],
+
+[
+  'title' => 'Sequence Models',
+  'issuer' => 'DeepLearning.AI',
+  'date' => 'Jun 2025',
+  'id' => 'OHTA37ZZYTM6',
+  'skills' => 'Sequence Modeling, RNNs, GRUs, LSTMs, Beam Search, Attention Models, Natural Language Processing (NLP)',
+  'image' => 'certificates/sequence_models.png', // Move your uploaded image to this path
+  'link' => 'https://www.coursera.org/account/accomplishments/verify/OHTA37ZZYTM6'
 ],
 
 
@@ -192,16 +212,7 @@
   'link' => 'https://coursera.org/verify/TEKNANEX2SGI'
 ],
 
-          [
-            'title' => 'Advanced Learning Algorithms',
-            'issuer' => 'Stanford Online',
-            'date' => 'Mar 2025',
-            'id' => 'T133QK2542ZJ',
-            'skills' => 'TensorFlow , Keras, NLP, Hyperparameter Tuning, +6 skills',
-            'image' => 'certificates/advanced_learning_algorithms.png',
-            'link' => 'https://coursera.org/verify/T133QK2542ZJ'
-          ],
-          [
+ [
             'title' => 'Neural Networks and Deep Learning',
             'issuer' => 'DeepLearning.AI',
             'date' => 'Mar 2025',
@@ -211,15 +222,16 @@
             'link' => 'https://coursera.org/verify/27BS1R4411JV'
           ],
           [
-            'title' => 'Supervised Machine Learning: Regression and Classification',
-            'issuer' => 'Stanford Online',
-            'date' => 'Mar 2025',
-            'id' => 'OWOEBASEFPWQ',
-            'skills' => 'TensorFlow, Scikit-Learn, Classification, Regression',
-            'image' => 'certificates/supervised_ml.png',
-            'link' => 'https://coursera.org/verify/OWOEBASEFPWQ'
-          ],
-          [
+  'title' => 'Machine Learning Specialization',
+  'issuer' => 'Stanford Online',
+  'date' => 'Mar 2025',
+  'id' => 'XGRN2X2P22GG',
+  'skills' => 'Supervised Learning (Linear & Logistic Regression), Unsupervised Learning (Clustering, Anomaly Detection), Recommender Systems, Neural Networks, Reinforcement Learning, Decision Trees',
+  'image' => 'certificates/machine_learning_specialization.png', // Place your uploaded image here
+  'link' => 'https://www.coursera.org/account/accomplishments/specialization/XGRN2X2P22GG'
+],
+
+           [
             'title' => 'Unsupervised Learning, Recommenders, Reinforcement Learning',
             'issuer' => 'Stanford Online',
             'date' => 'Mar 2025',
@@ -227,7 +239,27 @@
             'skills' => 'Unsupervised Learning, RL, Recommender Systems',
             'image' => 'certificates/unsupervised_rl.png',
             'link' => 'https://coursera.org/verify/GSCWZZHE2WQY'
+          ],
+          [
+            'title' => 'Advanced Learning Algorithms',
+            'issuer' => 'Stanford Online',
+            'date' => 'Mar 2025',
+            'id' => 'T133QK2542ZJ',
+            'skills' => 'TensorFlow , Keras, NLP, Hyperparameter Tuning, +6 skills',
+            'image' => 'certificates/advanced_learning_algorithms.png',
+            'link' => 'https://coursera.org/verify/T133QK2542ZJ'
+          ],
+         
+          [
+            'title' => 'Supervised Machine Learning: Regression and Classification',
+            'issuer' => 'Stanford Online',
+            'date' => 'Mar 2025',
+            'id' => 'OWOEBASEFPWQ',
+            'skills' => 'TensorFlow, Scikit-Learn, Classification, Regression',
+            'image' => 'certificates/supervised_ml.png',
+            'link' => 'https://coursera.org/verify/OWOEBASEFPWQ'
           ]
+         
         ];
       @endphp
 
