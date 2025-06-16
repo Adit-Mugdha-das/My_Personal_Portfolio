@@ -304,7 +304,7 @@
 
   <!-- Certifications Section -->
   <section class="text-center py-16 px-4 animate__animated animate__fadeIn">
-    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 text-white drop-shadow-[0_0_20px_#c084fc]">Licenses & Certifications</h1>
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 text-white drop-shadow-[0_0_20px_#c084fc]">Microsoft 365 Copilot Certifications</h1>
 
     <div class="grid gap-8 max-w-6xl mx-auto text-left sm:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(300px,1fr))]">
       @php
