@@ -295,8 +295,132 @@
           </div>
         </div>
       @endforeach
+      
     </div>
+
+      
   </section>
+
+
+  <!-- Certifications Section -->
+  <section class="text-center py-16 px-4 animate__animated animate__fadeIn">
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 text-white drop-shadow-[0_0_20px_#c084fc]">Licenses & Certifications</h1>
+
+    <div class="grid gap-8 max-w-6xl mx-auto text-left sm:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(300px,1fr))]">
+      @php
+        $certs = [
+        [
+          'title' => 'Introduction to Microsoft 365 Copilot',
+          'issuer' => 'Microsoft Learn',
+          'date' => 'Jun 2025',
+          'id' => 'Verified via Microsoft Learn',
+          'skills' => 'Copilot Overview, Microsoft 365 Capabilities, Productivity Tools',
+          'image' => 'certificates/microsoft_365_copilot.png',
+          'link' => 'https://learn.microsoft.com/en-us/users/aditmugdhadas-9336/achievements?username=AditMugdhaDas-9336&section=activity'
+        ],
+
+        [
+          'title' => 'Ask questions and analyze content with Microsoft 365 Copilot',
+          'issuer' => 'Microsoft Learn',
+          'date' => 'Jun 2025',
+          'id' => 'Verified via Microsoft Learn',
+          'skills' => 'Prompting, Data Analysis, Natural Language Input',
+          'image' => 'certificates/ms365_ask_questions.png',
+          'link' => 'https://learn.microsoft.com/en-us/users/aditmugdhadas-9336/achievements?username=AditMugdhaDas-9336&section=activity'
+        ],
+
+        [
+          'title' => 'Edit and transform content with Microsoft 365 Copilot',
+          'issuer' => 'Microsoft Learn',
+          'date' => 'Jun 2025',
+          'id' => 'Verified via Microsoft Learn',
+          'skills' => 'Editing Prompts, Productivity, Copilot Use Cases',
+          'image' => 'certificates/ms365_edit_transform.png',
+          'link' => 'https://learn.microsoft.com/en-us/users/aditmugdhadas-9336/achievements?username=AditMugdhaDas-9336&section=activity'
+        ],
+
+          [
+          'title' => 'Create and draft with Microsoft 365 Copilot',
+          'issuer' => 'Microsoft Learn',
+          'date' => 'Jun 2025',
+          'id' => 'Verified via Microsoft Learn',
+          'skills' => 'Generating Content, Drafting Documents, Email Assistance',
+          'image' => 'certificates/ms365_create_draft.png',
+          'link' => 'https://learn.microsoft.com/en-us/users/aditmugdhadas-9336/achievements?username=AditMugdhaDas-9336&section=activity'
+        ],
+[
+          'title' => 'Summarize and simplify information with Microsoft 365 Copilot',
+          'issuer' => 'Microsoft Learn',
+          'date' => 'Jun 2025',
+          'id' => 'Verified via Microsoft Learn',
+          'skills' => 'Summarization, Information Simplification, Clarity Tools',
+          'image' => 'certificates/ms365_summarize.png',
+          'link' => 'https://learn.microsoft.com/en-us/users/aditmugdhadas-9336/achievements?username=AditMugdhaDas-9336&section=activity'
+        ],
+
+ [
+          'title' => 'Optimize and extend Microsoft 365 Copilot',
+          'issuer' => 'Microsoft Learn',
+          'date' => 'Jun 2025',
+          'id' => 'Verified via Microsoft Learn',
+          'skills' => 'Power Platform Integration, Advanced Scenarios, Workflow',
+          'image' => 'certificates/ms365_optimize_extend.png',
+          'link' => 'https://learn.microsoft.com/en-us/users/aditmugdhadas-9336/achievements?username=AditMugdhaDas-9336&section=activity'
+        ],
+
+[
+          'title' => 'Explore the possibilities with Microsoft 365 Copilot',
+          'issuer' => 'Microsoft Learn',
+          'date' => 'Jun 2025',
+          'id' => 'Verified via Microsoft Learn',
+          'skills' => 'Copilot Vision, Use Cases, Workplace Transformation',
+          'image' => 'certificates/ms365_explore_possibilities.png',
+          'link' => 'https://learn.microsoft.com/en-us/users/aditmugdhadas-9336/achievements?username=AditMugdhaDas-9336&section=activity'
+        ]
+
+
+        ];
+      @endphp
+
+      @foreach ($certs as $index => $cert)
+        <div 
+          class="bg-black/60 border border-fuchsia-400/20 rounded-xl p-6 shadow-lg 
+                 transition-transform duration-2000 ease-in-out transform 
+                 hover:scale-[1.03] hover:shadow-[0_0_20px_#c084fc]"
+          data-aos="fade-up"
+          data-aos-delay="{{ $index * 200 }}"
+          data-aos-duration="500"
+          data-aos-once="true"
+        >
+          <img src="{{ asset($cert['image']) }}" alt="{{ $cert['title'] }}"
+               class="rounded-lg mb-4 w-full cursor-zoom-in hover-border-purple"
+               @click="modalImage = '{{ asset($cert['image']) }}'; modalOpen = true">
+
+          <h2 class="text-2xl font-semibold text-fuchsia-300 mb-2">{{ $cert['title'] }}</h2>
+          <p class="text-base text-purple-200 font-semibold">{{ $cert['issuer'] }}</p>
+          <p class="text-base text-gray-300">Issued {{ $cert['date'] }}</p>
+          <p class="text-base text-gray-400">Credential ID: {{ $cert['id'] }}</p>
+          <p class="mt-2 text-base text-gray-200">Skills: {{ $cert['skills'] }}</p>
+
+          <div class="mt-5 space-x-6 text-base font-medium">
+            <a href="{{ $cert['link'] }}" target="_blank"
+               class="text-fuchsia-300 underline transition-transform duration-300 transform hover:scale-105 hover:drop-shadow-[0_0_8px_#c084fc]">
+              Show Credential
+            </a>
+            <a href="{{ asset($cert['image']) }}" download
+               class="text-fuchsia-400 underline transition-transform duration-300 transform hover:scale-105 hover:drop-shadow-[0_0_8px_#c084fc]">
+              Download
+            </a>
+          </div>
+        </div>
+      @endforeach
+      
+    </div>
+
+      
+  </section>
+
+
 
   <!-- Modal -->
   <div x-show="modalOpen" x-transition class="fixed inset-0 z-50 flex items-center justify-center">
