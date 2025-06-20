@@ -183,7 +183,7 @@
         <div class="bg-black/60 p-6 rounded-xl shadow-lg border border-fuchsia-400/20 w-full sm:w-[45%] transition hover:scale-[1.03] hover:shadow-[0_0_20px_#c084fc]">
           <h2 class="text-xl font-semibold mb-2 text-fuchsia-400">Additional Technical Skills</h2>
           <ul class="list-disc list-inside space-y-1">
-          <li>Problem Solving (500+ Leetcode Solve)</li><li>Data Cleaning</li><li>Data Migration & Automation</li><li>Digital Circuit Design (Logisim)</li>
+          <li>Problem Solving (550+ Leetcode Solve)</li><li>Data Cleaning</li><li>Data Migration & Automation</li><li>Digital Circuit Design (Logisim)</li>
           </ul>
         </div>
       </div>
@@ -208,7 +208,7 @@
         <li>Neural Style Transfer</li>
         <li>U-NET, Siamese Network</li>
         <li>Recurrent Neural Networks (RNNs)</li>
-        <li>GRUs , LSTMs, Beam Search</li>
+        <li>GRUs,LSTMs,Attension Mechanism</li>
         <li>Natural Language Processing (NLP)</li>
         <li>Sequence to Sequence Models</li>
         <li>Transformer Models</li>
